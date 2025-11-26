@@ -1,0 +1,49 @@
+{% if pagination.pageNumber > 1 %}
+  <div class="pagination">
+    <ul>
+      {% if pagination.href.previous %}
+        <li><a href="{{ pagination.href.previous }}">Newer</a></li>
+      {% endif %}
+
+      {% if pagination.page_trail %}
+        {% for trail in pagination.page_trail %}
+          <li class="{% if post.url == path %}pagination-item-current{% endif %}"><a href="{{ post.path }}" title="{{title}}">{{ num }}</a></li>
+        {% endfor %}
+      {% endif %}
+
+      {% if pagination.href.next %}
+        <li><a href="{{ pagination.href.next }}">Older</a></li>
+      {% endif %}
+    </ul>
+  </div>
+{% endif %}
+
+<!-- 
+{{ paginator.per_page }}
+Maximum number of posts or documents on each pagination page.
+{{ paginator.total_posts }}
+Total number of posts included in pagination.
+{{ paginator.total_pages }}
+Total number of pagination pages created.
+{{ paginator.page	}}
+Number of the current pagination page.
+{{ paginator.page_path }}
+The relative Url path of the current pagination page.
+{{ paginator.previous_page }}
+Number of the previous page in the pagination. Nil if no previous page is available.
+{{ paginator.previous_page_path	}}
+The relative Url of the previous page. Nil if no previous page is available.
+{{ paginator.next_page }}
+Number of the next page in the pagination. Nil if there is no next page available.
+{{ paginator.next_page_path }}
+The relative Url of the next page in the pagination. Nil if there is no next page available.
+{{ paginator.first_page }}
+Number of the first page in the pagination (usually this is 1).
+{{ paginator.first_page_path }}
+The relative Url of the first page in the pagination.
+{{ paginator.last_page }}
+Number of the last page in the pagination (this is equal to total_pages).
+{{ paginator.last_page_path }}
+The relative Url of the last page in the pagination.
+{{ paginator.page_trail }}
+-->

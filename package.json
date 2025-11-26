@@ -1,0 +1,39 @@
+{
+  "name": "11ty-curate",
+  "version": "1.1.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "watch:sass": "sass --watch src/_sass/style.scss:public/assets/css/style.css",
+    "build:sass": "sass src/_sass/style.scss:public/assets/css/style.css",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "clean": "rm -rf public",
+    "dev": "npm run start",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*"
+  },
+  "keywords": [],
+  "author": "",
+  "description": "",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "markdown-it-attrs": "^4.2.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "1.77.6"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-plugin-rss": "^2.0.2",
+    "@eslint/js": "^9.12.0",
+    "eleventy-xml-plugin": "^0.1.0",
+    "eslint": "^9.12.0",
+    "globals": "^15.11.0",
+    "lint-staged": "^15.2.10",
+    "prettier": "3.3.3"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}

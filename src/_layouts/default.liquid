@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    {% include 'framework/seo-meta-tags.liquid' %}
+    {% include 'framework/og-meta-tags.liquid' %}
+    {% include 'framework/feed.liquid' %}
+    {% include 'framework/favicon.liquid' %}
+
+    <link href="{{ '/assets/css/style.css' }}" rel="stylesheet">
+    <link href="{{ '/assets/css/main.css' }}" rel="stylesheet">
+
+    {% if site.darkmode.enable_dark_mode != false %}
+      <script>
+          localStorage.getItem('darkMode') === 'true' && document.documentElement.setAttribute('data-bs-theme', 'dark');
+      </script>
+    {% endif %}
+
+    {% if site.cookie_banner.enabled %}
+      {% include "framework/cookie-consent" %}
+    {% endif %}
+
+    {% include "framework/fonts" %}
+    {% include "framework/google-tag-manager" %}
+
+  </head>
+<body class="page {% if body_classes %}{{ body_classes }}{% elsif layout.body_classes %}{{ layout.body_classes }}{% endif %}{% if site.header.fixed %} has-fixed-header{% else %} has-static-header{% endif %}">
+
+{% include "framework/menu-main-mobile" %}
+{% include "framework/header" %}
+
+<div id="wrapper" class="wrapper">     
+  {{ content }}
+</div>
+
+{% if site.footer.enable_footer %}
+  {% include "framework/footer" %}
+{% endif %}
+{% if site.bottom.enable_bottom %}
+  {% include "framework/bottom" %}
+{% endif %}
+
+<script type="text/javascript" src="{{ '/assets/js/scripts.js' }}"></script>
+{% if site.header.fixed %}
+  <script type="text/javascript" src="{{ '/assets/js/header.js' }}"></script>
+{% endif %}
+<script type="text/javascript" src="{{ '/assets/js/hamburger.js' }}"></script>
+<script type="text/javascript" src="{{ '/assets/js/darkModeSwitch.js' }}"></script>
+
+{% include "framework/google-analytics" %}
+{% include "framework/plausible-analytics" %}
+{% include "framework/umami-analytics" %}
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% assign show_count =  show_count | default: false %}
+{% assign category_slug = category_name | slugify %}
+{% capture category_url %}/{{ site.category_dir }}/{{ category_slug }}/{% endcapture %}
+
+<div class="category-link">
+<a href="{{ category_url | strip  }}">
+  {{ category_name }}
+</a>
+{% if show_count %}
+<span>({{categories[category_name].size}})</span>
+{% endif %}
+</div>

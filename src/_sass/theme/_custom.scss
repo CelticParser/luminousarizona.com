@@ -1,0 +1,21 @@
+.heading .heading-heading h1 {
+  @include media-breakpoint-up(lg) {
+    font-size: 74px;
+    line-height: 1;
+    width: 80%;
+    letter-spacing: 12px;
+    font-weight: 100;
+  }
+  strong {
+    text-decoration-color: var(--color-base-bg-3);
+  }
+}
+
+.gallery-caption {
+  float: right;
+  font-size: .8em;
+  font-weight: 100;
+  line-height: normal;
+  letter-spacing: .08em;
+  color: #78828b;
+}

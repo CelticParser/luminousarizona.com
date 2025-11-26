@@ -1,0 +1,56 @@
+
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEXBEzrYSrSMcd6g3yS-DpeD2fVuCpUfc&callback=initMap"></script>
+
+    <div id="map" style="aspect-ratio: 16 / 9; width: 100%;"></div>
+
+    <script>
+    function initMap() {
+        
+        {% for item in featured limit: limit %}
+
+        const mapOptions = {
+            center: { 
+
+                {% if isProject %}
+                 lat: 34.5667, lng: -111.85
+                {%  else %}
+                {{ tripod }}
+                {% endif %}
+
+            }, // Initial map center
+            zoom: 8, // Initial zoom level
+            mapId: "1fd95539b9a6382ce645575f",
+        };
+
+        const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        // Define your custom points
+        const customPoints = [
+            { 
+                lat: 36.970402, lng: -110.141348, 
+                title: 'Grey Whiskers Butte',
+                icon: {
+                    url: '/assets/images/grey-whiskers-butte-photo-by-jason-robert-okennedy.jpeg',
+                    size: new google.maps.Size(100, 100), // Size of the image in pixels
+                    origin: new google.maps.Point(0, 0), // Origin point (top-left corner)
+                    anchor: new google.maps.Point(16, 32) // Anchor point (center-bottom for a pushpin effect)
+                }
+            },
+
+        ];
+
+        {% endfor %}
+
+        // Add markers for each custom point
+        customPoints.forEach(point => {
+            new google.maps.Marker({
+                position: { lat: point.lat, lng: point.lng },
+                map: map,
+                title: point.title,
+                icon: point.icon
+            });
+        });
+    }
+    </script>

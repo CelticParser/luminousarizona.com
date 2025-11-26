@@ -1,0 +1,25 @@
+<!-- Pagination links -->
+{% if pagination.size > 0 %}
+<div class="pagination">
+  <ul>
+    {% if pagination.href.previous %}
+      <li><a href="{{ pagination.href.previous }}"><i class="fa fa-chevron-left"></i></a></li>
+    {% endif %}
+
+    {% for blogpost in pagination.pages %}
+      {% if pagination.pageNumber == forloop.index0 %}
+        <li class="active"><span>{{ forloop.index }}</span></li>
+      {% elsif pagination.hrefs[forloop.index0] == 1 %}
+        <li><a href="{{ 'blog' | url }}">{{ forloop.index }}</a></li>
+      {% else %}
+        <li><a href="{{ pagination.hrefs[forloop.index0] }}">{{ forloop.index }}</a></li>
+      {% endif %}
+
+    {% endfor %}
+  
+  {% if pagination.href.next %}
+    <li><a href="{{ site.baseurl }}{{ pagination.href.next }}"><i class="fa fa-chevron-right"></i></a></li>
+  {% endif %}
+  </ul>
+</div>
+{% endif %}

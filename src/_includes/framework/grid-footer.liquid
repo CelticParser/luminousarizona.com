@@ -1,0 +1,14 @@
+{% assign text = view_more_button_text | default: "View More" %}
+{% assign link = view_more_button_link %}
+{% assign align = align | default: "left" %}
+{% assign icon = icon | default:"" %}
+
+{% if link and link != '' %}
+<div class="col-12">
+    <div class="grid-footer grid-footer-align-{{ align }}">
+        <a href="{{link  }}" class="grid-view-more-button">
+            {{ text }} {% if icon and icon != '' %}<i class="fa-solid {{ icon }}"></i>{% endif %}
+        </a>
+    </div>
+</div>
+{% endif %}

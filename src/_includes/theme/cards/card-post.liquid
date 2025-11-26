@@ -1,0 +1,69 @@
+{% assign style = style | default: "column" %}
+
+<div class="card card-post card-{{ style }} {% if thumbnail %}card-has-thumbnail{% endif %} {% if icon or fa_icon %}card-has-icon{% endif %}">
+
+  {% if thumbnail %}
+    <div class="card-thumbnail {% if thumbnail_size %}card-thumbnail-{{ thumbnail_size }}{% endif %}">
+      <a href="{{ url }}"><img alt="{{ title }}" src="/assets/images/{{ thumbnail }}"/></a>
+    </div>
+  {% endif %}
+
+  <div class="card-content">
+    {% if post.authors or post.date %}
+      <div class="card-meta">
+
+        {% if post.authors %}
+          <div class="card-authors">
+            {% for author in authors %}
+              {% include 'framework/author',
+                author:author
+                style:'inline'
+              %}
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% if date %}
+          <div class="card-date">
+            <span class="post-date-date">{{ date | date_to_long_string }}</span>
+          </div>
+        {% endif %}
+
+      </div>
+    {% endif %}
+
+    <div class="card-title">
+      <h3>
+        <a href="{{ url }}">{{ title }}</a>
+      </h3>
+    </div>
+
+    {% if client %}
+      <div class="card-client">
+        {{ client }}
+      </div>
+    {% endif %}
+
+    {% if description %}
+      <div class="card-description">
+        <p>{{ description }}</p>
+      </div>
+    {% endif %}
+
+    {% if categories %}
+      <div class="card-categories mt-auto">
+        {% for category in categories %}
+          <a class="card-category" href="{{ "/category/"  }}{{ category | slugify }}">{{ category }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if url and show_read_more %}
+      <div class="card-readmore">
+        <a href="{{ url }}">Read More<i class="fas fa-long-arrow-alt-right"></i>
+        </a>
+      </div>
+    {% endif %}
+
+  </div>
+</div>

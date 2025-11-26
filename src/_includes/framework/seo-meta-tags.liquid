@@ -1,0 +1,11 @@
+<title>{% if meta_title %}{{ meta_title }}{% elsif title %}{{ title }} - {{ site.title}}{% else %}{{ site.title }}{% endif %}</title>
+
+{% if meta_description %}
+  <meta name="description" content="{{ meta_description }}"/>
+{% elsif description %}
+  <meta name="description" content="{{ description }}"/>
+{% endif %}
+
+{% if meta_keywords %}
+  <meta name="keywords" content="{{ meta_keywords }}">
+{% endif %}

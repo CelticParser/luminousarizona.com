@@ -1,0 +1,19 @@
+{% assign p_data_domain = null %}
+
+{% if env.PLAUSIBLE_DATA_DOMAIN %}
+  {% assign p_data_domain = env.PLAUSIBLE_DATA_DOMAIN %}
+{% elsif site.analytics.plausible_data_domain and site.analytics.plausible_data_domain != '' %}
+  {% assign p_data_domain = site.analytics.plausible_data_domain %}
+{% endif %}
+
+{% assign p_src = "https://plausible.io/js/plausible.js" %}
+
+{% if env.PLAUSIBLE_SRC %}
+  {% assign p_src = env.PLAUSIBLE_SRC %}
+{% elsif site.analytics.plausible_src and site.analytics.plausible_src != '' %}
+  {% assign p_src = site.analytics.plausible_src %}
+{% endif %}
+
+{% if p_data_domain %}
+  <script defer data-domain="{{ p_data_domain }}" src="{{ p_src }}"></script>
+{% endif %}

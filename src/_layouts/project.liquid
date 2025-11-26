@@ -1,0 +1,83 @@
+---
+layout: default
+body_classes: page-project
+---
+
+{% assign limit = gallery_limit | default: 6 %}
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-12 col-md-6 mb-4">
+
+        {% if title %}
+          <div class="project-heading">
+            <h1>{{ title }}</h1>
+          </div>
+        {% endif %}
+
+        {% if categories %}
+          <div class="project-categories">
+          {% include 'framework/categories-badges',
+              categories:categories
+          %}
+          </div>
+        {% endif %}
+
+        {% if date %}
+          <div class="project-date">
+            <strong>Date </strong><span>{{ date | date_to_long_string }}</span>
+          </div>
+        {% endif %}
+
+        {% if client %}
+          <div class="project-client">
+            <strong>Client </strong><span>{{ client }}</span>
+          </div>
+        {% endif %}
+
+        {% if role %}
+          <div class="project-role">
+            <strong>Role </strong><span>{{ role }}</span>
+          </div>
+        {% endif %}
+
+      </div>
+
+      <div class="col-12 col-md-6 mb-4">
+        <div class="content">{{ content }}</div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="gallery gallery-masonry">
+          {% for item in gallery limit: limit %}
+            <div class="gallery-item">
+              <div class="gallery-image"><img alt="" src="/assets/images/{{ item.image  }}"/></div>
+              {% if item.caption %}
+              <div class="gallery-caption">{{ item.caption }}</div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script>
+  var grid = document.querySelector('.gallery');
+  var msnry;
+
+  imagesLoaded( grid, function() {
+    msnry = new Masonry( grid, {
+      itemSelector: '.gallery-item',
+      percentPosition: true,
+    });
+  });
+</script>

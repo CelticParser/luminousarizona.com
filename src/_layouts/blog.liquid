@@ -1,0 +1,60 @@
+---
+layout: default
+title: "Blog"
+body_classes: page-blog
+pagination:
+  data: collections.posts
+  size: 6
+  reverse: true
+  alias: blogposts
+permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber | plus: 1 }}{% endif %}/index.html"
+---
+<div class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-12">
+        {% include 'framework/heading',
+        title:title
+        description:description
+        %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-12">
+          <div class="row">
+            <ol>
+              {% if pagination.pages %}
+                <div class="col-12">
+                  {% include 'framework/paginator-count' %}
+                </div>
+              {% endif %}
+
+              {% for post in blogposts %}
+                <div class="col-12 col-md-12 col-lg-10 mb-6">
+                  {% include 'theme/cards/card-post',
+                    date:post.date
+                    title:post.data.title
+                    description:post.data.description
+                    url:post.url
+                    thumbnail:post.data.thumbnail
+                    style:"row"
+                  %}
+                </div>
+              {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% if pagination.pages %}
+      <div class="row justify-content-center mt-4">
+        <div class="col-auto">
+          {% include 'framework/paginator' %}
+        </div>
+      </div>
+      {% endif %}
+  </div>
+</div>

@@ -1,0 +1,29 @@
+    <br>
+    <h2>{{ title }} Gallery<h2>
+    <br>
+
+    <div class="row mb-6">
+      <div class="col">
+
+        <div class="gallery gallery-two-column">
+
+          {% assign currentTag = title | slugify %}
+          {% for post in collections[currentTag] %}
+
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <a href="/images/{{ post.data.title | slugify }}">
+                <img eleventy:widths="200,595"
+                    style="object-position: {{ post.data.thumbCardPosition }};"
+                     alt=""
+                    src="/assets/images/{{ post.data.thumbnail }}" />
+              </a>
+            </div>
+            <div class="gallery-caption">{{ post.data.title }}</div>
+          </div>
+
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>

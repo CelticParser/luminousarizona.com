@@ -1,0 +1,58 @@
+---
+layout: default
+body_classes: page-project
+---
+
+{% assign limit = gallery_limit | default: 100 %}
+
+<div class="section">
+  <div class="container">
+
+    <div class="row mb-6">
+      <div class="col">
+        <div class="gallery ">
+
+
+          <div class="gallery-item">
+            <a href="/assets/images/{{ image }}">
+              <div class="gallery-image">
+                <img 
+                  alt=""
+                  src="/assets/images/{{ image }}" />
+              </div>
+            </a>
+            <div class="gallery-caption" style="float:right">
+              <strong>Above:</strong> &copy;{{ year }} | {{ title }}
+              <br>
+              <p style="float:right">Photo by: {{ site.photographer }}</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <header class="project-heading">
+      <h1>{{ title }}</h1>
+    </header>
+
+    <div class="content" style="width: 100%">{{ content }}</div>
+    <br>
+
+    <hr>
+
+    <div>
+
+      <br>
+      <h2>Tripod Location for {{ title }}</h2>
+      <br>
+
+      {% include 'theme/tripod-map',
+        
+      %}
+
+    </div>
+
+  </div>
+</div>

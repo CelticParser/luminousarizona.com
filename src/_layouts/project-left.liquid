@@ -1,0 +1,88 @@
+---
+layout: default
+body_classes: page-project
+---
+
+{% assign limit = gallery_limit | default: 100 %}
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-12 col-md-6 mb-6 mb-md-0">
+
+        {% if featured %}
+
+        <div class="gallery gallery-single-column">
+
+          {% for item in featured limit: limit %}
+
+          <div>
+            <a href="gallery-image/{{ item.caption | slugify }}">
+              <div class="gallery-image">
+                <img 
+                  style="vertical-align: bottom;
+                          max-width: 100%;
+                          height: auto;"
+                  alt=""
+                  src="/assets/images/{{ item.image  }}" />
+              </div>
+            </a>
+            <div class="gallery-caption">
+              <strong>Above:</strong> &copy;{{ item.year }} | {{ item.caption }}
+              <br>
+              <p>Photo by: {{ site.photographer }}</p>
+            </div>
+          </div>
+
+          {% endfor %}
+
+        </div>
+
+        {% endif %}
+
+      </div>
+
+      <div class="col-12 col-md-6">
+
+        {% if title %}
+
+          <header class="project-heading">
+            <h1>{{ title }}</h1>
+            <p style="font-size: 1.2em">{{ subTitle }}
+            <p>
+          </header>
+
+        {% endif %}
+
+        <div class="content">{{ content }}</div>
+
+      </div>
+
+    </div>
+
+    <hr>
+
+    {% include '_layouts/project-gallery' %}
+  
+    <hr>
+
+    <div>
+
+      {% if title %}
+      <br>
+      <h2>Tripod Locations for {{ title }}</h2>
+      <br>
+
+      {% endif %}
+
+      {% include 'theme/tripod-map',
+        heading:projects.heading
+        sub_heading:projects.sub_heading
+      %}
+
+    </div>
+
+  </div>
+</div>
+

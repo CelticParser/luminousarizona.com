@@ -1,0 +1,24 @@
+<meta property="og:type" content="{{ site.open_graph.meta_opengraph_type }}"/>
+<meta property="og:url" content="{{ url }}"/>
+
+{% if meta_title %}
+  <meta property="og:title" content="{{ meta_title }}"/>
+{% elsif title %}
+  <meta property="og:title" content="{{ title }}"/>
+{% endif %}
+
+{% if meta_description %}
+  <meta property="og:description" content="{{ meta_description }}"/>
+{% elsif description %}
+  <meta property="og:description" content="{{ description }}"/>
+{% endif %}
+
+{% if meta_image %}
+  <meta property="og:image" content="{{ meta_image | url }}"/>
+{% elsif image %}
+  <meta property="og:image" content="{{ image }}"/>
+{% endif %}
+
+<meta name="twitter:card" content="{{ site.open_graph.meta_twitter_card }}"/>
+<meta name="twitter:site" content="{{ site.open_graph.meta_twitter_site }}" />
+<meta name="twitter:creator" content="{{ site.open_graph.meta_twitter_creator }}" />

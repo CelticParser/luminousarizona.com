@@ -1,0 +1,9 @@
+<div class="menu-footer">
+  <ul>
+    {% for item in footnav %}
+      <li class="{% if item.url == page.url %}active{% endif %}">
+        <a href="{{ item.url  }}">{{ item.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

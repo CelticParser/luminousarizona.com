@@ -1,0 +1,81 @@
+---
+layout: default
+body_classes: page-project
+---
+
+{% assign limit = gallery_limit | default: 100 %}
+
+<div class="section">
+  <div class="container">
+
+    {% if featured %}
+
+    <div class="row mb-6">
+      <div class="col">
+        <div class="gallery ">
+
+          {% for item in featured limit: limit %}
+
+          <div class="gallery-item">
+            <a href="/images/{{ item.caption | slugify }}">
+              <div class="gallery-image">
+                <img 
+                  alt=""
+                  src="/assets/images/{{ item.image  }}" />
+              </div>
+            </a>
+            <div class="gallery-caption" style="float:right">
+              <strong>Above:</strong> &copy;{{ item.year }} | {{ item.caption }}
+              <br>
+              <p style="float:right">Photo by: {{ site.photographer }}</p>
+            </div>
+
+          </div>
+
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+
+    {% endif %}
+
+    {% if title %}
+
+    <header class="project-heading">
+      <h1>{{ title }}</h1>
+      <p style="font-size: 1.2em">{{ subTitle }}
+      <p>
+    </header>
+
+    {% endif %}
+
+    <br>
+    <div class="content" style="width: 100%">{{ content }}</div>
+    <br>
+
+    <hr>
+
+    {% include '_layouts/project-gallery' %}
+
+    <hr>
+
+    <div>
+
+      {% if title %}
+      <br>
+      <h2>Tripod Locations for {{ title }}</h2>
+      <br>
+
+      {% endif %}
+
+      {% include 'theme/tripod-map',
+        heading:projects.heading
+        sub_heading:projects.sub_heading
+      %}
+
+    </div>
+
+  </div>
+</div>
+{{ currentTag }}

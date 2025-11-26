@@ -1,0 +1,64 @@
+---
+layout: default
+body_classes: page-projects
+---
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {% include 'framework/heading',
+          title:title
+          description:description
+        %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% assign limit = projects.limit | default: 3 %}
+{% assign sort_by = projects.sort | default: 'date' %}
+{% assign columns =  projects.columns | default: 3 %}
+{% capture columns %}col-lg-{{ 12 | divided_by:columns }}{% endcapture %}
+{% assign cards = collections.projects | sort: sort_by %}
+{% if sort_by == 'weight' %}
+  {% assign cards = collections.projects | sortByWeight %}
+{% endif %}
+
+{% if cards.size > 0 %}
+<div class="section pt-0">
+  <div class="container">
+    <div class="row">
+
+      {% include 'framework/grid-header',
+        heading:projects.heading
+        sub_heading:projects.sub_heading
+      %}
+     
+      {% for card in cards limit:limit %}
+
+      <div
+        class="col-12 col-md-6 {{ columns }} mb-gutter mt-gutter {% if forloop.first %}mt-0{% endif %} {% if forloop.last %}mb-0{% endif %} mt-md-0">
+        {% include 'theme/cards/card-project',
+          title:card.data.title
+          description:card.data.description
+          thumbnail:card.data.thumbnail
+          categories:card.data.categories
+          date:card.date
+          url:card.url
+          client:card.data.client
+        %}
+      </div>
+      {% endfor %}
+
+      {% include 'framework/grid-footer',
+        view_more_button_text:card.data.view_more_button_text
+        view_more_button_link:card.data.view_more_button_link
+        align:"right"
+        icon:"fa-arrow-right"
+      %}
+
+    </div>
+  </div>
+</div>
+{% endif %}

@@ -1,0 +1,9 @@
+{
+  "feed": {
+    "subtitle": "Curate is a premium portfolio for 11ty.",
+    "filename": "feed.xml",
+    "path": "/feed.xml",
+    "url": "https://www.zerostatic.io/theme/11ty-curate/",
+    "base": "https://www.zerostatic.io/"
+  }
+}

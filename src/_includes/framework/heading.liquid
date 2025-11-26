@@ -1,0 +1,29 @@
+{% assign align = align | default: 'left' %}
+
+<div class="heading {% if align %}heading-{{ align }}{% endif %}">
+  {% if badge %}
+    <div class="heading-badge">
+      <span>{{ badge }}</span>
+    </div>
+  {% endif %}
+
+  {% if title %}
+  <div class="heading-heading">
+    <h1 style="margin-bottom: -.2em;">{{ title }}</h1>
+  </div>
+  {% endif %}
+  
+  {% if description %}
+    <div class="heading-description">
+      <p>{{ description }}</p>
+    </div>
+  {% endif %}
+
+  <hr>
+
+  {% if image and image != "" %}
+    <div class="heading-image">
+      <img {% if title %} alt="{{ title }}" {% endif %} src="{{ image  }}"/>
+    </div>
+  {% endif %}
+</div>

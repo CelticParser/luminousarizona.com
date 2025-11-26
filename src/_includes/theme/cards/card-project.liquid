@@ -1,0 +1,28 @@
+{% assign style = style | default: "column" %}
+
+<div class="card card-project card-{{ style }} {% if thumbnail %}card-has-thumbnail{% endif %} {% if icon or fa_icon %}card-has-icon{% endif %}">
+
+  {% if thumbnail %}
+    <div class="card-thumbnail {% if thumbnail_size %}card-thumbnail-{{ thumbnail_size }}{% endif %}">
+      <a href="{{ url  }}">
+        <img eleventy:widths="200,595"
+          style="object-position: {{ tumbCardPosition }};"
+          alt="{{ title }}" 
+          src="/assets/images/{{ thumbnail  }}"/>
+      </a>
+    </div>
+  {% endif %}
+
+  <div class="card-content">
+    <div class="card-title">
+      <h2>
+        <a href="{{ url  }}">{{ title }}</a>
+      </h2>
+    </div>
+    {% if client %}
+      <div class="card-client">
+        {{ client }}
+      </div>
+    {% endif %}
+  </div>
+</div>

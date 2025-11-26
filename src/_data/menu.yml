@@ -1,0 +1,91 @@
+main:
+  - name: Home
+    url: "/"
+    order: 1
+  - name: Projects
+    url: "/projects/"
+    order: 2
+    child:
+      - name: Ancestrial Puebloans
+        description: 
+        url: "/projects/ancestral-puebloans/"
+      - name: Arboreal
+        description: 
+        url: "/projects/arboreal/"
+      - name: Discarded
+        description:
+        url: "/projects/discarded/"
+      - name: Monoliths
+        description: 
+        url: "/projects/monoliths/"
+      - name: On The Tonto
+        description: 
+        url: "/projects/on-the-tonto/"
+      - name: Sky Islands
+        description: 
+        url: "/projects/sky-islands/"
+      - name: Tribal Lands
+        description: 
+        url: "/projects/tribal-lands/"
+      - name: Warship
+        description: 
+        url: "/projects/warship/"
+  - name: Blog
+    url: "/blog/"
+    order: 2
+  - name: About
+    url: "/about/"
+    order: 3
+    child:
+      - name: About Arissona
+        description: 
+        url: "/about/arissona/"
+      - name: About Jason
+        description: 
+        url: "/about/jason-robert-okennedy/"
+  - name: Contact
+    url: "/contact/"
+    order: 4
+
+footer_primary:
+  - name: Project 1
+    url: "/projects/project-1/"
+  - name: Project 2
+    url: "/projects/project-2/"
+  - name: Project 3
+    url: "/projects/project-3/"
+  - name: Project 4
+    url: "/projects/project-4/"
+
+footer_secondary:
+  - name: Blog
+    url: "/blog/"
+    order: 2
+  - name: About
+    url: "/about/"
+    order: 3
+  - name: Contact
+    url: "/contact/"
+    order: 4
+  - name: Privacy Policy
+    url: "/privacy-policy/"
+    order: 1
+  - name: Terms and Conditions
+    url: "/terms-and-conditions/"
+    order: 2
+
+footer_tertiary:
+  - name: Privacy Policy
+    url: "/privacy-policy/"
+    order: 1
+  - name: Terms and Conditions
+    url: "/terms-and-conditions/"
+    order: 2
+
+bottom:
+  - name: Privacy Policy
+    url: "/privacy-policy/"
+    order: 3
+  - name: Terms and Conditions
+    url: "/terms-and-conditions/"
+    order: 4

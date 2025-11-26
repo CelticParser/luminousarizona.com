@@ -1,0 +1,144 @@
+---
+layout: default
+body_classes: page-home
+---
+<div class="section" style="padding-bottom:0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {% include 'framework/heading', title:title description:description %}
+        {{ childitem.icon_darkmode }}
+      </div>
+    </div>
+
+    {% if featured %}
+    <div style="margin-bottom: 4em;">
+      <div class="col">
+        <div class="gallery ">
+          {% for item in featured limit: limit %}
+          <div class="gallery-item">
+            <a href="images/{{ item.caption | slugify }}">
+              <div class="gallery-image">
+                <img eleventy:widths="200,595,1220"
+                  style="width: 100%;"
+                  alt=""
+                  src="/assets/images/{{ item.image  }}" />
+              </div>
+            </a>
+            <div class="gallery-caption" style="float:right">
+              <strong>Above:</strong> &copy;{{ item.year }} | {{ item.caption }}
+              <br>
+              <p style="float:right">Photo by: {{ site.photographer }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+{% assign cards = collections.projects | sort: 'date' | reverse %}
+{% assign limit = projects.limit | default: 999 %}
+{% assign sort_by = projects.sort | default: 'date' %}
+{% assign columns =  projects.columns | default: 3 %}
+{% capture columns %}col-lg-{{ 12 | divided_by:columns }}{% endcapture %}
+{% if sort_by == 'weight' %}
+  {% assign cards = cards | sortByWeight %}
+{% endif %}
+
+
+{% if cards.size > 0 %}
+<div class="section pt-0">
+
+  <div class="container">
+  <hr>
+  <h2>P r o j e c t s</h2>
+    <div class="row">
+
+      {% include 'framework/grid-header',
+        heading:projects.heading
+        sub_heading:projects.sub_heading
+      %}
+
+      {% for card in cards limit: limit %}
+      <div
+        class="col-12 col-md-6 {{ columns }} mb-gutter mt-gutter {% if forloop.first %}mt-0{% endif %} {% if forloop.last %}mb-0{% endif %} mt-md-0">
+        {% include 'theme/cards/card-project',
+          title:card.data.title
+          description:card.data.description
+          thumbnail:card.data.thumbnail
+          tumbCardPosition:card.data.tumbCardPosition
+          categories:card.data.categories
+          date:card.date
+          url:card.url
+        %}
+      </div>
+      {% endfor %}
+
+      {% include 'framework/grid-footer',
+        view_more_button_text:projects.view_more_button_text
+        view_more_button_link:projects.view_more_button_link
+        align:"right"
+        icon:"fa-arrow-right"
+      %}
+
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% assign cards = collections.posts | sort: 'date' | reverse %}
+{% assign limit = posts.limit | default: 3 %}
+{% assign sort_by = posts.sort | default: 'date' %}
+{% assign columns =  posts.columns | default: 3 %}
+{% capture columns %}col-lg-{{ 12 | divided_by:columns }}{% endcapture %}
+{% if sort_by == 'weight' %}
+  {% assign cards = cards | sort: 'weight' %}
+{% endif %}
+
+{% if cards.size > 0 %}
+<div class="section section-base-bg-2">
+  <div class="container">
+    <div class="row">
+
+      {% include 'framework/grid-header',
+        heading:posts.heading
+        sub_heading:posts.sub_heading
+      %}
+
+      {% for card in cards limit: limit %}
+      <div class="col-12 col-md-4 {{ columns }} {% if forloop.first %}mt-0{% endif %} {% if forloop.last %}mb-0{% endif %} mb-3 mb-md-6">
+        {% include 'theme/cards/card-post'
+          title:card.data.title
+          description:card.data.description
+          url:card.url
+        %}
+      </div>
+      {% endfor %}
+
+      {% include 'framework/grid-footer',
+        view_more_button_text:posts.view_more_button_text
+        view_more_button_link:posts.view_more_button_link
+        align:"right"
+        icon:"fa-arrow-right"
+      %}
+
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if site.newsletter.mailchimp.form_action_url and site.newsletter.mailchimp.form_action_url != '' %}
+  <div class="section section-base-bg-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-12"></div>
+        {% include 'framework/subscribe' %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+ 
