@@ -18,7 +18,7 @@ body_classes: page-project
           {% for item in featured limit: limit %}
 
           <div>
-            <a href="gallery-image/{{ item.caption | slugify }}">
+            <a href="/images/{{ item.caption | slugify }}">
               <div class="gallery-image">
                 <img 
                   style="vertical-align: bottom;

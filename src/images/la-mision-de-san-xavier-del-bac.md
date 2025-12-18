@@ -18,7 +18,7 @@ And there, a vision from the earth upsprings,
 Where Tucson's light its storied beauty throws.
 <br><br>
 From heavy cumulus, a glory flows,
-As God-rays pierce the sky, like golden rain,
+As God-rays pierce the sky, like silver rain,
 And on the desert's canvas, stark and clean,
 The White Dove of the Desert softly glows.
 <br><br>
@@ -27,6 +27,6 @@ It draws the gaze beyond the tilled expanse,
 A silent promise in the waning light,
 A sanctuary holding time's slow dance.
 <br><br>
-It stands afar, where faith and solace meet,
-A beacon pure, beneath the heavens' heat.
+​It stands afar, a relic stark and grand,
+As when the last of them released its hand.
 <br><br><p style="float:right;">-jason_</p>

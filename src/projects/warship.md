@@ -7,11 +7,10 @@ date: 2026-01-01
 weight: 2
 thumbnail: "the-santa-cruz-photo-by-jason-robert-okennedy.jpeg"
 tumbCardPosition: "top"
-tags: "warship"
 isProject: true
 featured:
   - image: "the-santa-cruz-photo-by-jason-robert-okennedy.jpeg"
-    caption: "The Santa Cuz"
+    caption: "The Santa Cruz"
     year: "2023"
 ---
 
