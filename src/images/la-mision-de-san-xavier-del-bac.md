@@ -12,7 +12,7 @@ year: "2022"
 tripod: "lat: 32.103310, lng: -111.003673"
 ---
 
-> _Across the field, where silvered cotton grows,
+> _Across the field, where white cotton grows,
 A hazy line defines the verdant plain,
 And there, a vision from the earth upsprings,
 Where Tucson's light its storied beauty throws.
