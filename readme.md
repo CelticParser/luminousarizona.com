@@ -23,6 +23,8 @@ To build the 11ty site run `npm run build`
 
 ## Deploy
 
+git push --progres
+
 ### Netlify
 
 This theme comes with a `netlify.toml` and is tested and configured to deploy with Netlify.
