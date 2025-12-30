@@ -122,7 +122,7 @@ export default function(eleventyConfig) {
     templateFormats: ["html", "md", "njk", "liquid"],
     dir: {
       input: "src",
-      output: "docs",
+      output: "public",
       includes: "_includes",
       layouts: "_layouts",
     },
