@@ -23,7 +23,13 @@ To build the 11ty site run `npm run build`
 
 ## Deploy
 
+## Git Commands
+
 git push --progres
+
+git rm -r one-of-the-directories // This deletes from filesystem
+git commit . -m "Remove duplicated directory"
+git push origin <your-git-branch> (typically 'master', but not always)
 
 ### Netlify
 

@@ -12,8 +12,8 @@ year: "2022"
 tripod: "lat: 32.103310, lng: -111.003673"
 ---
 
-<b><i>"Aside The Great Western Trail - What have I gained by the toil of the trail?"</i></b>
-
+> _"Aside The Great Western Trail - What have I gained by the toil of the trail?"
+<br><br>
 I know and know well.
 <br><br>
 I have found once again the lore I had lost
@@ -38,6 +38,6 @@ I defy the stern sky.
 <br><br>
 So long as I live these joys will remain,
 <br>
-I have touched the most primitive wildness again.
+I have touched the most primitive wildness again._
 <br><br>
 Hamlin Garland. 1893
