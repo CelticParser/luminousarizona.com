@@ -16,10 +16,10 @@ This is the soil where I shall plant my name,
 <br>To leave behind the hunger and the shame,
 <br>And cast the heavy burdens from my mind.
 <br><br>
-<br>The distant peaks with promise in their breath,
+The distant peaks with promise in their breath,
 <br>Now call my spirit to a quiet shore,
 <br>To find a life that triumphs over death,
 <br>And walk in silent grace forevermore.
 <br><br>
-<br>When day is through, the victory is won;
+When day is through, the victory is won;
 <br>I’ve lived my life, I’m following the sun._

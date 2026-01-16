@@ -15,17 +15,17 @@ tripod: "lat: 32.103310, lng: -111.003673"
 > _Two sentinels, by sun-baked earth they stood,
 <br>Tall saguaros, reaching for the sky
 <br>Decades passed, a silent brotherhood,
-<br>As seasons wheeled and ancient moments fly
+<br>As seasons wheeled and ancient moments fly.
 <br><br>
 They watched the desert lake, a shimmering grace,
 <br>Reflecting clouds and mountains, stark and grand
 <br>Their roots entwined, within that arid place,
-<br>A testament to friendship, close at hand
+<br>A testament to friendship, close at hand.
 <br><br>
 Through scorching days and nights of cool embrace,
 <br>They shared the whispers of the desert breeze
 <br>A steadfast bond, time could not erase,
-<br>Rooted deep, beneath the ancient trees
+<br>Rooted deep, beneath the ancient trees.
 <br><br>
 So side by side, they stood, with hearts so true,
 <br>Friends of the desert, with a boundless view._
