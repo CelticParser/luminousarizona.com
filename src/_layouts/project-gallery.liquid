@@ -13,10 +13,11 @@
           <div class="gallery-item">
             <div class="gallery-image">
               <a href="/images/{{ post.data.title | slugify }}">
-                <img eleventy:widths="200,595"
-                    style="object-position: {{ post.data.thumbCardPosition }};"
-                     alt=""
-                    src="/assets/images/{{ post.data.thumbnail }}" />
+                {% include 'framework/shortcodes/responsive-image',
+                  src: post.data.thumbnail,
+                  alt: post.data.title,
+                  object-position: post.data.thumbCardPosition
+                %}
               </a>
             </div>
             <div class="gallery-caption">{{ post.data.title }}</div>

@@ -19,9 +19,10 @@ body_classes: page-project
           <div class="gallery-item">
             <a href="/images/{{ item.caption | slugify }}">
               <div class="gallery-image">
-                <img 
-                  alt=""
-                  src="/assets/images/{{ item.image  }}" />
+                {% include 'framework/shortcodes/responsive-image',
+                  src: item.image,
+                  alt: item.caption
+                %}
               </div>
             </a>
             <div class="gallery-caption" style="float:right">

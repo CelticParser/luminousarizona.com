@@ -5,10 +5,11 @@
   {% if thumbnail %}
     <div class="card-thumbnail {% if thumbnail_size %}card-thumbnail-{{ thumbnail_size }}{% endif %}">
       <a href="{{ url  }}">
-        <img eleventy:widths="200,595"
-          style="object-position: {{ tumbCardPosition }};"
-          alt="{{ title }}" 
-          src="/assets/images/{{ thumbnail  }}"/>
+        {% include 'framework/shortcodes/responsive-image',
+          src: thumbnail,
+          alt: title,
+          object-position: tumbCardPosition
+        %}
       </a>
     </div>
   {% endif %}

@@ -19,10 +19,11 @@ body_classes: page-home
           <div class="gallery-item">
             <a href="images/{{ item.caption | slugify }}">
               <div class="gallery-image">
-                <img eleventy:widths="200,595,1220"
-                  style="width: 100%;"
-                  alt=""
-                  src="/assets/images/{{ item.image  }}" />
+                {% include 'framework/shortcodes/responsive-image',
+                  src: item.image,
+                  alt: item.caption,
+                  style: 'width: 100%;'
+                %}
               </div>
             </a>
             <div class="gallery-caption" style="float:right">

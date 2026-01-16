@@ -20,12 +20,11 @@ body_classes: page-project
           <div>
             <a href="/images/{{ item.caption | slugify }}">
               <div class="gallery-image">
-                <img 
-                  style="vertical-align: bottom;
-                          max-width: 100%;
-                          height: auto;"
-                  alt=""
-                  src="/assets/images/{{ item.image  }}" />
+                {% include 'framework/shortcodes/responsive-image',
+                  src: item.image,
+                  alt: item.caption,
+                  style: 'vertical-align: bottom; max-width: 100%; height: auto;'
+                %}
               </div>
             </a>
             <div class="gallery-caption">

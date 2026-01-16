@@ -5,6 +5,7 @@ import xmlFiltersPlugin from "eleventy-xml-plugin";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import eleventyImage from "@11ty/eleventy-img";
 
 export default function(eleventyConfig) {
   // 11ty watch targets
@@ -14,6 +15,9 @@ export default function(eleventyConfig) {
   // 11ty Collections
   eleventyConfig.addCollection("projects", (collection) => {
     return collection.getFilteredByGlob("./src/projects/*.md");
+  });
+  eleventyConfig.addCollection("about", (collection) => {
+    return collection.getFilteredByGlob("./src/about/*.md");
   });
   eleventyConfig.addCollection("images", (collection) => {
     return collection.getFilteredByGlob("./src/images/*.md");
@@ -27,8 +31,8 @@ export default function(eleventyConfig) {
     // output image formats
     formats: ["avif", "webp", "jpeg"],
 
-    // output image widths
-    widths: ["auto"],
+    // output image widths - matching CSS breakpoints
+    widths: [576, 768, 992, 1360],
 
     // optional, attributes assigned on <img> nodes override these values
     htmlOptions: {
@@ -38,6 +42,83 @@ export default function(eleventyConfig) {
       },
       pictureAttributes: {}
     },
+  });
+
+  // Responsive Image Shortcode
+  eleventyConfig.addShortcode("responsiveImage", async function(src, alt = "", style = "", className = "", sizesOverride = "") {
+    if (!src) return "";
+    
+    // Get the source path (relative to src/assets/images or absolute)
+    const inputPath = src.startsWith("/") ? `./src${src}` : `./src/assets/images/${src}`;
+    
+    let metadata;
+    try {
+      // Use the default export function which handles queue setup automatically
+      metadata = await eleventyImage(inputPath, {
+        widths: [576, 768, 992, 1360],
+        formats: ["avif", "webp", "jpeg"],
+        outputDir: "./public/assets/images/",
+        urlPath: "/assets/images/",
+      });
+    } catch (error) {
+      // If image processing fails, fallback to simple img tag
+      console.warn(`Failed to process image ${inputPath}:`, error.message);
+      return `<img src="/assets/images/${src}" alt="${(alt || '').replace(/"/g, '&quot;')}"${style ? ` style="${String(style).replace(/"/g, '&quot;')}"` : ''}${className ? ` class="${String(className).replace(/"/g, '&quot;')}"` : ''}>`;
+    }
+
+    // Build picture element with sources for each breakpoint and format
+    let pictureHtml = '<picture>';
+    
+    // Define sizes attribute for responsive images
+    // This tells the browser what size the image will be displayed at different viewport widths
+    // Default sizes based on container max-widths: xl: 1140px, with padding accounting for ~1220px at xl breakpoint
+    // Using calc to account for container padding and margins
+    const sizes = sizesOverride || "(min-width: 1360px) 1220px, calc(94.23vw - 43px)";
+    
+    // Generate sources for each format (AVIF, WebP) with media queries
+    for (const format of ["avif", "webp"]) {
+      if (!metadata[format]) continue;
+      
+      const formatImages = metadata[format];
+      const srcset = formatImages.map(img => `${img.url} ${img.width}w`).join(', ');
+      
+      // Add sources for each breakpoint (largest to smallest for proper media query ordering)
+      // Each source includes all widths in srcset - browser picks best size within that breakpoint
+      // Note: For true art direction, you would use different image sources per breakpoint
+      // sizes attribute is required when using width descriptors (W) in srcset
+      pictureHtml += `<source media="(min-width: 1360px)" type="image/${format}" srcset="${srcset}" sizes="${sizes}">`;
+      pictureHtml += `<source media="(min-width: 992px)" type="image/${format}" srcset="${srcset}" sizes="${sizes}">`;
+      pictureHtml += `<source media="(min-width: 768px)" type="image/${format}" srcset="${srcset}" sizes="${sizes}">`;
+      pictureHtml += `<source media="(min-width: 576px)" type="image/${format}" srcset="${srcset}" sizes="${sizes}">`;
+      // Default source for mobile (< 576px) to provide modern formats
+      pictureHtml += `<source type="image/${format}" srcset="${srcset}" sizes="${sizes}">`;
+    }
+    
+    // Fallback img tag with JPEG format
+    const jpegImages = metadata.jpeg || [];
+    const jpegSrcset = jpegImages.map(img => `${img.url} ${img.width}w`).join(', ');
+    const fallbackSrc = jpegImages.length > 0 ? jpegImages[jpegImages.length - 1].url : src;
+    
+    // Build img attributes
+    let imgAttributes = `loading="lazy" decoding="async" alt="${(alt || '').replace(/"/g, '&quot;')}" srcset="${jpegSrcset}" sizes="${sizes}" src="${fallbackSrc}"`;
+    
+    // Add style attribute if provided
+    if (style) {
+      imgAttributes += ` style="${String(style).replace(/"/g, '&quot;')}"`;
+    }
+    
+    // Add class attribute if provided
+    if (className) {
+      imgAttributes += ` class="${String(className).replace(/"/g, '&quot;')}"`;
+    }
+    
+    // Add eleventy:ignore attribute to prevent transform plugin from processing this img tag
+    imgAttributes += ' eleventy:ignore';
+    
+    pictureHtml += `<img ${imgAttributes}>`;
+    pictureHtml += '</picture>';
+    
+    return pictureHtml;
   });
 
   // Post Tags

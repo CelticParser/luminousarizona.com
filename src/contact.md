@@ -6,6 +6,6 @@ permalink: "/contact/"
 
 ## Contact Info
 
-- **Email:** <a href="mailto:jroke@luminousarizona.com">example@example.com</a>
+- **Email:** <a href="mailto:jroke@luminousarizona.com">jroke@luminousarizona.com</a>
 - **Phone:** 
 - **Address:** 

@@ -4,7 +4,12 @@
 
   {% if thumbnail %}
     <div class="card-thumbnail {% if thumbnail_size %}card-thumbnail-{{ thumbnail_size }}{% endif %}">
-      <a href="{{ url }}"><img alt="{{ title }}" src="/assets/images/{{ thumbnail }}"/></a>
+      <a href="{{ url }}">
+        {% include 'framework/shortcodes/responsive-image',
+          src: thumbnail,
+          alt: title
+        %}
+      </a>
     </div>
   {% endif %}
 

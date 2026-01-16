@@ -56,10 +56,11 @@ body_classes: page-project
           {% for item in gallery limit: limit %}
             <div class="gallery-item">
               <div class="gallery-image">
-                <img 
-                  alt="" 
-                  src="/assets/images/{{ item.image  }}"/>
-                </div>
+                {% include 'framework/shortcodes/responsive-image',
+                  src: item.image,
+                  alt: item.caption
+                %}
+              </div>
               <div class="gallery-caption">{{ item.caption }}</div>
             </div>
           {% endfor %}

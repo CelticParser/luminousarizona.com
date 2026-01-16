@@ -56,7 +56,12 @@ body_classes: page-project
         <div class="gallery gallery-masonry">
           {% for item in gallery limit: limit %}
             <div class="gallery-item">
-              <div class="gallery-image"><img alt="" src="/assets/images/{{ item.image  }}"/></div>
+              <div class="gallery-image">
+                {% include 'framework/shortcodes/responsive-image',
+                  src: item.image,
+                  alt: item.caption
+                %}
+              </div>
               {% if item.caption %}
               <div class="gallery-caption">{{ item.caption }}</div>
               {% endif %}

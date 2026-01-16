@@ -1,0 +1,42 @@
+{% comment %}
+  Responsive Image Include
+  
+  Usage:
+  {% include 'framework/shortcodes/responsive-image',
+    src: 'image-name.jpg',
+    alt: 'Image description',
+    style: 'max-width: 100%; height: auto;',
+    class: 'gallery-image',
+    object-position: 'center top',
+    sizes: '(min-width: 1360px) 1220px, calc(94.23vw - 43px)'
+  %}
+  
+  Parameters:
+  - src: Image filename (required) - should be in /assets/images/
+  - alt: Alt text for accessibility (default: '')
+  - style: Inline CSS styles (optional)
+  - class: CSS class(es) (optional)
+  - object-position: Object position for object-fit (optional) - will be appended to style
+  - sizes: Sizes attribute for responsive images (optional) - defaults to container-based sizing
+{% endcomment %}
+
+{% if src %}
+  {% assign imageSrc = src %}
+  {% assign imageAlt = alt | default: '' %}
+  
+  {% comment %} Build style attribute, combining style and object-position if provided {% endcomment %}
+  {% assign combinedStyle = style | default: '' %}
+  {% if object-position %}
+    {% if combinedStyle != '' %}
+      {% assign combinedStyle = combinedStyle | append: ' object-position: ' | append: object-position | append: ';' %}
+    {% else %}
+      {% assign combinedStyle = 'object-position: ' | append: object-position | append: ';' %}
+    {% endif %}
+  {% endif %}
+  
+  {% comment %} Use the responsiveImage shortcode {% endcomment %}
+  {% responsiveImage imageSrc, imageAlt, combinedStyle, class, sizes %}
+{% else %}
+  {% comment %} Fallback if no src provided {% endcomment %}
+  <img src="{{ src }}" alt="{{ alt | default: '' }}">
+{% endif %}
