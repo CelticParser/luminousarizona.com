@@ -1,6 +1,6 @@
 ---
 layout: image-top
-title: Beneath A Cold Moon Haze"
+title: Beneath A Cold Moon Haze
 subTitle: ""
 description: ""
 date: 2025-10-16

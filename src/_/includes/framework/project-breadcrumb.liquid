@@ -1,0 +1,19 @@
+<nav class="project-breadcrumb" aria-label="Breadcrumb">
+  <a href="/">Home</a>
+  <span class="breadcrumb-separator">/</span>
+  <a href="/projects/">Projects</a>
+  {% if tags %}
+    {% comment %} For image pages, show project name from tags {% endcomment %}
+    <span class="breadcrumb-separator">/</span>
+    <a href="/projects/{{ tags | slugify }}/">{{ tags }}</a>
+  {% elsif title %}
+    {% comment %} For project pages, show project title {% endcomment %}
+    <span class="breadcrumb-separator">/</span>
+    <span class="breadcrumb-current">{{ title }}</span>
+  {% endif %}
+  {% if tags and title %}
+    {% comment %} For image pages, also show image title {% endcomment %}
+    <span class="breadcrumb-separator">/</span>
+    <span class="breadcrumb-current">{{ title }}</span>
+  {% endif %}
+</nav>

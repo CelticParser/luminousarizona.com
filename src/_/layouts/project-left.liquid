@@ -13,6 +13,7 @@ body_classes: page-project
 
         {% if featured %}
 
+        {% include 'framework/project-breadcrumb' %}
         <div class="gallery gallery-single-column">
 
           {% for item in featured limit: limit %}
@@ -53,7 +54,7 @@ body_classes: page-project
         {% endif %}
 
         <div class="content">{{ content }}</div>
-
+        {% include 'framework/project-pagination' %}
       </div>
 
     </div>

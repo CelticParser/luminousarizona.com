@@ -12,6 +12,7 @@ body_classes: page-project
 
     <div class="row mb-6">
       <div class="col">
+        {% include 'framework/project-breadcrumb' %}
         <div class="gallery ">
 
           {% for item in featured limit: limit %}
@@ -51,6 +52,7 @@ body_classes: page-project
 
     <br>
     <div class="content" style="width: 100%">{{ content }}</div>
+    {% include 'framework/project-pagination' %}
     <br>
 
     <hr>

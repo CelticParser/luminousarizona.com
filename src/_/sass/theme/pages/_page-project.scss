@@ -1,4 +1,80 @@
 .page-project {
+  .project-breadcrumb {
+    display: none; // Hidden on mobile
+    @include media-breakpoint-up(md) {
+      display: block;
+      float: right;
+      clear: right;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: var(--color-base-text-2);
+      
+      a {
+        color: var(--color-base-text-2);
+        text-decoration: none;
+        transition: color 0.2s ease;
+        
+        &:hover {
+          color: var(--color-base-text);
+          text-decoration: underline;
+        }
+      }
+      
+      .breadcrumb-separator {
+        margin: 0 6px;
+        color: var(--color-base-text-2);
+      }
+      
+      .breadcrumb-current {
+        color: var(--color-base-text);
+        font-weight: 500;
+      }
+    }
+  }
+  
+  // Ensure gallery clears the floated breadcrumb
+  .gallery {
+    @include media-breakpoint-up(md) {
+      clear: both;
+    }
+  }
+  
+  .project-pagination {
+    display: none; // Hidden on mobile
+    @include media-breakpoint-up(md) {
+      display: block;
+      float: right;
+      clear: right;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: var(--color-base-text-2);
+      
+      .pagination-link {
+        color: var(--color-base-text-2);
+        text-decoration: none;
+        transition: color 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        
+        &:hover {
+          color: var(--color-base-text);
+          text-decoration: underline;
+        }
+      }
+      
+      .pagination-info {
+        color: var(--color-base-text-2);
+        margin: 0 15px;
+      }
+      
+      .pagination-arrow {
+        font-size: 16px;
+      }
+    }
+  }
+  
   .project-heading {
     h1 {
       font-size: 36px;
@@ -20,8 +96,6 @@
   }
   .project-description {
     width: 80%;
-    p {
-    }
   }
   .gallery {
     .gallery-item {

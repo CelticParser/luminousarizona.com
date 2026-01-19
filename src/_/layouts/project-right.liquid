@@ -26,6 +26,7 @@ body_classes: page-project
         {% endif %}
 
         <div class="content">{{ content }}</div>
+        {% include 'framework/project-pagination' %}
 
         {% if date or client or role %}
           <div class="project-stats">

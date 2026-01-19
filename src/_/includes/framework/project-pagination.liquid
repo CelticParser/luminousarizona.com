@@ -1,0 +1,20 @@
+{% comment %} Show pagination if Eleventy pagination is configured and has multiple pages {% endcomment %}
+{% if pagination.pages and pagination.pages.size > 1 %}
+<nav class="project-pagination" aria-label="Gallery pagination">
+  {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}" class="pagination-link pagination-prev" aria-label="Previous page">
+      <span class="pagination-arrow">←</span> Previous
+    </a>
+  {% endif %}
+  
+  <span class="pagination-info">
+    Page {{ pagination.pageNumber | plus: 1 }} of {{ pagination.pages.size }}
+  </span>
+  
+  {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}" class="pagination-link pagination-next" aria-label="Next page">
+      Next <span class="pagination-arrow">→</span>
+    </a>
+  {% endif %}
+</nav>
+{% endif %}
