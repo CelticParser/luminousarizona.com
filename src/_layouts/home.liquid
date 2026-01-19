@@ -16,8 +16,10 @@ body_classes: page-home
       <div class="col">
         <div class="gallery ">
           {% for item in featured limit: limit %}
+          {% assign imageItem = collections.images | where: "data.title", item.caption | first %}
+          {% assign projectTag = imageItem.data.tags | default: "" %}
           <div class="gallery-item">
-            <a href="images/{{ item.caption | slugify }}">
+            <a href="/projects/{{ projectTag }}/{{ item.caption | slugify }}">
               <div class="gallery-image">
                 {% include 'framework/shortcodes/responsive-image',
                   src: item.image,

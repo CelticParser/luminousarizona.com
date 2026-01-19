@@ -14,13 +14,23 @@ export default function(eleventyConfig) {
   eleventyConfig.addDataExtension("yml", (contents) => yaml.load(contents));
   // 11ty Collections
   eleventyConfig.addCollection("projects", (collection) => {
-    return collection.getFilteredByGlob("./src/projects/*.md");
+    return collection.getFilteredByGlob("./src/projects/**/*.md").filter(item => {
+      // Only include the main project file (same name as directory)
+      const dirName = item.inputPath.split('/').slice(-2, -1)[0];
+      const fileName = item.inputPath.split('/').slice(-1)[0].replace('.md', '');
+      return dirName === fileName;
+    });
   });
   eleventyConfig.addCollection("about", (collection) => {
     return collection.getFilteredByGlob("./src/about/*.md");
   });
   eleventyConfig.addCollection("images", (collection) => {
-    return collection.getFilteredByGlob("./src/images/*.md");
+    // Images are now in project subdirectories, collect all .md files except the main project file
+    return collection.getFilteredByGlob("./src/projects/**/*.md").filter(item => {
+      const dirName = item.inputPath.split('/').slice(-2, -1)[0];
+      const fileName = item.inputPath.split('/').slice(-1)[0].replace('.md', '');
+      return dirName !== fileName; // Exclude the main project file
+    });
   });
   eleventyConfig.addCollection("posts", (collection) => {
     return collection.getFilteredByGlob("./src/_posts/*.md");

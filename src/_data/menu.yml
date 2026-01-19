@@ -62,7 +62,7 @@ footer_secondary:
     url: "/blog/"
     order: 2
   - name: About
-    url: "/about/"
+    url: "/about/jason-robert-okennedy/"
     order: 3
   - name: Contact
     url: "/contact/"

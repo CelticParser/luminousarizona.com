@@ -18,7 +18,7 @@ body_classes: page-project
           {% for item in featured limit: limit %}
 
           <div>
-            <a href="/images/{{ item.caption | slugify }}">
+            <a href="/projects/{{ title | slugify }}/{{ item.caption | slugify }}">
               <div class="gallery-image">
                 {% include 'framework/shortcodes/responsive-image',
                   src: item.image,
