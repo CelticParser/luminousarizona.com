@@ -9,7 +9,7 @@ import eleventyImage from "@11ty/eleventy-img";
 
 export default function(eleventyConfig) {
   // 11ty watch targets
-  eleventyConfig.addWatchTarget("./src/_scss/");
+  eleventyConfig.addWatchTarget("./src/_/sass/");
   // 11ty YAML support
   eleventyConfig.addDataExtension("yml", (contents) => yaml.load(contents));
   // 11ty Collections
@@ -33,7 +33,7 @@ export default function(eleventyConfig) {
     });
   });
   eleventyConfig.addCollection("posts", (collection) => {
-    return collection.getFilteredByGlob("./src/_posts/*.md");
+    return collection.getFilteredByGlob("./src/_/posts/*.md");
   });
 
   // Image config
@@ -134,7 +134,7 @@ export default function(eleventyConfig) {
   // Post Tags
   eleventyConfig.addCollection("tagList", (collectionApi) => {
     const tagsSet = {};
-    collectionApi.getFilteredByGlob("./src/_posts/*.md").forEach((item) => {
+    collectionApi.getFilteredByGlob("./src/_/posts/*.md").forEach((item) => {
       if (!item.data.tags) return;
       item.data.tags
         .filter((tag) => !["posts", "all"].includes(tag))
@@ -151,7 +151,7 @@ export default function(eleventyConfig) {
   // Post Categories
   eleventyConfig.addCollection("categoryList", (collectionApi) => {
     let catSet = {};
-    collectionApi.getFilteredByGlob("./src/_posts/*.md").forEach((item) => {
+    collectionApi.getFilteredByGlob("./src/_/posts/*.md").forEach((item) => {
       if (!item.data.categories) return;
       item.data.categories
         .filter((cat) => !["posts", "all"].includes(cat))
@@ -214,8 +214,9 @@ export default function(eleventyConfig) {
     dir: {
       input: "src",
       output: "public",
-      includes: "_includes",
-      layouts: "_layouts",
+      data: "_/_data",
+      includes: "_/includes",
+      layouts: "_/layouts",
     },
   };
 };

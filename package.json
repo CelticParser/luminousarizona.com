@@ -4,9 +4,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "watch:sass": "sass --watch src/_sass/style.scss:public/assets/css/style.css",
-    "build:sass": "sass src/_sass/style.scss:public/assets/css/style.css",
-    "build:sass:prod": "sass --style=compressed --no-source-map src/_sass/style.scss:public/assets/css/style.css",
+    "watch:sass": "sass --watch src/_/sass/style.scss:public/assets/css/style.css",
+    "build:sass": "sass src/_/sass/style.scss:public/assets/css/style.css",
+    "build:sass:prod": "sass --style=compressed --no-source-map src/_/sass/style.scss:public/assets/css/style.css",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "eleventy",
     "clean": "rm -rf public",
