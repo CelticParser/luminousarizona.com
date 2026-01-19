@@ -32,25 +32,17 @@
     }
   }
   
-  // Ensure gallery clears the floated breadcrumb
-  .gallery {
-    @include media-breakpoint-up(md) {
-      clear: both;
-    }
-  }
-  
-  .project-pagination {
+  .project-navigation {
     display: none; // Hidden on mobile
     @include media-breakpoint-up(md) {
       display: block;
       float: right;
       clear: right;
-      margin-top: 10px;
       margin-bottom: 10px;
       font-size: 14px;
       color: var(--color-base-text-2);
       
-      .pagination-link {
+      .nav-link {
         color: var(--color-base-text-2);
         text-decoration: none;
         transition: color 0.2s ease;
@@ -64,16 +56,24 @@
         }
       }
       
-      .pagination-info {
+      .nav-separator {
+        margin: 0 10px;
         color: var(--color-base-text-2);
-        margin: 0 15px;
       }
       
-      .pagination-arrow {
+      .nav-arrow {
         font-size: 16px;
       }
     }
   }
+  
+  // Ensure gallery clears the floated breadcrumb
+  .gallery {
+    @include media-breakpoint-up(md) {
+      clear: both;
+    }
+  }
+  
   
   .project-heading {
     h1 {
