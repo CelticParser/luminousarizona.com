@@ -1,55 +1,271 @@
 
-
-
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEXBEzrYSrSMcd6g3yS-DpeD2fVuCpUfc&callback=initMap"></script>
 
     <div id="map" style="aspect-ratio: 16 / 9; width: 100%;"></div>
 
     <script>
     function initMap() {
+        {% comment %} Get center and zoom - from project's gMap if isProject, or from image's gMap if image page {% endcomment %}
+        {% assign mapCenterLat = '34.5667' %}
+        {% assign mapCenterLng = '-111.85' %}
+        {% assign mapZoom = '8' %}
         
-        {% for item in featured limit: limit %}
-
+        {% if isProject and gMap and gMap.size > 0 %}
+          {% comment %} Project page: use project's gMap center and zoom {% endcomment %}
+          {% assign gMapConfig = gMap[0] %}
+          {% if gMapConfig.center %}
+            {% assign centerStr = gMapConfig.center %}
+            {% assign centerParts = centerStr | split: ',' %}
+            {% if centerParts.size >= 2 %}
+              {% assign latStr = centerParts[0] | split: ':' %}
+              {% assign lngStr = centerParts[1] | split: ':' %}
+              {% if latStr.size >= 2 and lngStr.size >= 2 %}
+                {% assign mapCenterLat = latStr[1] | strip %}
+                {% assign mapCenterLng = lngStr[1] | strip %}
+              {% endif %}
+            {% endif %}
+          {% endif %}
+          
+          {% if gMapConfig.zoom %}
+            {% assign mapZoom = gMapConfig.zoom %}
+          {% endif %}
+        {% elsif gMap and gMap.size > 0 %}
+          {% comment %} Image page: use image's gMap center/zoom, or use tripod as center if no center specified {% endcomment %}
+          {% assign gMapConfig = gMap[0] %}
+          {% if gMapConfig.center %}
+            {% assign centerStr = gMapConfig.center %}
+            {% assign centerParts = centerStr | split: ',' %}
+            {% if centerParts.size >= 2 %}
+              {% assign latStr = centerParts[0] | split: ':' %}
+              {% assign lngStr = centerParts[1] | split: ':' %}
+              {% if latStr.size >= 2 and lngStr.size >= 2 %}
+                {% assign mapCenterLat = latStr[1] | strip %}
+                {% assign mapCenterLng = lngStr[1] | strip %}
+              {% endif %}
+            {% endif %}
+          {% elsif gMapConfig.tripod %}
+            {% comment %} If no center specified, use tripod location as center {% endcomment %}
+            {% assign tripodStr = gMapConfig.tripod %}
+            {% assign tripodParts = tripodStr | split: ',' %}
+            {% if tripodParts.size >= 2 %}
+              {% assign latPart = tripodParts[0] | split: ':' %}
+              {% assign lngPart = tripodParts[1] | split: ':' %}
+              {% if latPart.size >= 2 and lngPart.size >= 2 %}
+                {% assign mapCenterLat = latPart[1] | strip %}
+                {% assign mapCenterLng = lngPart[1] | strip %}
+              {% endif %}
+            {% endif %}
+          {% endif %}
+          
+          {% if gMapConfig.zoom %}
+            {% assign mapZoom = gMapConfig.zoom %}
+          {% endif %}
+        {% endif %}
+        
         const mapOptions = {
             center: { 
-
-                {% if isProject %}
-                 lat: 34.5667, lng: -111.85
-                {%  else %}
-                {{ tripod }}
-                {% endif %}
-
-            }, // Initial map center
-            zoom: 8, // Initial zoom level
+                lat: {{ mapCenterLat }},
+                lng: {{ mapCenterLng }}
+            },
+            zoom: {{ mapZoom }},
             mapId: "1fd95539b9a6382ce645575f",
         };
 
         const map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-        // Define your custom points
-        const customPoints = [
-            { 
-                lat: 36.970402, lng: -110.141348, 
-                title: 'Grey Whiskers Butte',
-                icon: {
-                    url: '/assets/images/grey-whiskers-butte-photo-by-jason-robert-okennedy.jpeg',
-                    size: new google.maps.Size(100, 100), // Size of the image in pixels
-                    origin: new google.maps.Point(0, 0), // Origin point (top-left corner)
-                    anchor: new google.maps.Point(16, 32) // Anchor point (center-bottom for a pushpin effect)
-                }
-            },
+        {% if isProject %}
+          {% comment %} Project page: show all pins from project images {% endcomment %}
+          // Get project images from collections using project title as tag
+          {% assign projectTag = title | slugify %}
+          {% assign projectImages = collections[projectTag] %}
+          
+          // Define custom points from project images' gMap.tripod
+          const customPoints = [
+            {% if projectImages %}
+              {% assign pointCount = 0 %}
+              {% for image in projectImages %}
+                {% if image.data.gMap and image.data.gMap.size > 0 %}
+                  {% assign imageGMap = image.data.gMap[0] %}
+                  {% if imageGMap.tripod %}
+                    {% comment %} Parse tripod string: "lat: 36.970402, lng: -110.141348" {% endcomment %}
+                    {% assign tripodStr = imageGMap.tripod %}
+                    {% assign tripodParts = tripodStr | split: ',' %}
+                    {% if tripodParts.size >= 2 %}
+                      {% assign latPart = tripodParts[0] | split: ':' %}
+                      {% assign lngPart = tripodParts[1] | split: ':' %}
+                      {% if latPart.size >= 2 and lngPart.size >= 2 %}
+                        {% assign lat = latPart[1] | strip %}
+                        {% assign lng = lngPart[1] | strip %}
+                        {% if pointCount > 0 %},{% endif %}
+                        {
+                            lat: {{ lat }},
+                            lng: {{ lng }}, 
+                            title: '{{ image.data.title | escape }}',
+                            imageUrl: '{{ image.data.image }}',
+                            pageUrl: '{{ image.url }}',
+                            portrait: {% if imageGMap.portrait == true %}true{% else %}false{% endif %}
+                        }
+                        {% assign pointCount = pointCount | plus: 1 %}
+                      {% endif %}
+                    {% endif %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          ];
+        {% else %}
+          {% comment %} Image page: show single pin for this image {% endcomment %}
+          {% if gMap and gMap.size > 0 %}
+            {% assign imageGMap = gMap[0] %}
+            {% if imageGMap.tripod %}
+              {% assign tripodStr = imageGMap.tripod %}
+              {% assign tripodParts = tripodStr | split: ',' %}
+              {% if tripodParts.size >= 2 %}
+                {% assign latPart = tripodParts[0] | split: ':' %}
+                {% assign lngPart = tripodParts[1] | split: ':' %}
+                {% if latPart.size >= 2 and lngPart.size >= 2 %}
+                  {% assign lat = latPart[1] | strip %}
+                  {% assign lng = lngPart[1] | strip %}
+                  const customPoints = [
+                    {
+                        lat: {{ lat }},
+                        lng: {{ lng }}, 
+                        title: '{{ title | escape }}',
+                        imageUrl: '{{ image }}',
+                        pageUrl: '{{ page.url }}',
+                        portrait: {% if imageGMap.portrait == true %}true{% else %}false{% endif %}
+                    }
+                  ];
+                {% else %}
+                  const customPoints = [];
+                {% endif %}
+              {% else %}
+                const customPoints = [];
+              {% endif %}
+            {% else %}
+              const customPoints = [];
+            {% endif %}
+          {% else %}
+            const customPoints = [];
+          {% endif %}
+        {% endif %}
 
-        ];
-
-        {% endfor %}
+        // Function to create custom icon with border and pointer
+        function createCustomIcon(imageUrl, isPortrait) {
+            return new Promise((resolve) => {
+                const img = new Image();
+                img.crossOrigin = 'anonymous';
+                
+                img.onload = function() {
+                    // Set dimensions based on orientation
+                    const imgWidth = isPortrait ? 50 : 80;
+                    const imgHeight = isPortrait ? 70 : 50;
+                    const borderWidth = 2;
+                    const pointerHeight = 10;
+                    const pointerWidth = 12;
+                    
+                    // Total canvas dimensions (image + border + pointer)
+                    const canvasWidth = imgWidth + (borderWidth * 2);
+                    const canvasHeight = imgHeight + (borderWidth * 2) + pointerHeight;
+                    
+                    const canvas = document.createElement('canvas');
+                    canvas.width = canvasWidth;
+                    canvas.height = canvasHeight;
+                    const ctx = canvas.getContext('2d');
+                    
+                    // Draw orange border around image
+                    ctx.fillStyle = '#FF8C00'; // Orange color
+                    ctx.fillRect(0, 0, canvasWidth, imgHeight + (borderWidth * 2));
+                    
+                    // Apply object-fit: cover behavior
+                    // Calculate aspect ratios
+                    const sourceAspect = img.naturalWidth / img.naturalHeight;
+                    const targetAspect = imgWidth / imgHeight;
+                    
+                    let drawWidth, drawHeight, sourceX, sourceY, sourceWidth, sourceHeight;
+                    
+                    if (sourceAspect > targetAspect) {
+                        // Source is wider - fit to height and crop width
+                        drawHeight = imgHeight;
+                        drawWidth = imgHeight * sourceAspect;
+                        sourceX = (img.naturalWidth - (img.naturalHeight * targetAspect)) / 2;
+                        sourceY = 0;
+                        sourceWidth = img.naturalHeight * targetAspect;
+                        sourceHeight = img.naturalHeight;
+                    } else {
+                        // Source is taller - fit to width and crop height
+                        drawWidth = imgWidth;
+                        drawHeight = imgWidth / sourceAspect;
+                        sourceX = 0;
+                        sourceY = (img.naturalHeight - (img.naturalWidth / targetAspect)) / 2;
+                        sourceWidth = img.naturalWidth;
+                        sourceHeight = img.naturalWidth / targetAspect;
+                    }
+                    
+                    // Draw image with cover behavior (cropped and centered)
+                    ctx.drawImage(
+                        img,
+                        sourceX, sourceY, sourceWidth, sourceHeight, // Source rectangle
+                        borderWidth, borderWidth, imgWidth, imgHeight // Destination rectangle
+                    );
+                    
+                    // Draw orange pointer pin at bottom center
+                    const pointerX = (canvasWidth / 2) - (pointerWidth / 2);
+                    const pointerY = imgHeight + (borderWidth * 2);
+                    
+                    ctx.beginPath();
+                    ctx.moveTo(pointerX, pointerY);
+                    ctx.lineTo(pointerX + (pointerWidth / 2), pointerY + pointerHeight);
+                    ctx.lineTo(pointerX + pointerWidth, pointerY);
+                    ctx.closePath();
+                    ctx.fillStyle = '#FF8C00'; // Orange color
+                    ctx.fill();
+                    
+                    // Add orange border to pointer
+                    ctx.strokeStyle = '#FF8C00';
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                    
+                    resolve({
+                        url: canvas.toDataURL(),
+                        scaledSize: new google.maps.Size(canvasWidth, canvasHeight),
+                        anchor: new google.maps.Point(canvasWidth / 2, canvasHeight) // Anchor at bottom center of pointer
+                    });
+                };
+                
+                img.onerror = function() {
+                    // Fallback if image fails to load
+                    resolve({
+                        url: imageUrl,
+                        scaledSize: new google.maps.Size(isPortrait ? 50 : 80, isPortrait ? 70 : 50),
+                        anchor: new google.maps.Point(isPortrait ? 25 : 40, isPortrait ? 70 : 50)
+                    });
+                };
+                
+                img.src = imageUrl;
+            });
+        }
 
         // Add markers for each custom point
-        customPoints.forEach(point => {
-            new google.maps.Marker({
-                position: { lat: point.lat, lng: point.lng },
-                map: map,
-                title: point.title,
-                icon: point.icon
+        customPoints.forEach((point) => {
+            // Create absolute URL for the image
+            const baseUrl = window.location.origin;
+            const imageUrl = baseUrl + '/assets/images/' + point.imageUrl;
+            
+            // Create custom icon with border and pointer
+            createCustomIcon(imageUrl, point.portrait).then((iconConfig) => {
+                const marker = new google.maps.Marker({
+                    position: { lat: point.lat, lng: point.lng },
+                    map: map,
+                    title: point.title,
+                    icon: iconConfig,
+                    optimized: false
+                });
+                
+                // Add click event to navigate to image page
+                marker.addListener('click', function() {
+                    window.location.href = point.pageUrl;
+                });
             });
         });
     }

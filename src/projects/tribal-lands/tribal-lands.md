@@ -14,9 +14,10 @@ featured:
     alt: ""
     caption: "Grey Whiskers Butte"
     year: "2020"
-    tripod: "lat: 36.970402, lng: -110.141348"
+gMap:
+  - center: "lat: 36.970402, lng: -110.141348"
+    zoom: "10"
 gallery: true
-gallery_limit: 2
 ---
 
 <b><i>"This essay project is a pilgrimage to the heart of the Southwest, a chance to capture the timeless beauty and historical significance of the tribal lands within. The Navajo Nation, the Hopi Reservation, the Apache lands, the Tohono Oʼodham - each hold stories as old as the canyons, forests, and deserts themselves."</i></b>

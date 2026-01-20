@@ -22,7 +22,9 @@ gallery:
   - image: "grey-whiskers-butte-photo-by-jason-robert-okennedy.jpeg"
     caption: "Grey Whiskers Butte"
     alt: ""
-gallery_limit: 2
+gMap:
+  - center: "lat: 34.592446, lng: -112.418207"
+    zoom: "11"
 ---
 
 <i><b>"Arizona, the state of extremes, hosts an astonishing biodiversity defined by elevation, where arid desert floors ascend rapidly into alpine peaks."</b></i>

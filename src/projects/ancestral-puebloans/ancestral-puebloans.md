@@ -21,7 +21,9 @@ gallery:
   - image: "grey-whiskers-butte-photo-by-jason-robert-okennedy.jpeg"
     caption: "Grey Whiskers Butte"
     alt: ""
-gallery_limit: 2
+gMap:
+  - center: "lat: 35.531521, lng: -111.329461"
+    zoom: "10"
 ---
 
 <i><b>"The arid canyons and mesas of the Southwest hold monuments not to nature, but to memory."</i></b>

@@ -10,7 +10,10 @@ thumbnail: "grey-whiskers-butte-photo-by-jason-robert-okennedy.jpeg"
 image: "grey-whiskers-butte-photo-by-jason-robert-okennedy.jpeg"
 alt: ""
 year: "2020"
-tripod: "lat: 36.970402, lng: -110.141348"
+gMap:
+  - tripod: "lat: 36.970402, lng: -110.141348"
+    zoom: "12"
+    portrait: false
 ---
 > _Upon red lands where ancient mesas stand,
 A spirit walked, a guide named Grey Whiskers,

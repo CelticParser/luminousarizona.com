@@ -10,7 +10,10 @@ thumbnail: "image-coming-soon.webp"
 image: "image-coming-soon.webp"
 alt: ""
 year: "2026"
-tripod: "lat: 32.103310, lng: -111.003673"
+gMap:
+  - tripod: "NULL"
+    zoom: "13"
+    portrait: true
 ---
 
 > _Upon the canyon's long rust-red walls,

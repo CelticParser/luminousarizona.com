@@ -11,7 +11,10 @@ tumbCardPosition: "top"
 image: "aspen-on-watson-lake-photo-by-jason-robert-okennedy.jpeg"
 alt: ""
 year: "2022"
-tripod: "lat: 32.103310, lng: -111.003673"
+gMap:
+  - tripod: "lat: 34.592446, lng: -112.418207"
+    zoom: "14"
+    portrait: false
 ---
 
 > _Two distant, solemn souls share cracks of granite in silence
