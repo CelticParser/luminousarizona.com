@@ -7,22 +7,16 @@ date: 2026-01-01
 weight: 5
 thumbnail: "delapidated-dc3-ephonage-photo-by-jason-robert-okennedy.jpeg"
 tumbCardPosition: "bottom"
-categories: ["Tribal Lands"]
-role: ""
 isProject: true
 featured:
   - image: "delapidated-dc3-ephonage-photo-by-jason-robert-okennedy.jpeg"
     alt: ""
     caption: "Delapidated DC3 Ephonage"
     year: "2020"
-gallery:
-  - image: "grey-whiskers-butte-photo-by-jason-robert-okennedy.jpeg"
-    caption: "Grey Whiskers Butte"
-    alt: ""
-  - image: "grey-whiskers-butte-photo-by-jason-robert-okennedy.jpeg"
-    caption: "Grey Whiskers Butte"
-    alt: ""
-gallery_limit: 2
+gMap:
+  - tripod: "lat: 33.223918, lng: -112.136214"
+    zoom: "9"
+    portrait: false
 ---
 
 <b><i>"The objects and structures we leave behind possess a unique narrative, acquiring a spectral dignity as time and the elements claim them."</i></b>

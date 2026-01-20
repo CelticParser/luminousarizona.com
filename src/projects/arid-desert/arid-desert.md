@@ -6,17 +6,17 @@ description: ""
 date: 2026-01-01
 weight: 12
 thumbnail: "el-desierto-pintado-photo-by-jason-robert-okennedy.jpeg"
-categories: ["Tribal Lands"]
-role: ""
+categories: ["Arid-Desert"]
 isProject: true
 featured:
   - image: "el-desierto-pintado-photo-by-jason-robert-okennedy.jpeg"
     alt: ""
     caption: "el Desierto Pintado"
     year: "2020"
-    tripod: "lat: 36.970402, lng: -110.141348"
 gallery: true
-gallery_limit: 2
+gMap:
+  - center: "lat: 35.065036, lng: -112.393389"
+    zoom: "7"
 ---
 
 <b><i>"The Arizona desert, often romanticized as boundless scenery, is fundamentally defined by its profound and unforgiving ecology. It is an ecosystem built upon scarcity—a land where survival is an active, daily negotiation with extreme heat, unrelenting sun, and chronic drought."</i></b>

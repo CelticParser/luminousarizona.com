@@ -23,7 +23,7 @@ gallery:
     alt: ""
 gMap:
   - center: "lat: 35.531521, lng: -111.329461"
-    zoom: "10"
+    zoom: "7"
 ---
 
 <i><b>"The arid canyons and mesas of the Southwest hold monuments not to nature, but to memory."</i></b>

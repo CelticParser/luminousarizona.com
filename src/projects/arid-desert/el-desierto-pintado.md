@@ -10,7 +10,10 @@ thumbnail: "el-desierto-pintado-photo-by-jason-robert-okennedy.jpeg"
 image: "el-desierto-pintado-photo-by-jason-robert-okennedy.jpeg"
 alt: ""
 year: "2023"
-tripod: "lat: 32.103310, lng: -111.003673"
+gMap:
+  - tripod: "lat: 36.065036, lng: -111.393389"
+    zoom: "14"
+    portrait: false
 ---
 
 > _The Spanish dream, by gilded hope defined,

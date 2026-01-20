@@ -10,7 +10,10 @@ thumbnail: "image-coming-soon.webp"
 image: "image-coming-soon.webp"
 alt: ""
 year: "2026"
-tripod: "lat: 32.103310, lng: -111.003673"
+gMap:
+  - tripod: "lat: 34.065, lng: -112.5"
+    zoom: "14"
+    portrait: false
 ---
 
 > _Does sorrow weave a wreath of prickly shame,

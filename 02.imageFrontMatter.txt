@@ -1,0 +1,18 @@
+---
+layout: image-top
+title: "Window to Darkness"
+subTitle: ""
+description: ""
+date: 2025-10-16
+tags: "ancestral-puebloans"
+permalink: "/projects/ancestral-puebloans/window-to-darkness/"
+thumbnail: "image-coming-soon.webp"
+tumbCardPosition: "top"
+image: "image-coming-soon.webp"
+alt: ""
+year: "2026"
+gMap:
+  - tripod: "lat: 33.640383, lng: -111.116602"
+    zoom: "14"
+    portrait: false
+---

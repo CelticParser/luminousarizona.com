@@ -8,23 +8,15 @@ weight: 8
 thumbnail: "two-aspen-photo-by-jason-robert-okennedy.webp"
 tumbCardPosition: "bottom"
 categories: ["Arboreal"]
-role: ""
 isProject: true
 featured:
   - image: "two-aspen-photo-by-jason-robert-okennedy.webp"
     alt: ""
     caption: "Two Aspen"
     year: "2020"
-gallery:
-  - image: "grey-whiskers-butte-photo-by-jason-robert-okennedy.jpeg"
-    caption: "Grey Whiskers Butte"
-    alt: ""
-  - image: "grey-whiskers-butte-photo-by-jason-robert-okennedy.jpeg"
-    caption: "Grey Whiskers Butte"
-    alt: ""
 gMap:
-  - center: "lat: 34.592446, lng: -112.418207"
-    zoom: "11"
+  - center: "lat: 34.911695, lng: -111.974406"
+    zoom: "9"
 ---
 
 <i><b>"Arizona, the state of extremes, hosts an astonishing biodiversity defined by elevation, where arid desert floors ascend rapidly into alpine peaks."</b></i>

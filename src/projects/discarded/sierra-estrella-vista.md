@@ -7,10 +7,14 @@ date: 2025-10-16
 tags: "discarded"
 permalink: "/projects/discarded/sierra-estrella-vista/"
 thumbnail: "sierra-estrella-vista-by-jason-robert-okennedy.jpg"
+tumbCardPosition: ""
 image: "sierra-estrella-vista-by-jason-robert-okennedy.jpg"
 alt: ""
 year: "2022"
-tripod: "lat: 32.103310, lng: -111.003673"
+gMap:
+  - tripod: "lat: 33.234205, lng: -112.443895"
+    zoom: "14"
+    portrait: false
 ---
 
 > _The sun-baked clay of earthen walls decays,
