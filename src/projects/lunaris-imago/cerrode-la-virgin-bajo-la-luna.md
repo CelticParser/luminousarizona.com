@@ -1,19 +1,19 @@
 ---
 layout: image-top
-title: "A Hunters Moon"
+title: "Cerrode la Virgin Bajo la Luna"
 subTitle: ""
 description: ""
 date: 2025-10-16
 tags: "lunaris-imago"
-permalink: "/projects/lunaris-imago/a-hunters-moon/"
-thumbnail: "image-coming-soon.webp"
-tumbCardPosition: "top"
-image: "image-coming-soon.webp"
+permalink: "/projects/lunaris-imago/errode-la-virgin-bajo-la-luna/"
+thumbnail: "cerrode-la-virgin-bajo-la-luna-photo-by-jason-robrt-okennedy.jpg"
+tumbCardPosition: ""
+image: "cerrode-la-virgin-bajo-la-luna-photo-by-jason-robrt-okennedy.jpg"
 alt: ""
-year: "2026"
+year: "2022"
 gMap:
-  - tripod: "lat: 33.452207, lng: -111.461914"
-    zoom: "14"
+  - tripod: "lat: 31.3797, lng: -110.222646"
+    zoom: "12"
     portrait: false
 ---
 

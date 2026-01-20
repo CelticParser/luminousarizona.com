@@ -7,19 +7,15 @@ date: 2026-01-01
 weight: 3
 thumbnail: "picacho-photo-by-jason-robert-okennedy.jpeg"
 tumbCardPosition: "bottom"
-categories: ["Monoliths"]
 role: ""
 isProject: true
 featured:
   - image: "picacho-photo-by-jason-robert-okennedy.jpeg"
     caption: "Picacho"
     year: "2023"
-gallery:
-  - image: "notches-in-the-sky-photo-by-jason-robert-okennedy.jpeg"
-    caption: "Notches In The Sky"
-  - image: "notches-in-the-sky-photo-by-jason-robert-okennedy.jpeg"
-    caption: "Notches In The Sky"
-gallery_limit: 2
+gMap:
+  - center: "lat: 33.75, lng: -112"
+    zoom: "8"
 ---
 
 <b><i>"Arizona’s identity is forged not just by its vast arid plains, but by the sudden, dramatic ascent of its mountain ranges and isolated peaks."</i></b>

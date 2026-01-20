@@ -7,16 +7,15 @@ date: 2026-01-01
 weight: 11
 thumbnail: "cerrode-la-virgin-bajo-la-luna-photo-by-jason-robrt-okennedy.jpg"
 categories: ["lunaris-imago"]
-role: ""
 isProject: true
 featured:
   - image: "cerrode-la-virgin-bajo-la-luna-photo-by-jason-robrt-okennedy.jpg"
     alt: ""
     caption: "Cerrode la Virgin Bajo la Luna"
     year: "2020"
-    tripod: "lat: 36.970402, lng: -110.141348"
-gallery: true
-gallery_limit: 2
+gMap:
+  - center: "lat: 32.75, lng: -111"
+    zoom: "8"
 ---
 
 <b><i>"The celestial sphere, with its cyclic presence and luminous mystery, has long served as a profound mirror for human contemplation. Of all the heavenly bodies, the moon possesses a unique and enduring visual power, simultaneously intimate and impossibly distant."</i></b>

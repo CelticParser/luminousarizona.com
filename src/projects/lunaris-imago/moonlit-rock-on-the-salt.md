@@ -7,10 +7,14 @@ date: 2025-10-16
 tags: "lunaris-imago"
 permalink: "/projects/lunaris-imago/moonlit-rock-on-the-salt/"
 thumbnail: "moonlit-rock-on-the-salt-photo-by-jason-robert-okennedy.jpeg"
+tumbCardPosition: "bottom"
 image: "moonlit-rock-on-the-salt-photo-by-jason-robert-okennedy.jpeg"
 alt: ""
 year: "2022"
-tripod: "lat: 32.103310, lng: -111.003673"
+gMap:
+  - tripod: "lat: 33.557069, lng: -111.540724"
+    zoom: "14"
+    portrait: true
 ---
 
 <b><i>"We thank the moon for the light it provides, 
