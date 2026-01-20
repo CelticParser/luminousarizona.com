@@ -14,9 +14,8 @@ featured:
     caption: "Delapidated DC3 Ephonage"
     year: "2020"
 gMap:
-  - tripod: "lat: 33.223918, lng: -112.136214"
-    zoom: "9"
-    portrait: false
+  - center: "lat: 33.223918, lng: -112.136214"
+    zoom: "10"
 ---
 
 <b><i>"The objects and structures we leave behind possess a unique narrative, acquiring a spectral dignity as time and the elements claim them."</i></b>

@@ -7,7 +7,6 @@ date: 2026-01-01
 weight: 6
 thumbnail: "wukoki-by-jason-robert-okennedy.jpeg"
 tumbCardPosition: "bottom"
-categories: ["Ancestral Puebloans"]
 isProject: true
 featured:
   - image: "wukoki-by-jason-robert-okennedy.jpeg"
