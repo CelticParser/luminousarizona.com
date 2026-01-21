@@ -27,9 +27,9 @@ main:
       - name: Tribal Lands
         description: 
         url: "/projects/tribal-lands/"
-      - name: Warship
+      - name: worship
         description: 
-        url: "/projects/warship/"
+        url: "/projects/worship/"
   - name: Blog
     url: "/blog/"
     order: 2
