@@ -8,18 +8,14 @@ weight: 9
 thumbnail: "muerte_de_un_saguaro-photo-by-jason-robert-okennedy.jpg"
 tumbCardPosition: "0px -110px"
 categories: ["muerte de un saguaro"]
-role: ""
 isProject: true
 featured:
   - image: "muerte_de_un_saguaro-photo-by-jason-robert-okennedy.jpg"
     caption: "Muerte de un Saguaro #1"
     year: "2023"
-gallery:
-  - image: "muerte_de_un_saguaro-photo-by-jason-robert-okennedy.jpg"
-    caption: "Notches In The Sky"
-  - image: "muerte_de_un_saguaro-photo-by-jason-robert-okennedy.jpg"
-    caption: "Notches In The Sky"
-gallery_limit: 2
+gMap:
+  - center: "lat: 35.531521, lng: -111.329461"
+    zoom: "7"
 ---
 
 <b><i>"The Saguaro cactus (Carnegiea gigantea) stands as the silent, colossal sentinel of the Sonoran Desert, a living monument to centuries of arid persistence."</i></b>

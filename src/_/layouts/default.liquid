@@ -13,11 +13,10 @@
     <link href="{{ '/assets/css/style.css' }}" rel="stylesheet">
     <link href="{{ '/assets/css/main.css' }}" rel="stylesheet">
 
-    {% if site.darkmode.enable_dark_mode != false %}
-      <script>
-          localStorage.getItem('darkMode') === 'true' && document.documentElement.setAttribute('data-bs-theme', 'dark');
-      </script>
-    {% endif %}
+    <script>
+        // Always set dark mode
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+    </script>
 
     {% if site.cookie_banner.enabled %}
       {% include "framework/cookie-consent" %}
@@ -48,7 +47,6 @@
   <script type="text/javascript" src="{{ '/assets/js/header.js' }}"></script>
 {% endif %}
 <script type="text/javascript" src="{{ '/assets/js/hamburger.js' }}"></script>
-<script type="text/javascript" src="{{ '/assets/js/darkModeSwitch.js' }}"></script>
 
 {% include "framework/google-analytics" %}
 {% include "framework/plausible-analytics" %}

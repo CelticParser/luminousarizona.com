@@ -67,10 +67,10 @@ open_graph:
 
 darkmode:
   enable_dark_mode: true
-  show_dark_mode_toggle_in_header: true
+  show_dark_mode_toggle_in_header: false
   show_dark_mode_toggle_in_footer: false
   show_dark_mode_toggle_in_bottom: false
-  show_dark_mode_toggle_in_mobile_menu: true
+  show_dark_mode_toggle_in_mobile_menu: false
 
 cookie_banner:
   enabled: true
