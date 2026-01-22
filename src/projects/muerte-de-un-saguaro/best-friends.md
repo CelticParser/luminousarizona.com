@@ -7,10 +7,14 @@ date: 2025-10-16
 tags: "muerte-de-un-saguaro"
 permalink: "/projects/muerte-de-un-saguaro/best-friends/"
 thumbnail: "image-coming-soon.webp"
+tumbCardPosition: "top"
 image: "image-coming-soon.webp"
 alt: ""
 year: "2026"
-tripod: "lat: 32.103310, lng: -111.003673"
+gMap:
+  - tripod: "lat: 33.542150, lng: -111.442297"
+    zoom: "14"
+    portrait: false
 ---
 
 > _Two sentinels, by sun-baked earth they stood,

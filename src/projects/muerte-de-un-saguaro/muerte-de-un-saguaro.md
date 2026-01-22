@@ -14,8 +14,8 @@ featured:
     caption: "Muerte de un Saguaro #1"
     year: "2023"
 gMap:
-  - center: "lat: 35.531521, lng: -111.329461"
-    zoom: "7"
+  - center: "lat: 33.489033, lng: -112"
+    zoom: "10"
 ---
 
 <b><i>"The Saguaro cactus (Carnegiea gigantea) stands as the silent, colossal sentinel of the Sonoran Desert, a living monument to centuries of arid persistence."</i></b>
