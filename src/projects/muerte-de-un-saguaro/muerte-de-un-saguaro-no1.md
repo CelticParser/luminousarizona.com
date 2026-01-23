@@ -1,5 +1,5 @@
 ---
-layout: image-top
+layout: image-left
 title: "Muerte de un Saguaro"
 subTitle: "The Death of a Saguaro"
 description: ""

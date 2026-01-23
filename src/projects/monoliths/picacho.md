@@ -1,5 +1,5 @@
 ---
-layout: image-top
+layout: image-left
 title: "Picacho"
 subTitle: ""
 description: ""

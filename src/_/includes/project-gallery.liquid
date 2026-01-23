@@ -12,7 +12,7 @@
 
           <div class="gallery-item">
             <div class="gallery-image">
-              <a href="/projects/{{ post.data.tags }}/{{ post.data.title | slugify }}">
+              <a href="{{ post.url }}">
                 {% include 'framework/shortcodes/responsive-image',
                   src: post.data.thumbnail,
                   alt: post.data.title,

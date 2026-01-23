@@ -1,5 +1,5 @@
 ---
-layout: image-top
+layout: image-left
 title: "Echos of Rain"
 subTitle: ""
 description: ""

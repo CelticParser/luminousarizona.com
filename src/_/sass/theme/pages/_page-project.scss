@@ -118,6 +118,30 @@
         }
       }
     }
+    // Featured images (first gallery) - no cropping
+    &:not(.gallery-two-column):not(.gallery-masonry):not(.gallery-single-column) {
+      .gallery-item {
+        .gallery-image {
+          img {
+            aspect-ratio: unset;
+            object-fit: unset;
+            height: auto;
+          }
+        }
+      }
+    }
+    // gallery-single-column (featured in project-left layout) - no cropping
+    &.gallery-single-column {
+      .gallery-item {
+        .gallery-image {
+          img {
+            aspect-ratio: unset;
+            object-fit: unset;
+            height: auto;
+          }
+        }
+      }
+    }
   }
   .gallery-single-column {
     display: grid;
