@@ -1,14 +1,14 @@
 ---
 layout: image-top
-title: "Granite Rocks"
+title: "Outcrop"
 subTitle: ""
 description: ""
 date: 2025-10-16
 tags: "monoliths"
-permalink: "/projects/monoliths/granite-rocks/"
-thumbnail: "granite-rocks-photo-by-jason-robert-okennedy.jpeg"
+permalink: "/projects/monoliths/outcrop/"
+thumbnail: "outcrop-photo-by-jason-robert-okennedy.jpeg"
 tumbCardPosition: "top"
-image: "granite-rocks-photo-by-jason-robert-okennedy.jpeg"
+image: "outcrop-photo-by-jason-robert-okennedy.jpeg"
 alt: ""
 year: "2022"
 gMap:
