@@ -8,16 +8,11 @@ body_classes: page-project
 <div class="section">
   <div class="container">
     <div class="row">
-
+      {% if featured %}
       <div class="col-12 col-md-6 mb-6 mb-md-0">
-
-        {% if featured %}
-
         {% include 'framework/project-breadcrumb' %}
         <div class="gallery gallery-single-column">
-
           {% for item in featured limit: limit %}
-
           <div>
             <a href="/projects/{{ title | slugify }}/{{ item.caption | slugify }}">
               <div class="gallery-image">
@@ -32,55 +27,37 @@ body_classes: page-project
               &copy;{{ item.year }} | {{ item.caption }}
             </div>
           </div>
-
           {% endfor %}
-
         </div>
-
-        {% endif %}
-
       </div>
+      {% endif %}
 
       <div class="col-12 col-md-6">
-
         {% if title %}
-
-          <header class="project-heading">
-            <h1>{{ title }}</h1>
-            <p style="font-size: 1.2em">{{ subTitle }}
-            <p>
-          </header>
-
+        <div class="project-heading">
+          <h1>{{ title }}</h1>
+          {% if subTitle %}
+          <p style="font-size: 1.2em">{{ subTitle }}</p>
+          {% endif %}
+        </div>
         {% endif %}
 
         <div class="content">{{ content }}</div>
         {% include 'framework/project-navigation' %}
       </div>
-
     </div>
 
-    <hr>
-
     {% include 'project-gallery' %}
-  
-    <hr>
 
+    {% if title %}
     <div>
-
-      {% if title %}
-      <br>
       <h2>Tripod Locations for {{ title }}</h2>
-      <br>
-
-      {% endif %}
-
       {% include 'theme/tripod-map',
         heading:projects.heading
         sub_heading:projects.sub_heading
       %}
-
     </div>
-
+    {% endif %}
   </div>
 </div>
 

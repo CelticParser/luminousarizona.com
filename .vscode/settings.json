@@ -2,5 +2,9 @@
     "files.exclude": {
         "**/node_modules": true,
         "**/.vscode":true
+    },
+    "[liquid]": {
+        "editor.defaultFormatter": "sissel.shopify-liquid",
+        "editor.formatOnSave": true
     }
 }

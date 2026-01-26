@@ -3,17 +3,12 @@ layout: default
 body_classes: page-project
 ---
 
-{% assign limit = gallery_limit | default: 100 %}
-
 <div class="section">
   <div class="container">
     <div class="row">
-
       <div class="col-12 col-md-6 mb-6 mb-md-0">
-
         {% include 'framework/project-breadcrumb' %}
         <div class="gallery gallery-single-column">
-
           <div>
             <a href="/assets/images/{{ image }}">
               <div class="gallery-image">
@@ -28,42 +23,26 @@ body_classes: page-project
               &copy;{{ year }} | {{ title }}
             </div>
           </div>
-
         </div>
-
       </div>
 
       <div class="col-12 col-md-6">
-
         {% if title %}
-
-          <header class="project-heading">
-            <h1>{{ title }}</h1>
-            {% if subTitle %}
-              <p style="font-size: 1.2em">{{ subTitle }}</p>
-            {% endif %}
-          </header>
-
+        <div class="project-heading">
+          <h1>{{ title }}</h1>
+          {% if subTitle %}
+          <p style="font-size: 1.2em">{{ subTitle }}</p>
+          {% endif %}
+        </div>
         {% endif %}
 
         <div class="content">{{ content }}</div>
       </div>
-
     </div>
-
-    <hr>
 
     <div>
-
-      <br>
       <h2>Tripod Location for {{ title }}</h2>
-      <br>
-
-      {% include 'theme/tripod-map',
-        
-      %}
-
+      {% include 'theme/tripod-map' %}
     </div>
-
   </div>
 </div>
