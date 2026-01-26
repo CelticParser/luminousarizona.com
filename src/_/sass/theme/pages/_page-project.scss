@@ -151,6 +151,7 @@
     }
     // gallery-single-column (featured in project-left layout) - no cropping
     &.gallery-single-column {
+      figure,
       .gallery-item {
         .gallery-image {
           img {
@@ -159,6 +160,11 @@
             height: auto;
           }
         }
+        figcaption,
+        .gallery-caption {
+          margin-top: 5px;
+          font-size: 14px;
+        }
       }
     }
   }
@@ -166,6 +172,10 @@
     display: grid;
     gap: $grid-gutter-width;
     grid-template-columns: 1fr;
+    
+    figure {
+      margin: 0;
+    }
   }
   .gallery-two-column {
     display: grid;

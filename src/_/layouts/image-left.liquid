@@ -3,46 +3,46 @@ layout: default
 body_classes: page-project
 ---
 
-<div class="section">
+<main class="section">
   <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-6 mb-6 mb-md-0">
+    <section class="row">
+      <aside class="col-12 col-md-6 mb-6 mb-md-0">
         {% include 'framework/project-breadcrumb' %}
         <div class="gallery gallery-single-column">
-          <div>
+          <figure>
             <a href="/assets/images/{{ image }}">
               <div class="gallery-image">
-                {% include 'framework/shortcodes/responsive-image',
-                  src: image,
-                  alt: title,
-                  style: 'vertical-align: bottom; max-width: 100%; height: auto;'
+                {% include 'framework/shortcodes/responsive-image'
+                  , src: image
+                  , alt: title
+                  , style: 'vertical-align: bottom; max-width: 100%; height: auto;'
                 %}
               </div>
             </a>
-            <div class="gallery-caption">
+            <figcaption class="gallery-caption">
               &copy;{{ year }} | {{ title }}
-            </div>
-          </div>
+            </figcaption>
+          </figure>
         </div>
-      </div>
+      </aside>
 
-      <div class="col-12 col-md-6">
+      <article class="col-12 col-md-6">
         {% if title %}
-        <div class="project-heading">
-          <h1>{{ title }}</h1>
-          {% if subTitle %}
-          <p style="font-size: 1.2em">{{ subTitle }}</p>
-          {% endif %}
-        </div>
+          <header class="project-heading">
+            <h1>{{ title }}</h1>
+            {% if subTitle %}
+              <p style="font-size: 1.2em">{{ subTitle }}</p>
+            {% endif %}
+          </header>
         {% endif %}
 
         <div class="content">{{ content }}</div>
-      </div>
-    </div>
+      </article>
+    </section>
 
-    <div>
+    <section>
       <h2>Tripod Location for {{ title }}</h2>
       {% include 'theme/tripod-map' %}
-    </div>
+    </section>
   </div>
-</div>
+</main>

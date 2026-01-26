@@ -3,38 +3,38 @@ layout: default
 body_classes: page-project
 ---
 
-<div class="section">
+<main class="section">
   <div class="container">
-    <div class="row mb-6">
-      <div class="col">
+    <section class="row mb-6">
+      <section class="col">
         {% include 'framework/project-breadcrumb' %}
         <div class="gallery">
-          <div class="gallery-item">
+          <figure class="gallery-item">
             <a href="/assets/images/{{ image }}">
               <div class="gallery-image">
-                {% include 'framework/shortcodes/responsive-image',
-                  src: image,
-                  alt: title
+                {% include 'framework/shortcodes/responsive-image'
+                  , src: image
+                  , alt: title
                 %}
               </div>
             </a>
-            <div class="gallery-caption" style="float:right">
+            <figcaption class="gallery-caption" style="float:right">
               &copy;{{ year }} | {{ title }}
-            </div>
-          </div>
+            </figcaption>
+          </figure>
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
 
-    <div class="project-heading">
+    <header class="project-heading">
       <h1>{{ title }}</h1>
-    </div>
+    </header>
 
-    <div class="content" style="width: 100%">{{ content }}</div>
+    <article class="content" style="width: 100%">{{ content }}</article>
 
-    <div>
+    <section>
       <h2>Tripod Location for {{ title }}</h2>
       {% include 'theme/tripod-map' %}
-    </div>
+    </section>
   </div>
-</div>
+</main>

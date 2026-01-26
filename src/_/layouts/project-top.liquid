@@ -5,15 +5,15 @@ body_classes: page-project
 
 {% assign limit = gallery_limit | default: 100 %}
 
-<div class="section">
+<main class="section">
   <div class="container">
     {% if featured %}
-      <div class="row mb-6">
-        <div class="col">
+      <section class="row mb-6">
+        <section class="col">
           {% include 'framework/project-breadcrumb' %}
           <div class="gallery">
             {% for item in featured limit: limit %}
-              <div class="gallery-item">
+              <figure class="gallery-item">
                 <a href="/projects/{{ title | slugify }}/{{ item.caption | slugify }}">
                   <div class="gallery-image">
                     {% include 'framework/shortcodes/responsive-image'
@@ -22,37 +22,37 @@ body_classes: page-project
                     %}
                   </div>
                 </a>
-                <div class="gallery-caption" style="float:right">
+                <figcaption class="gallery-caption" style="float:right">
                   &copy;{{ item.year }} | {{ item.caption }}
-                </div>
-              </div>
+                </figcaption>
+              </figure>
             {% endfor %}
           </div>
-        </div>
-      </div>
+        </section>
+      </section>
     {% endif %}
 
     {% if title %}
-      <div class="project-heading">
+      <header class="project-heading">
         <h1>{{ title }}</h1>
         {% if subTitle %}
           <p style="font-size: 1.2em">{{ subTitle }}</p>
         {% endif %}
-      </div>
+      </header>
     {% endif %}
 
-    <div class="content" style="width: 100%">{{ content }}</div>
+    <article class="content" style="width: 100%">{{ content }}</article>
     {% include 'framework/project-navigation' %}
 
     {% include 'project-gallery' %}
 
     {% if title %}
-      <div>
+      <section>
         <h2>Tripod Locations for {{ title }}</h2>
         {% include 'theme/tripod-map'
           , heading: projects.heading sub_heading: projects.sub_heading
         %}
-      </div>
+      </section>
     {% endif %}
   </div>
-</div>
+</main>

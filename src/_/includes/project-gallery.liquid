@@ -1,22 +1,22 @@
-<div class="row mb-6">
-  <div class="col">
+<section class="row mb-6">
+  <section class="col">
     <h2>{{ title }} Gallery</h2>
     <div class="gallery gallery-two-column">
       {% assign currentTag = title | slugify %}
       {% for post in collections[currentTag] %}
-      <div class="gallery-item">
-        <div class="gallery-image">
-          <a href="{{ post.url }}">
-            {% include 'framework/shortcodes/responsive-image',
-              src: post.data.thumbnail,
-              alt: post.data.title,
-              object-position: post.data.thumbCardPosition
-            %}
-          </a>
-        </div>
-        <div class="gallery-caption">{{ post.data.title }}</div>
-      </div>
+        <figure class="gallery-item">
+          <div class="gallery-image">
+            <a href="{{ post.url }}">
+              {% include 'framework/shortcodes/responsive-image'
+                , src: post.data.thumbnail
+                , alt: post.data.title
+                , object-position: post.data.thumbCardPosition
+              %}
+            </a>
+          </div>
+          <figcaption class="gallery-caption">{{ post.data.title }}</figcaption>
+        </figure>
       {% endfor %}
     </div>
-  </div>
-</div>
+  </section>
+</section>

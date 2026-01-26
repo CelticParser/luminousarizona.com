@@ -5,59 +5,57 @@ body_classes: page-project
 
 {% assign limit = gallery_limit | default: 100 %}
 
-<div class="section">
+<main class="section">
   <div class="container">
-    <div class="row">
+    <section class="row">
       {% if featured %}
-      <div class="col-12 col-md-6 mb-6 mb-md-0">
-        {% include 'framework/project-breadcrumb' %}
-        <div class="gallery gallery-single-column">
-          {% for item in featured limit: limit %}
-          <div>
-            <a href="/projects/{{ title | slugify }}/{{ item.caption | slugify }}">
-              <div class="gallery-image">
-                {% include 'framework/shortcodes/responsive-image',
-                  src: item.image,
-                  alt: item.caption,
-                  style: 'vertical-align: bottom; max-width: 100%; height: auto;'
-                %}
-              </div>
-            </a>
-            <div class="gallery-caption">
-              &copy;{{ item.year }} | {{ item.caption }}
-            </div>
+        <aside class="col-12 col-md-6 mb-6 mb-md-0">
+          {% include 'framework/project-breadcrumb' %}
+          <div class="gallery gallery-single-column">
+            {% for item in featured limit: limit %}
+              <figure>
+                <a href="/projects/{{ title | slugify }}/{{ item.caption | slugify }}">
+                  <div class="gallery-image">
+                    {% include 'framework/shortcodes/responsive-image'
+                      , src: item.image
+                      , alt: item.caption
+                      , style: 'vertical-align: bottom; max-width: 100%; height: auto;'
+                    %}
+                  </div>
+                </a>
+                <figcaption class="gallery-caption">
+                  &copy;{{ item.year }} | {{ item.caption }}
+                </figcaption>
+              </figure>
+            {% endfor %}
           </div>
-          {% endfor %}
-        </div>
-      </div>
+        </aside>
       {% endif %}
 
-      <div class="col-12 col-md-6">
+      <article class="col-12 col-md-6">
         {% if title %}
-        <div class="project-heading">
-          <h1>{{ title }}</h1>
-          {% if subTitle %}
-          <p style="font-size: 1.2em">{{ subTitle }}</p>
-          {% endif %}
-        </div>
+          <header class="project-heading">
+            <h1>{{ title }}</h1>
+            {% if subTitle %}
+              <p style="font-size: 1.2em">{{ subTitle }}</p>
+            {% endif %}
+          </header>
         {% endif %}
 
         <div class="content">{{ content }}</div>
         {% include 'framework/project-navigation' %}
-      </div>
-    </div>
+      </article>
+    </section>
 
     {% include 'project-gallery' %}
 
     {% if title %}
-    <div>
-      <h2>Tripod Locations for {{ title }}</h2>
-      {% include 'theme/tripod-map',
-        heading:projects.heading
-        sub_heading:projects.sub_heading
-      %}
-    </div>
+      <section>
+        <h2>Tripod Locations for {{ title }}</h2>
+        {% include 'theme/tripod-map'
+          , heading: projects.heading sub_heading: projects.sub_heading
+        %}
+      </section>
     {% endif %}
   </div>
-</div>
-
+</main>
