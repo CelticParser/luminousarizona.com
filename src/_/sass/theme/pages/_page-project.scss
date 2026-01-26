@@ -118,14 +118,26 @@
         }
       }
     }
-    // Featured images (first gallery) - no cropping
+    // Featured images (first gallery with multiple items) - no cropping
+    // Only apply when there are multiple gallery items (featured images in project pages)
     &:not(.gallery-two-column):not(.gallery-masonry):not(.gallery-single-column) {
-      .gallery-item {
+      // For multiple items (featured images), remove cropping
+      .gallery-item:not(:only-child) {
         .gallery-image {
           img {
             aspect-ratio: unset;
             object-fit: unset;
             height: auto;
+          }
+        }
+      }
+      // Single item galleries (image pages) maintain default aspect-ratio for full height
+      .gallery-item:only-child {
+        .gallery-image {
+          img {
+            // Keep default behavior for single image pages to maintain full height
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
           }
         }
       }

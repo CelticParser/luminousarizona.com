@@ -6,6 +6,7 @@ import pluginRss from "@11ty/eleventy-plugin-rss";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import eleventyImage from "@11ty/eleventy-img";
+import path from "path";
 
 export default function(eleventyConfig) {
   // 11ty watch targets
@@ -36,6 +37,17 @@ export default function(eleventyConfig) {
     return collection.getFilteredByGlob("./src/_/posts/*.md");
   });
 
+  // Custom filename format function to preserve original filename with width appended
+  function customFilenameFormat(id, src, width, format, options) {
+    // Extract original filename without extension
+    // src can be a full path, so we need to get just the basename
+    const basename = path.basename(src);
+    const ext = path.extname(basename);
+    const originalName = basename.replace(ext, '');
+    // Return filename as: originalname-width.format
+    return `${originalName}-${width}.${format}`;
+  }
+
   // Image config
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     // output image formats
@@ -43,6 +55,9 @@ export default function(eleventyConfig) {
 
     // output image widths - matching CSS breakpoints
     widths: [576, 768, 992, 1360],
+
+    // Custom filename format to preserve original filename
+    filenameFormat: customFilenameFormat,
 
     // optional, attributes assigned on <img> nodes override these values
     htmlOptions: {
@@ -69,6 +84,7 @@ export default function(eleventyConfig) {
         formats: ["avif", "webp", "jpeg"],
         outputDir: "./public/assets/images/",
         urlPath: "/assets/images/",
+        filenameFormat: customFilenameFormat,
       });
     } catch (error) {
       // If image processing fails, fallback to simple img tag
