@@ -6,7 +6,7 @@
       float: right;
       clear: right;
       margin-bottom: 10px;
-      font-size: 14px;
+      font-size: 0.78em; // 14px / 18px
       color: var(--color-base-text-2);
       
       a {
@@ -39,7 +39,7 @@
       float: right;
       clear: right;
       margin-bottom: 10px;
-      font-size: 14px;
+      font-size: 0.78em; // 14px / 18px
       color: var(--color-base-text-2);
       
       .nav-link {
@@ -62,7 +62,7 @@
       }
       
       .nav-arrow {
-        font-size: 16px;
+        font-size: 0.89em; // 16px / 18px
       }
     }
   }
@@ -105,13 +105,14 @@
   
   .project-heading {
     h1 {
-      font-size: 36px;
-      letter-spacing: -2px;
+      font-size: 2em; // 36px / 18px - mobile first
+      letter-spacing: -0.0556em; // -2px / 36px
       line-height: 1.2;
       // font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 0.56em; // 10px / 18px
       @include media-breakpoint-up(md) {
-        font-size: 48px;
+        font-size: 2.67em; // 48px / 18px
+        letter-spacing: -0.0417em; // -2px / 48px
       }
     }
   }
@@ -135,8 +136,8 @@
         }
       }
       .gallery-caption {
-        margin-top: 5px;
-        font-size: 14px;
+        margin-top: 0.28em; // 5px / 18px
+        font-size: 0.78em; // 14px / 18px
         strong {
           font-weight: 600;
         }
@@ -196,8 +197,8 @@
         }
         figcaption,
         .gallery-caption {
-          margin-top: 5px;
-          font-size: 14px;
+          margin-top: 0.28em; // 5px / 18px
+          font-size: 0.78em; // 14px / 18px
         }
       }
     }
@@ -240,8 +241,8 @@
       }
       
       .gallery-caption {
-        margin-top: 5px;
-        font-size: 14px;
+        margin-top: 0.28em; // 5px / 18px
+        font-size: 0.78em; // 14px / 18px
         display: block;
         color: var(--color-base-text-2);
         float: none !important;
@@ -293,12 +294,12 @@
   .project-date,
   .project-role,
   .project-client {
-    margin-bottom: 10px;
-    font-size: 16px;
+    margin-bottom: 0.56em; // 10px / 18px
+    font-size: 0.89em; // 16px / 18px
     strong {
       display: inline-block;
       font-weight: 600;
-      width: 70px;
+      width: 3.89em; // 70px / 18px
     }
     span {
       display: inline-block;

@@ -1,5 +1,5 @@
 .content {
-  font-size: 19px;
+  font-size: 1.06em; // 19px / 18px
   font-family: var(--font-family-base);
   color: var(--color-base-text-2);
   h1,
@@ -11,28 +11,28 @@
     font-family: var(--font-family-heading);
   }
   h1 {
-    margin-top: 60px;
-    margin-bottom: 15px;
-    font-size: 36px;
+    margin-top: 3.33em; // 60px / 18px
+    margin-bottom: 0.83em; // 15px / 18px
+    font-size: 2em; // 36px / 18px
     font-weight: 400;
   }
   h2 {
-    margin-top: 40px;
-    margin-bottom: 15px;
-    font-size: 28px;
+    margin-top: 2.22em; // 40px / 18px
+    margin-bottom: 0.83em; // 15px / 18px
+    font-size: 1.56em; // 28px / 18px
     font-weight: 500;
   }
   h3 {
     font-family: var(--font-family-base);
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 22px;
+    margin-top: 1.67em; // 30px / 18px
+    margin-bottom: 0.83em; // 15px / 18px
+    font-size: 1.22em; // 22px / 18px
     font-weight: 600;
   }
   h4 {
-    margin-top: 20px;
-    margin-bottom: 15px;
-    font-size: 16px;
+    margin-top: 1.11em; // 20px / 18px
+    margin-bottom: 0.83em; // 15px / 18px
+    font-size: 0.89em; // 16px / 18px
     font-weight: 700;
   }
   > h1,
@@ -45,20 +45,20 @@
   }
   p {
     line-height: 1.56;
-    margin-bottom: 20px;
+    margin-bottom: 1.11em; // 20px / 18px
     font-family: var(--font-family-base);
     color: var(--color-base-text-2);
   }
   ul {
-    margin: 20px;
+    margin: 1.11em; // 20px / 18px
     list-style: disc;
   }
   ol {
-    margin: 20px;
+    margin: 1.11em; // 20px / 18px
     list-style: decimal;
   }
   li {
-    margin-left: 20px;
+    margin-left: 1.11em; // 20px / 18px
     line-height: 1.5;
   }
   a {
@@ -72,29 +72,29 @@
     }
   }
   img {
-    margin: 40px 0 40px 0;
+    margin: 2.22em 0; // 40px / 18px
     max-width: 100%;
     height: auto;
     @include media-breakpoint-up(md) {
-      margin: 60px 0 60px 0;
+      margin: 3.33em 0; // 60px / 18px
     }
   }
   img + img {
     margin-top: 0;
   }
   figure {
-    margin: 40px 0 40px 0;
+    margin: 2.22em 0; // 40px / 18px
     figcaption {
-      margin-top: 10px;
-      font-size: 14px;
+      margin-top: 0.56em; // 10px / 18px
+      font-size: 0.78em; // 14px / 18px
       h4 {
-        font-size: 14px;
+        font-size: 0.78em; // 14px / 18px
         margin: 0;
         font-weight: normal;
         font-family: var(--font-family-base);
       }
       p {
-        font-size: 14px;
+        font-size: 0.78em; // 14px / 18px
         margin: 0;
         font-weight: bold;
         font-family: var(--font-family-base);
@@ -115,17 +115,17 @@
     pre {
       background-color: var(--color-base-bg-2);
       border-radius: var(--card-border-radius);
-      font-size: 15px;
-      line-height: 20px;
-      padding: 26px;
+      font-size: 0.83em; // 15px / 18px
+      line-height: 1.11em; // 20px / 18px
+      padding: 1.44em; // 26px / 18px
       overflow: auto;
       font-family: var(--font-family-monospace);
     }
   }
   blockquote {
-    margin: 40px 0 40px 0;
+    margin: 2.22em 0; // 40px / 18px
     border-left: 1px solid #fefefe;
-    padding: 30px 20px;
+    padding: 1.67em 1.11em; // 30px 20px / 18px
     &::before {
       content: "";
     }
@@ -134,7 +134,7 @@
     }
     p {
       font-family: var(--font-family-base);
-      letter-spacing: 4px;
+      letter-spacing: 0.22em; // 4px / 18px (approximate)
       line-height: 1.6;
       margin: 0;
     }

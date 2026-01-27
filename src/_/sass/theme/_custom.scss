@@ -1,11 +1,21 @@
 .heading .heading-heading h1 {
-  @include media-breakpoint-up(lg) {
-    font-size: 74px;
-    line-height: 1;
-    width: 80%;
-    letter-spacing: 12px;
-    font-weight: 100;
+  font-size: 2.67em; // 48px / 18px - mobile default
+  line-height: 1;
+  width: 100%;
+  letter-spacing: 0.025em; // 12px / 480px (approximate)
+  font-weight: 100;
+  
+  @include media-breakpoint-up(md) {
+    font-size: 3.33em; // 60px / 18px
+    letter-spacing: 0.02em; // 12px / 600px
   }
+  
+  @include media-breakpoint-up(lg) {
+    font-size: 4.11em; // 74px / 18px
+    width: 80%;
+    letter-spacing: 0.162em; // 12px / 74px
+  }
+  
   strong {
     text-decoration-color: var(--color-base-bg-3);
   }

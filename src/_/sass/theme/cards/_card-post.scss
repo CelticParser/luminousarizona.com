@@ -38,13 +38,14 @@
   .card-title {
     h2,
     h3 {
-      font-size: 22px;
+      font-size: 1.22em; // 22px / 18px - mobile
       font-weight: 500;
       line-height: 1.3;
-      letter-spacing: -0.1px;
-      margin-bottom: 6px;
+      letter-spacing: -0.0045em; // -0.1px / 22px
+      margin-bottom: 0.33em; // 6px / 18px
       @include media-breakpoint-up(md) {
-        font-size: 26px;
+        font-size: 1.44em; // 26px / 18px
+        letter-spacing: -0.0038em; // -0.1px / 26px
       }
     }
     a {
@@ -55,7 +56,7 @@
     p {
       line-height: 1.5;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 0.89em; // 16px / 18px
       color: var(--color-base-text-2);
       margin: 0;
     }
@@ -67,8 +68,8 @@
     margin-top: auto;
     line-height: 1;
     i {
-      margin-left: 5px;
-      margin-top: 4px;
+      margin-left: 0.28em; // 5px / 18px
+      margin-top: 0.22em; // 4px / 18px
     }
   }
   .card-date {
@@ -77,11 +78,11 @@
     align-items: center;
     font-weight: 700;
     color: var(--color-base-text-2);
-    font-size: 15px;
+    font-size: 0.83em; // 15px / 18px
   }
   .card-categories {
     display: inline-flex;
-    font-size: 12px;
+    font-size: 0.67em; // 12px / 18px
     font-family: $font-family-monospace;
     > a {
       background-color: var(--color-base-bg-2);
@@ -168,10 +169,10 @@
     margin-bottom: 2px;
   }
   .card-title {
-    margin-bottom: 4px;
+    margin-bottom: 0.22em; // 4px / 18px
     font-weight: 600;
     h3 {
-      font-size: 20px;
+      font-size: 1.11em; // 20px / 18px
       font-weight: 500;
       line-height: 1.3;
       margin: 0;
@@ -225,8 +226,12 @@
     line-height: 1.4;
     flex-basis: 50%;
     h3 {
+      font-size: 1.22em; // 22px / 18px - mobile default
+      @include media-breakpoint-up(md) {
+        font-size: 1.44em; // 26px / 18px
+      }
       @include media-breakpoint-up(lg) {
-        font-size: 36px;
+        font-size: 2em; // 36px / 18px
       }
     }
     a {
