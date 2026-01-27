@@ -1,5 +1,5 @@
 ---
-layout: image-top
+layout: image-landscape
 title: "Sierra Estrella Vista"
 subTitle: ""
 description: ""

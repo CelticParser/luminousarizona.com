@@ -53,8 +53,16 @@ export default function(eleventyConfig) {
     // output image formats
     formats: ["avif", "webp", "jpeg"],
 
-    // output image widths - matching CSS breakpoints
-    widths: [576, 768, 992, 1360],
+    // output image widths - matching CSS breakpoints exactly
+    // Breakpoints: xs: 0, sm: 768px, md: 1024px, lg: 1280px, xl: 1360px, xxl: 1920px
+    // Image widths align with breakpoints:
+    // - 576px: Mobile base (< sm: 768px)
+    // - 768px: Tablet breakpoint (sm)
+    // - 1024px: Desktop breakpoint (md)
+    // - 1280px: Large desktop breakpoint (lg)
+    // - 1360px: XL desktop breakpoint (xl)
+    // - 1920px: 4K desktop breakpoint (xxl)
+    widths: [576, 768, 1024, 1280, 1360, 1920],
 
     // Custom filename format to preserve original filename
     filenameFormat: customFilenameFormat,
@@ -80,7 +88,8 @@ export default function(eleventyConfig) {
     try {
       // Use the default export function which handles queue setup automatically
       metadata = await eleventyImage(inputPath, {
-        widths: [576, 768, 992, 1360],
+        // Image widths matching breakpoints: 576px (mobile), 768px (sm), 1024px (md), 1280px (lg), 1360px (xl), 1920px (xxl)
+        widths: [576, 768, 1024, 1280, 1360, 1920],
         formats: ["avif", "webp", "jpeg"],
         outputDir: "./public/assets/images/",
         urlPath: "/assets/images/",
@@ -97,9 +106,10 @@ export default function(eleventyConfig) {
     
     // Define sizes attribute for responsive images
     // This tells the browser what size the image will be displayed at different viewport widths
-    // Default sizes based on container max-widths: xl: 1140px, with padding accounting for ~1220px at xl breakpoint
-    // Using calc to account for container padding and margins
-    const sizes = sizesOverride || "(min-width: 1360px) 1220px, calc(94.23vw - 43px)";
+    // The sizes must match the ACTUAL rendered width, accounting for container padding (30px on each side = 60px total)
+    // Based on linter analysis of actual rendered widths at different viewports
+    // For images in columns (col-md-6) or two-column galleries, use sizesOverride parameter
+    const sizes = sizesOverride || "(min-width: 1920px) 1540px, (min-width: 1280px) 1099px, (min-width: 1040px) 900px, (min-width: 780px) 660px, calc(100vw - 60px)";
     
     // Generate sources for each format (AVIF, WebP) with media queries
     for (const format of ["avif", "webp"]) {
@@ -112,11 +122,13 @@ export default function(eleventyConfig) {
       // Each source includes all widths in srcset - browser picks best size within that breakpoint
       // Note: For true art direction, you would use different image sources per breakpoint
       // sizes attribute is required when using width descriptors (W) in srcset
+      // Breakpoints: xxl: 1920px (4K), xl: 1360px, lg: 1280px, md: 1024px, sm: 768px
+      pictureHtml += `<source media="(min-width: 1920px)" type="image/${format}" srcset="${srcset}" sizes="${sizes}">`;
       pictureHtml += `<source media="(min-width: 1360px)" type="image/${format}" srcset="${srcset}" sizes="${sizes}">`;
-      pictureHtml += `<source media="(min-width: 992px)" type="image/${format}" srcset="${srcset}" sizes="${sizes}">`;
+      pictureHtml += `<source media="(min-width: 1280px)" type="image/${format}" srcset="${srcset}" sizes="${sizes}">`;
+      pictureHtml += `<source media="(min-width: 1024px)" type="image/${format}" srcset="${srcset}" sizes="${sizes}">`;
       pictureHtml += `<source media="(min-width: 768px)" type="image/${format}" srcset="${srcset}" sizes="${sizes}">`;
-      pictureHtml += `<source media="(min-width: 576px)" type="image/${format}" srcset="${srcset}" sizes="${sizes}">`;
-      // Default source for mobile (< 576px) to provide modern formats
+      // Default source for mobile (< sm: 768px) to provide modern formats
       pictureHtml += `<source type="image/${format}" srcset="${srcset}" sizes="${sizes}">`;
     }
     

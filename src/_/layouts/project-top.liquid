@@ -14,7 +14,7 @@ body_classes: page-project
           <div class="gallery">
             {% for item in featured limit: limit %}
               <figure class="gallery-item">
-                <a href="/projects/{{ title | slugify }}/{{ item.caption | slugify }}">
+                <a href="/projects/{{ title | slugify }}/{% if item.slug %}{{ item.slug }}{% else %}{{ item.caption | slugify }}{% endif %}/">
                   <div class="gallery-image">
                     {% include 'framework/shortcodes/responsive-image'
                       , src: item.image
@@ -42,6 +42,7 @@ body_classes: page-project
     {% endif %}
 
     <article class="content" style="width: 100%">{{ content }}</article>
+    <hr>
     {% include 'framework/project-navigation' %}
 
     {% include 'project-gallery' %}

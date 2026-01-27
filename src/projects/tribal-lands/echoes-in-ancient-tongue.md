@@ -1,5 +1,5 @@
 ---
-layout: image-left
+layout: image-portrait
 title: "Echoes In Ancient Tongue"
 subTitle: ""
 description: ""

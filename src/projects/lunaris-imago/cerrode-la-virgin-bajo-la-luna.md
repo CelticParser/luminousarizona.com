@@ -1,5 +1,5 @@
 ---
-layout: image-top
+layout: image-landscape
 title: "Cerrode la Virgin Bajo la Luna"
 subTitle: ""
 description: ""

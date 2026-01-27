@@ -2,7 +2,7 @@
 {% if isProject %}
   {% comment %} Get all projects where isProject is true, sorted alphabetically by title {% endcomment %}
   {% assign sortedProjects = collections.projects | where: "data.isProject", true | sort: "data.title" %}
-  
+
   {% comment %} Find current project index by comparing URLs {% endcomment %}
   {% assign currentIndex = -1 %}
   {% for project in sortedProjects %}
@@ -11,29 +11,39 @@
       {% break %}
     {% endif %}
   {% endfor %}
-  
+
   {% if currentIndex >= 0 %}
     {% assign prevIndex = currentIndex | minus: 1 %}
     {% assign nextIndex = currentIndex | plus: 1 %}
-    
+
     <nav class="project-navigation" aria-label="Project navigation">
       {% if prevIndex >= 0 %}
         {% assign prevProject = sortedProjects[prevIndex] %}
-        <a href="{{ prevProject.url }}" class="nav-link nav-prev" aria-label="Previous project">
-          <span class="nav-arrow">←</span> {{ prevProject.data.title }}
+        <a
+          href="{{ prevProject.url }}"
+          class="nav-link nav-prev"
+          aria-label="Previous project">
+          <span class="nav-arrow">←</span>
+          {{ prevProject.data.title }}
         </a>
       {% endif %}
-      
+
       {% if prevIndex >= 0 and nextIndex < sortedProjects.size %}
         <span class="nav-separator">|</span>
       {% endif %}
-      
+
       {% if nextIndex < sortedProjects.size %}
         {% assign nextProject = sortedProjects[nextIndex] %}
-        <a href="{{ nextProject.url }}" class="nav-link nav-next" aria-label="Next project">
-          {{ nextProject.data.title }} <span class="nav-arrow">→</span>
+        <a
+          href="{{ nextProject.url }}"
+          class="nav-link nav-next"
+          aria-label="Next project">
+          {{ nextProject.data.title }}
+          <span class="nav-arrow">→</span>
         </a>
       {% endif %}
+      <hr>
     </nav>
+
   {% endif %}
 {% endif %}

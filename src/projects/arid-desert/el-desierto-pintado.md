@@ -1,5 +1,5 @@
 ---
-layout: image-top
+layout: image-landscape
 title: "el Desierto Pintado"
 subTitle: "The Painted Desert"
 description: ""

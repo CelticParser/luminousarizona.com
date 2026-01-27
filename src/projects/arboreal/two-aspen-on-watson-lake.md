@@ -1,5 +1,5 @@
 ---
-layout: image-top
+layout: image-landscape
 title: "Two Aspen on Watson Lake"
 subTitle: ""
 description: ""

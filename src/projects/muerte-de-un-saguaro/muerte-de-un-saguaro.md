@@ -12,6 +12,7 @@ isProject: true
 featured:
   - image: "muerte_de_un_saguaro-photo-by-jason-robert-okennedy.jpg"
     caption: "Muerte de un Saguaro #1"
+    slug: "muerte_de_un_saguaro-no1"
     year: "2023"
 gMap:
   - center: "lat: 33.489033, lng: -112"

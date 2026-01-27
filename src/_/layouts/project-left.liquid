@@ -14,12 +14,13 @@ body_classes: page-project
           <div class="gallery gallery-single-column">
             {% for item in featured limit: limit %}
               <figure>
-                <a href="/projects/{{ title | slugify }}/{{ item.caption | slugify }}">
+                <a href="/projects/{{ title | slugify }}/{% if item.slug %}{{ item.slug }}{% else %}{{ item.caption | slugify }}{% endif %}/">
                   <div class="gallery-image">
                     {% include 'framework/shortcodes/responsive-image'
                       , src: item.image
                       , alt: item.caption
                       , style: 'vertical-align: bottom; max-width: 100%; height: auto;'
+                      , sizes: '(min-width: 1920px) 770px, (min-width: 1280px) 550px, (min-width: 1040px) 450px, (min-width: 780px) 330px, calc(50vw - 30px)'
                     %}
                   </div>
                 </a>
@@ -43,10 +44,10 @@ body_classes: page-project
         {% endif %}
 
         <div class="content">{{ content }}</div>
-        {% include 'framework/project-navigation' %}
       </article>
     </section>
-
+    <hr>
+    {% include 'framework/project-navigation' %}
     {% include 'project-gallery' %}
 
     {% if title %}

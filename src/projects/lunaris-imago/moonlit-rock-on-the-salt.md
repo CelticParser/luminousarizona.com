@@ -1,5 +1,5 @@
 ---
-layout: image-left
+layout: image-portrait
 title: "Moonlit Rock On The Salt"
 subTitle: ""
 description: ""

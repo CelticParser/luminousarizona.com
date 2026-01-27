@@ -1,5 +1,5 @@
 ---
-layout: image-top
+layout: image-landscape
 title: "Fall of a Dreamer"
 subTitle: "Cibecue Falls"
 description: ""

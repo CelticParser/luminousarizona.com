@@ -1,5 +1,5 @@
 ---
-layout: image-left
+layout: image-portrait
 title: "Delapidated DC3 Ephonage"
 subTitle: ""
 description: ""

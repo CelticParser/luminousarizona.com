@@ -11,10 +11,14 @@
                 , src: post.data.thumbnail
                 , alt: post.data.title
                 , object-position: post.data.thumbCardPosition
+                , sizes: '(min-width: 1920px) 770px, (min-width: 1280px) 550px, (min-width: 1040px) 450px, (min-width: 780px) 330px, calc(50vw - 30px)'
               %}
             </a>
           </div>
-          <figcaption class="gallery-caption">{{ post.data.title }}</figcaption>
+          <figcaption class="gallery-caption">
+            {% if post.data.year %}&copy;{{ post.data.year }} |
+            {% endif %}
+            {{ post.data.title }}</figcaption>
         </figure>
       {% endfor %}
     </div>

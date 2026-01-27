@@ -1,5 +1,5 @@
 ---
-layout: image-top
+layout: image-portrait
 title: "The Santa Cruz"
 subTitle: "TODO"
 description: ""

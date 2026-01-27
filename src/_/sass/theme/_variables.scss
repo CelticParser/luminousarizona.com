@@ -1,18 +1,25 @@
-// Bootstrap Grid
+// Bootstrap Grid - Simplified breakpoints
+// Mobile: 0-767px (default, no breakpoint)
+// Tablet: 768px-1023px (sm)
+// Desktop: 1024px-1279px (md)
+// Large Desktop: 1280px-1359px (lg)
+// Extra Large Desktop: 1360px-1919px (xl)
+// 4K Desktop: 1920px+ (xxl)
 $grid-breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1360px,
+  sm: 768px,    // Tablet and up
+  md: 1024px,   // Desktop and up
+  lg: 1280px,   // Large desktop and up
+  xl: 1360px,   // Extra large desktop (current project size)
+  xxl: 1920px,  // 4K and ultra-wide displays
 );
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1280px,
+  sm: 720px,    // Tablet container
+  md: 960px,    // Desktop container
+  lg: 1200px,   // Large desktop container
+  xl: 1220px,   // Extra large desktop container
+  xxl: 1600px,  // 4K desktop container (uses more screen width)
 );
 
 $grid-gutter-width: 30px;

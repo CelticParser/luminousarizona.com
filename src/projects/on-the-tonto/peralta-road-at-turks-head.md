@@ -1,5 +1,5 @@
 ---
-layout: image-top
+layout: image-landscape
 title: "Peralta Road At Turks Head"
 subTitle: ""
 description: ""

@@ -1,5 +1,5 @@
 ---
-layout: image-top
+layout: image-landscape
 title: Beneath A Cold Moon Haze
 subTitle: ""
 description: ""

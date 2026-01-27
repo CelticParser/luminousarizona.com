@@ -1,5 +1,5 @@
 ---
-layout: image-top
+layout: image-landscape
 title: "La Mision de San Xavier del Bac"
 subTitle: "Black and White Visions: Tribal Lands of the American Southwest"
 description: ""

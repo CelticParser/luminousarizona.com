@@ -81,6 +81,27 @@
     }
   }
   
+  // Make featured image full width on mobile in project-left layout
+  @include media-breakpoint-down(md) {
+    // Target the row that contains the featured image
+    section.row:first-of-type {
+      margin-left: calc(#{$grid-gutter-width} * -1);
+      margin-right: calc(#{$grid-gutter-width} * -1);
+      width: calc(100% + #{$grid-gutter-width} * 2);
+      
+      // Reset article padding to normal
+      article.col-12 {
+        padding-left: $grid-gutter-width;
+        padding-right: $grid-gutter-width;
+      }
+      
+      // Featured image aside should span full width
+      aside.col-12 {
+        padding-left: $grid-gutter-width;
+        padding-right: $grid-gutter-width;
+      }
+    }
+  }
   
   .project-heading {
     h1 {
@@ -154,10 +175,23 @@
       figure,
       .gallery-item {
         .gallery-image {
-          img {
-            aspect-ratio: unset;
-            object-fit: unset;
-            height: auto;
+          width: 100%;
+          display: block;
+          position: relative;
+          
+          picture {
+            width: 100%;
+            display: block;
+            line-height: 0;
+            
+            img {
+              aspect-ratio: unset !important;
+              object-fit: unset !important;
+              height: auto !important;
+              width: 100% !important;
+              max-width: 100% !important;
+              display: block !important;
+            }
           }
         }
         figcaption,
@@ -175,6 +209,12 @@
     
     figure {
       margin: 0;
+      width: 100%;
+      
+      a {
+        display: block;
+        width: 100%;
+      }
     }
   }
   .gallery-two-column {
@@ -191,7 +231,22 @@
     }
 
     .gallery-item {
-      overflow: hidden;
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+      
+      .gallery-image {
+        overflow: hidden;
+      }
+      
+      .gallery-caption {
+        margin-top: 5px;
+        font-size: 14px;
+        display: block;
+        color: var(--color-base-text-2);
+        float: none !important;
+        clear: both;
+      }
     }
   }
   

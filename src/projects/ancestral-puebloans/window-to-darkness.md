@@ -1,5 +1,5 @@
 ---
-layout: image-top
+layout: image-landscape
 title: "Window to Darkness"
 subTitle: ""
 description: ""

@@ -1,5 +1,5 @@
 ---
-layout: image-top
+layout: image-landscape
 title: "Where Salt-Brush Whispers"
 subTitle: ""
 description: ""

@@ -1,5 +1,5 @@
 ---
-layout: image-top
+layout: image-landscape
 title: "Grey Whiskers Butte"
 subTitle: "Black and White Visions: Tribal Lands of the American Southwest"
 description: ""

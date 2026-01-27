@@ -1,5 +1,5 @@
 ---
-layout: image-top
+layout: image-landscape
 title: "Memento Mori in Bloom"
 subTitle: ""
 description: ""
