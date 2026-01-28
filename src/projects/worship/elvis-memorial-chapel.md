@@ -1,5 +1,5 @@
 ---
-layout: image-landscape
+layout: image-portrait
 title: "Elvis Memorial Chapel"
 subTitle: "TODO"
 description: ""

@@ -1,5 +1,5 @@
 ---
-layout: image-landscape
+layout: image-portrait
 title: "Two Aspen"
 subTitle: ""
 description: ""
@@ -14,7 +14,7 @@ year: "2023"
 gMap:
   - tripod: "lat: 35.318157, lng: -111.717066" 
     zoom: "14"
-    portrait: false
+    portrait: true
 ---
 
 
