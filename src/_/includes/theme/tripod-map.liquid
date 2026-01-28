@@ -1,9 +1,8 @@
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEXBEzrYSrSMcd6g3yS-DpeD2fVuCpUfc&callback=initMap&loading=async"></script>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEXBEzrYSrSMcd6g3yS-DpeD2fVuCpUfc&callback=initMap"></script>
+<div id="map" style="aspect-ratio: 16 / 9; width: 100%;"></div>
 
-    <div id="map" style="aspect-ratio: 16 / 9; width: 100%;"></div>
-
-    <script>
+<script>
     function initMap() {
         {% comment %} Get center and zoom - from project's gMap if isProject, or from image's gMap if image page {% endcomment %}
         {% assign mapCenterLat = '34.5667' %}
@@ -287,4 +286,4 @@
             });
         });
     }
-    </script>
+</script>
