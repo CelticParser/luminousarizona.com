@@ -1,0 +1,80 @@
+---
+permalink: /image-sitemap.xml
+eleventyExcludeFromCollections: true
+layout: false
+---
+{% raw %}
+  <? xml version="1.0" encoding="UTF-8" ?>{% endraw %}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  {% assign baseUrl = metadata.feed.base | default: "https://luminousarizona.com" %}
+  {% comment %} Remove trailing slash from baseUrl if present, then append /license {% endcomment %}
+  {% if baseUrl contains "://" %}
+    {% assign urlParts = baseUrl | split: "://" %}
+    {% assign domain = urlParts[1] | replace: "/", "" %}
+    {% assign baseUrlClean = urlParts[0] | append: "://" | append: domain %}
+  {% else %}
+    {% assign baseUrlClean = baseUrl | replace: "/", "" %}
+  {% endif %}
+  {% assign licenseUrl = baseUrlClean | append: "/license" %}
+
+  {% comment %} Only include largest JPEG image (1920px width) {% endcomment %}
+  {% assign largestWidth = "1920" %}
+  {% assign jpegFormat = "jpeg" %}
+
+  {% for image in collections.images %}
+    {% if image.data.image %}
+      {% assign imageFilename = image.data.image %}
+      {% assign imageBasename = imageFilename | split: "." | first %}
+      {% assign imageExt = imageFilename | split: "." | last | downcase %}
+
+      {% comment %} Extract geo location from gMap.tripod {% endcomment %}
+      {% assign geoLocation = "" %}
+      {% if image.data.gMap and image.data.gMap.size > 0 %}
+        {% assign gMapConfig = image.data.gMap[0] %}
+        {% if gMapConfig.tripod %}
+          {% assign tripodStr = gMapConfig.tripod %}
+          {% assign tripodParts = tripodStr | split: "," %}
+          {% if tripodParts.size >= 2 %}
+            {% assign latPart = tripodParts[0] | split: ":" %}
+            {% assign lngPart = tripodParts[1] | split: ":" %}
+            {% if latPart.size >= 2 and lngPart.size >= 2 %}
+              {% assign lat = latPart[1] | strip %}
+              {% assign lng = lngPart[1] | strip %}
+              {% assign geoLocation = lat | append: ", " | append: lng %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+
+      <url>
+        <loc>{{ baseUrl }}{{ image.url }}</loc>
+        <lastmod>{{ image.date | date: "%Y-%m-%d" }}</lastmod>
+
+        {% comment %} Include largest processed JPEG image {% endcomment %}
+        {% assign processedImageName = imageBasename | append: "-" | append: largestWidth | append: "." | append: jpegFormat %}
+        <image:image>
+          <image:loc>{{ baseUrl }}/assets/images/{{ processedImageName }}</image:loc>
+          <image:caption>Jason Robert O'Kennedy - {{ image.data.title }}</image:caption>
+          <image:copyright>Jason Robert O'Kennedy - {{ image.data.year | default: "2025" }}</image:copyright>
+          <image:license>{{ licenseUrl }}</image:license>
+          {% if geoLocation != "" %}
+            <image:geo_location>{{ geoLocation }}</image:geo_location>
+          {% endif %}
+        </image:image>
+
+        {% comment %} Also include original image if it's a JPEG/JPG {% endcomment %}
+        {% if imageExt == "jpg" or imageExt == "jpeg" %}
+          <image:image>
+            <image:loc>{{ baseUrl }}/assets/images/{{ imageFilename }}</image:loc>
+            <image:caption>Jason Robert O'Kennedy - {{ image.data.title }}</image:caption>
+            <image:copyright>Jason Robert O'Kennedy - {{ image.data.year | default: "2025" }}</image:copyright>
+            <image:license>{{ licenseUrl }}</image:license>
+            {% if geoLocation != "" %}
+              <image:geo_location>{{ geoLocation }}</image:geo_location>
+            {% endif %}
+          </image:image>
+        {% endif %}
+      </url>
+    {% endif %}
+  {% endfor %}
+</urlset>

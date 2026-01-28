@@ -1,0 +1,64 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+layout: false
+---
+{% raw %}
+  <? xml version="1.0" encoding="UTF-8" ?>{% endraw %}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% assign baseUrl = metadata.feed.base | default: "https://luminousarizona.com" %}
+
+  {% comment %} Home page {% endcomment %}
+  <url>
+    <loc>{{ baseUrl }}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  {% comment %} Projects {% endcomment %}
+  {% for project in collections.projects %}
+    <url>
+      <loc>{{ baseUrl }}{{ project.url }}</loc>
+      <lastmod>{{ project.date | date: "%Y-%m-%d" }}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  {% endfor %}
+
+  {% comment %} Images {% endcomment %}
+  {% for image in collections.images %}
+    <url>
+      <loc>{{ baseUrl }}{{ image.url }}</loc>
+      <lastmod>{{ image.date | date: "%Y-%m-%d" }}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  {% endfor %}
+
+  {% comment %} About page {% endcomment %}
+  {% for about in collections.about %}
+    <url>
+      <loc>{{ baseUrl }}{{ about.url }}</loc>
+      <lastmod>{{ about.date | date: "%Y-%m-%d" }}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+    </url>
+  {% endfor %}
+
+  {% comment %} Other pages {% endcomment %}
+  {% assign otherPages = collections.all | where: "data.eleventyExcludeFromCollections", false %}
+  {% for page in otherPages %}
+    {% unless page.data.layout == "default" or page.data.layout == "home" or page.data.layout == "project" or page.data.layout == "project-portrait" or page.data.layout == "project-landscape" or page.data.layout == "image-portrait" or page.data.layout == "image-landscape" %}
+      {% if page.url != "/" and page.url != "/feed.xml" and page.url != "/sitemap.xml" and page.url != "/image-sitemap.xml" %}
+        <url>
+          <loc>{{ baseUrl }}{{ page.url }}</loc>
+          {% if page.date %}
+            <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
+          {% endif %}
+          <changefreq>monthly</changefreq>
+          <priority>0.5</priority>
+        </url>
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+</urlset>

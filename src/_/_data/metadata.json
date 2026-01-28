@@ -1,9 +1,9 @@
 {
   "feed": {
-    "subtitle": "Curate is a premium portfolio for 11ty.",
+    "subtitle": "Assay of Arizona's places and things that makes it unique",
     "filename": "feed.xml",
     "path": "/feed.xml",
-    "url": "https://www.zerostatic.io/theme/11ty-curate/",
-    "base": "https://www.zerostatic.io/"
+    "url": "https://luminousarizona.com/",
+    "base": "https://luminousarizona.com/"
   }
 }
