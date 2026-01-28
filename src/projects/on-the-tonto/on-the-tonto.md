@@ -1,5 +1,5 @@
 ---
-layout: project-left
+layout: project-portrait
 title: "On The Tonto"
 subTitle: "Black and White Visions within Tonto National Forest"
 description: ""

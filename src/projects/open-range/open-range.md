@@ -1,5 +1,5 @@
 ---
-layout: project-top
+layout: project-landscape
 title: "Open Range"
 subTitle: ""
 description: ""

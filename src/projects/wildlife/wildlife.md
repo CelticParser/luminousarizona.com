@@ -1,5 +1,5 @@
 ---
-layout: project-top
+layout: project-landscape
 title: "Wildlife"
 subTitle: "The Indiginous life of Arizona"
 description: ""

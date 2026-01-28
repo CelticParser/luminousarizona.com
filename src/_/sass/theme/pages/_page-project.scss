@@ -1,4 +1,20 @@
 .page-project {
+  // Center content vertically in image-portrait layout
+  .row {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: center;
+      
+      // Ensure columns align properly
+      aside.col-md-6,
+      article.col-md-6 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
+  
   .project-breadcrumb {
     display: none; // Hidden on mobile
     @include media-breakpoint-up(md) {
@@ -81,7 +97,7 @@
     }
   }
   
-  // Make featured image full width on mobile in project-left layout
+  // Make featured image full width on mobile in project-portrait layout
   @include media-breakpoint-down(md) {
     // Target the row that contains the featured image
     section.row:first-of-type {
@@ -173,7 +189,7 @@
         }
       }
     }
-    // gallery-single-column (featured in project-left layout) - no cropping
+    // gallery-single-column (featured in project-portrait layout) - no cropping
     &.gallery-single-column {
       figure,
       .gallery-item {

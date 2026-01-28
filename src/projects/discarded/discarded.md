@@ -1,5 +1,5 @@
 ---
-layout: project-left
+layout: project-portrait
 title: "Discarded"
 subTitle: "Add Sub line"
 description: ""

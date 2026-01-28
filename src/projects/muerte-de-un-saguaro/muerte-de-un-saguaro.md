@@ -1,5 +1,5 @@
 ---
-layout: project-left
+layout: project-portrait
 title: "Muerte de un Saguaro"
 subTitle: "The Death of a Saguaro"
 description: ""

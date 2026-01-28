@@ -1,5 +1,5 @@
 ---
-layout: project-top
+layout: project-landscape
 title: "Sky Islands"
 subTitle: "TODO Create a sub title"
 description: ""

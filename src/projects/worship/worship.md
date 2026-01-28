@@ -1,5 +1,5 @@
 ---
-layout: project-left
+layout: project-portrait
 title: "worship"
 subTitle: "Spanish Colonial Missions, Churches, and Chapels"
 description: ""

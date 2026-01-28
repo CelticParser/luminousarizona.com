@@ -1,5 +1,5 @@
 ---
-layout: project-left
+layout: project-portrait
 title: "Monoliths"
 subTitle: "Create a subtitle"
 description: ""

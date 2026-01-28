@@ -1,5 +1,5 @@
 ---
-layout: project-top
+layout: project-landscape
 title: "Lunaris Imago"
 subTitle: "Images of the Moon"
 description: ""

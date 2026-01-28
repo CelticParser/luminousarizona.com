@@ -1,5 +1,5 @@
 ---
-layout: project-top
+layout: project-landscape
 title: "Tribal Lands"
 subTitle: "Black and White Visions: Tribal Lands of the American Southwest"
 description: ""

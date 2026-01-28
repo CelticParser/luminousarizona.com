@@ -1,5 +1,5 @@
 ---
-layout: project-left
+layout: project-portrait
 title: "Arboreal"
 subTitle: "From Sand to Summit -- The Trees of Arizona"
 description: ""

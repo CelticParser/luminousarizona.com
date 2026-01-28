@@ -1,5 +1,5 @@
 ---
-layout: project-top
+layout: project-landscape
 title: "Arid Desert"
 subTitle: "Desertscapes of Arizona"
 description: ""
