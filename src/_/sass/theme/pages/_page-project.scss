@@ -160,13 +160,15 @@
           }
         }
       }
-      // Single item galleries (image pages) maintain default aspect-ratio for full height
+      // Single item galleries (image pages) - check if it's landscape or portrait
       .gallery-item:only-child {
         .gallery-image {
           img {
-            // Keep default behavior for single image pages to maintain full height
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
+            // Default: don't crop - show full image (for landscape layout)
+            aspect-ratio: unset;
+            object-fit: unset;
+            height: auto;
+            width: 100%;
           }
         }
       }
