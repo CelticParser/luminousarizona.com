@@ -1,4 +1,4 @@
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEXBEzrYSrSMcd6g3yS-DpeD2fVuCpUfc&callback=initMap&loading=async"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEXBEzrYSrSMcd6g3yS-DpeD2fVuCpUfc&callback=initMap&loading=async&libraries=marker"></script>
 
 <div id="map" style="aspect-ratio: 16 / 9; width: 100%;"></div>
 
@@ -158,8 +158,8 @@
           {% endif %}
         {% endif %}
 
-        // Function to create custom icon with border and pointer
-        function createCustomIcon(imageUrl, isPortrait, isMobileDevice) {
+        // Function to create custom icon element with border and pointer for AdvancedMarkerElement
+        function createCustomIconElement(imageUrl, isPortrait, isMobileDevice) {
             return new Promise((resolve) => {
                 const img = new Image();
                 img.crossOrigin = 'anonymous';
@@ -243,40 +243,70 @@
                     ctx.lineWidth = 1;
                     ctx.stroke();
                     
-                    resolve({
-                        url: canvas.toDataURL(),
-                        scaledSize: new google.maps.Size(canvasWidth, canvasHeight),
-                        anchor: new google.maps.Point(canvasWidth / 2, canvasHeight) // Anchor at bottom center of pointer
-                    });
+                    // Create container element for AdvancedMarkerElement
+                    const container = document.createElement('div');
+                    container.style.width = canvasWidth + 'px';
+                    container.style.height = canvasHeight + 'px';
+                    container.style.position = 'relative';
+                    // Anchor point at bottom center of pointer - use CSS transform to position
+                    container.style.transform = `translate(-${canvasWidth / 2}px, -${canvasHeight}px)`;
+                    container.style.transformOrigin = 'bottom center';
+                    
+                    // Create img element from canvas
+                    const markerImg = document.createElement('img');
+                    markerImg.src = canvas.toDataURL();
+                    markerImg.style.width = '100%';
+                    markerImg.style.height = '100%';
+                    markerImg.style.display = 'block';
+                    markerImg.style.objectFit = 'contain';
+                    
+                    container.appendChild(markerImg);
+                    
+                    resolve(container);
                 };
                 
                 img.onerror = function() {
-                    // Fallback if image fails to load
-                    resolve({
-                        url: imageUrl,
-                        scaledSize: new google.maps.Size(isPortrait ? 50 : 80, isPortrait ? 70 : 50),
-                        anchor: new google.maps.Point(isPortrait ? 25 : 40, isPortrait ? 70 : 50)
-                    });
+                    // Fallback if image fails to load - create simple container
+                    const fallbackWidth = isPortrait ? 50 : 80;
+                    const fallbackHeight = isPortrait ? 70 : 50;
+                    
+                    const container = document.createElement('div');
+                    container.style.width = fallbackWidth + 'px';
+                    container.style.height = fallbackHeight + 'px';
+                    container.style.position = 'relative';
+                    // Anchor point at bottom center
+                    container.style.transform = `translate(-${fallbackWidth / 2}px, -${fallbackHeight}px)`;
+                    container.style.transformOrigin = 'bottom center';
+                    
+                    const markerImg = document.createElement('img');
+                    markerImg.src = imageUrl;
+                    markerImg.style.width = '100%';
+                    markerImg.style.height = '100%';
+                    markerImg.style.display = 'block';
+                    markerImg.style.objectFit = 'cover';
+                    
+                    container.appendChild(markerImg);
+                    
+                    resolve(container);
                 };
                 
                 img.src = imageUrl;
             });
         }
 
-        // Add markers for each custom point
+        // Add markers for each custom point using AdvancedMarkerElement
         customPoints.forEach((point) => {
             // Create absolute URL for the image
             const baseUrl = window.location.origin;
             const imageUrl = baseUrl + '/assets/images/' + point.imageUrl;
             
-            // Create custom icon with border and pointer
-            createCustomIcon(imageUrl, point.portrait, isMobile).then((iconConfig) => {
-                const marker = new google.maps.Marker({
+            // Create custom icon element with border and pointer
+            createCustomIconElement(imageUrl, point.portrait, isMobile).then((iconElement) => {
+                const marker = new google.maps.marker.AdvancedMarkerElement({
                     position: { lat: point.lat, lng: point.lng },
                     map: map,
                     title: point.title,
-                    icon: iconConfig,
-                    optimized: false
+                    content: iconElement
                 });
                 
                 // Add click event to navigate to image page
