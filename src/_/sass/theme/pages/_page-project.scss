@@ -83,6 +83,55 @@
     }
   }
   
+  .image-navigation {
+    display: none; // Hidden on mobile
+    @include media-breakpoint-up(md) {
+      display: block;
+      float: right;
+      clear: right;
+      margin-top: 1em; // Space below content
+      margin-bottom: 10px;
+      font-size: 0.78em; // 14px / 18px
+      color: var(--color-base-text-2);
+      
+      .nav-link {
+        color: var(--color-base-text-2);
+        text-decoration: none;
+        transition: color 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        
+        &:hover {
+          color: var(--color-base-text);
+          text-decoration: underline;
+        }
+      }
+      
+      .nav-separator {
+        margin: 0 10px;
+        color: var(--color-base-text-2);
+      }
+      
+      .nav-arrow {
+        font-size: 0.89em; // 16px / 18px
+      }
+    }
+  }
+  
+  // Ensure image-navigation aligns right in image-portrait flex container
+  article.col-md-6 {
+    .image-navigation {
+      @include media-breakpoint-up(md) {
+        // In flex containers, use flexbox alignment instead of float
+        float: none;
+        align-self: flex-end;
+        margin-left: auto;
+        text-align: right;
+      }
+    }
+  }
+  
   // Ensure gallery clears the floated breadcrumb and navigation
   .gallery {
     @include media-breakpoint-up(md) {

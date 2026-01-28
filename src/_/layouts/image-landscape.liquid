@@ -32,6 +32,8 @@ body_classes: page-project
 
     <article class="content" style="width: 100%">{{ content }}</article>
 
+    {% include 'framework/image-navigation' %}
+    <br>
     <section>
       <h2>Tripod Location for {{ title }}</h2>
       {% include 'theme/tripod-map' %}

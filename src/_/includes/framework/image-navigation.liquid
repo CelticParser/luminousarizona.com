@@ -1,0 +1,50 @@
+{% comment %} Image navigation: previous/next images within the same project {% endcomment %}
+{% if tags %}
+  {% comment %} Get all images with the same project tag, sorted by title {% endcomment %}
+  {% assign projectTag = tags %}
+  {% assign projectImages = collections.images | where: "data.tags", projectTag | sort: "data.title" %}
+
+  {% comment %} Find current image index by comparing URLs {% endcomment %}
+  {% assign currentIndex = -1 %}
+  {% for image in projectImages %}
+    {% if image.url == page.url or image.url == url %}
+      {% assign currentIndex = forloop.index0 %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% if currentIndex >= 0 %}
+    {% assign prevIndex = currentIndex | minus: 1 %}
+    {% assign nextIndex = currentIndex | plus: 1 %}
+
+    <nav class="image-navigation" aria-label="Image navigation">
+      {% if prevIndex >= 0 %}
+        {% assign prevImage = projectImages[prevIndex] %}
+        <a
+          href="{{ prevImage.url }}"
+          class="nav-link nav-prev"
+          aria-label="Previous image">
+          <span class="nav-arrow">←</span>
+          {{ prevImage.data.title }}
+        </a>
+      {% endif %}
+
+      {% if prevIndex >= 0 and nextIndex < projectImages.size %}
+        <span class="nav-separator">|</span>
+      {% endif %}
+
+      {% if nextIndex < projectImages.size %}
+        {% assign nextImage = projectImages[nextIndex] %}
+        <a
+          href="{{ nextImage.url }}"
+          class="nav-link nav-next"
+          aria-label="Next image">
+          {{ nextImage.data.title }}
+          <span class="nav-arrow">→</span>
+        </a>
+      {% endif %}
+      <hr>
+    </nav>
+
+  {% endif %}
+{% endif %}
