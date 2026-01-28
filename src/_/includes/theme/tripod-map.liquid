@@ -80,6 +80,9 @@
         };
 
         const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        
+        // Create a shared InfoWindow for marker titles
+        const infoWindow = new google.maps.InfoWindow();
 
         {% if isProject %}
           {% comment %} Project page: show all pins from project images {% endcomment %}
@@ -309,8 +312,23 @@
                     content: iconElement
                 });
                 
+                // Show title instantly on hover
+                marker.addListener('gmp-pointerenter', function() {
+                    infoWindow.setContent(`<div style="padding: 8px; font-size: 14px;">${point.title}</div>`);
+                    infoWindow.open(map, marker);
+                });
+                
+                // Hide title when pointer leaves
+                marker.addListener('gmp-pointerleave', function() {
+                    infoWindow.close();
+                });
+                
                 // Add click event to navigate to image page
-                marker.addListener('click', function() {
+                marker.addListener('gmp-click', function() {
+                    // Close info window if open
+                    infoWindow.close();
+                    
+                    // Navigate to image page
                     window.location.href = point.pageUrl;
                 });
             });
