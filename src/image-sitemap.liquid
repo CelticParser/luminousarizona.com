@@ -46,16 +46,22 @@ layout: false
         {% endif %}
       {% endif %}
 
-      <url>
+      {% comment %} Generate image metadata strings {% endcomment %}
+      {% assign imageCaption = "Jason Robert O'Kennedy - " | append: image.data.title %}
+      {% assign imageYear = image.data.year | default: "2025" %}
+      {% assign imageCopyright = "Jason Robert O'Kennedy - " | append: imageYear %}
+
+        <url>
         <loc>{{ baseUrl }}{{ image.url }}</loc>
         <lastmod>{{ image.date | date: "%Y-%m-%d" }}</lastmod>
 
         {% comment %} Include largest processed JPEG image {% endcomment %}
         {% assign processedImageName = imageBasename | append: "-" | append: largestWidth | append: "." | append: jpegFormat %}
+        {% assign processedImageUrl = baseUrl | append: "/assets/images/" | append: processedImageName %}
         <image:image>
-          <image:loc>{{ baseUrl }}/assets/images/{{ processedImageName }}</image:loc>
-          <image:caption>Jason Robert O'Kennedy - {{ image.data.title }}</image:caption>
-          <image:copyright>Jason Robert O'Kennedy - {{ image.data.year | default: "2025" }}</image:copyright>
+          <image:loc>{{ processedImageUrl }}</image:loc>
+          <image:caption>{{ imageCaption }}</image:caption>
+          <image:copyright>{{ imageCopyright }}</image:copyright>
           <image:license>{{ licenseUrl }}</image:license>
           {% if geoLocation != "" %}
             <image:geo_location>{{ geoLocation }}</image:geo_location>
@@ -64,10 +70,11 @@ layout: false
 
         {% comment %} Also include original image if it's a JPEG/JPG {% endcomment %}
         {% if imageExt == "jpg" or imageExt == "jpeg" %}
+          {% assign originalImageUrl = baseUrl | append: "/assets/images/" | append: imageFilename %}
           <image:image>
-            <image:loc>{{ baseUrl }}/assets/images/{{ imageFilename }}</image:loc>
-            <image:caption>Jason Robert O'Kennedy - {{ image.data.title }}</image:caption>
-            <image:copyright>Jason Robert O'Kennedy - {{ image.data.year | default: "2025" }}</image:copyright>
+            <image:loc>{{ originalImageUrl }}</image:loc>
+            <image:caption>{{ imageCaption }}</image:caption>
+            <image:copyright>{{ imageCopyright }}</image:copyright>
             <image:license>{{ licenseUrl }}</image:license>
             {% if geoLocation != "" %}
               <image:geo_location>{{ geoLocation }}</image:geo_location>

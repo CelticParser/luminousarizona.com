@@ -9,28 +9,11 @@
         {% assign mapCenterLng = '-111.85' %}
         {% assign mapZoom = '8' %}
         
-        {% if isProject and gMap and gMap.size > 0 %}
-          {% comment %} Project page: use project's gMap center and zoom {% endcomment %}
+        {% comment %} Parse gMap center/zoom configuration {% endcomment %}
+        {% if gMap and gMap.size > 0 %}
           {% assign gMapConfig = gMap[0] %}
-          {% if gMapConfig.center %}
-            {% assign centerStr = gMapConfig.center %}
-            {% assign centerParts = centerStr | split: ',' %}
-            {% if centerParts.size >= 2 %}
-              {% assign latStr = centerParts[0] | split: ':' %}
-              {% assign lngStr = centerParts[1] | split: ':' %}
-              {% if latStr.size >= 2 and lngStr.size >= 2 %}
-                {% assign mapCenterLat = latStr[1] | strip %}
-                {% assign mapCenterLng = lngStr[1] | strip %}
-              {% endif %}
-            {% endif %}
-          {% endif %}
           
-          {% if gMapConfig.zoom %}
-            {% assign mapZoom = gMapConfig.zoom %}
-          {% endif %}
-        {% elsif gMap and gMap.size > 0 %}
-          {% comment %} Image page: use image's gMap center/zoom, or use tripod as center if no center specified {% endcomment %}
-          {% assign gMapConfig = gMap[0] %}
+          {% comment %} Parse center coordinates {% endcomment %}
           {% if gMapConfig.center %}
             {% assign centerStr = gMapConfig.center %}
             {% assign centerParts = centerStr | split: ',' %}
@@ -42,8 +25,8 @@
                 {% assign mapCenterLng = lngStr[1] | strip %}
               {% endif %}
             {% endif %}
-          {% elsif gMapConfig.tripod %}
-            {% comment %} If no center specified, use tripod location as center {% endcomment %}
+          {% elsif gMapConfig.tripod and isProject == false %}
+            {% comment %} Image page: If no center specified, use tripod location as center {% endcomment %}
             {% assign tripodStr = gMapConfig.tripod %}
             {% assign tripodParts = tripodStr | split: ',' %}
             {% if tripodParts.size >= 2 %}
@@ -105,12 +88,12 @@
                       {% assign latPart = tripodParts[0] | split: ':' %}
                       {% assign lngPart = tripodParts[1] | split: ':' %}
                       {% if latPart.size >= 2 and lngPart.size >= 2 %}
-                        {% assign lat = latPart[1] | strip %}
-                        {% assign lng = lngPart[1] | strip %}
+                        {% assign parsedLat = latPart[1] | strip %}
+                        {% assign parsedLng = lngPart[1] | strip %}
                         {% if pointCount > 0 %},{% endif %}
                         {
-                            lat: {{ lat }},
-                            lng: {{ lng }}, 
+                            lat: {{ parsedLat }},
+                            lng: {{ parsedLng }}, 
                             title: '{{ image.data.title | escape }}',
                             imageUrl: '{{ image.data.image }}',
                             pageUrl: '{{ image.url }}',
@@ -126,6 +109,7 @@
           ];
         {% else %}
           {% comment %} Image page: show single pin for this image {% endcomment %}
+          {% assign customPointsEmpty = true %}
           {% if gMap and gMap.size > 0 %}
             {% assign imageGMap = gMap[0] %}
             {% if imageGMap.tripod %}
@@ -135,30 +119,24 @@
                 {% assign latPart = tripodParts[0] | split: ':' %}
                 {% assign lngPart = tripodParts[1] | split: ':' %}
                 {% if latPart.size >= 2 and lngPart.size >= 2 %}
-                  {% assign lat = latPart[1] | strip %}
-                  {% assign lng = lngPart[1] | strip %}
+                  {% assign parsedLat = latPart[1] | strip %}
+                  {% assign parsedLng = lngPart[1] | strip %}
+                  {% assign customPointsEmpty = false %}
                   const customPoints = [
                     {
-                        lat: {{ lat }},
-                        lng: {{ lng }}, 
+                        lat: {{ parsedLat }},
+                        lng: {{ parsedLng }}, 
                         title: '{{ title | escape }}',
                         imageUrl: '{{ image }}',
                         pageUrl: '{{ page.url }}',
                         portrait: {% if imageGMap.portrait == true %}true{% else %}false{% endif %}
                     }
                   ];
-                {% else %}
-                  const customPoints = [];
                 {% endif %}
-              {% else %}
-                const customPoints = [];
               {% endif %}
-            {% else %}
-              const customPoints = [];
             {% endif %}
-          {% else %}
-            const customPoints = [];
           {% endif %}
+          {% if customPointsEmpty %}const customPoints = [];{% endif %}
         {% endif %}
 
         // Function to create custom icon element with border and pointer for AdvancedMarkerElement
