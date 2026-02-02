@@ -12,6 +12,9 @@ featured:
   - image: "the-santa-cruz-photo-by-jason-robert-okennedy.jpeg"
     caption: "The Santa Cruz"
     year: "2023"
+    gMap:
+  - center: "lat: 31.379932, lng: -110.222977"
+    zoom: "7"
 ---
 
 <b><i>"The arid, sun-bleached expanse of the Arizona desert holds not only the geology of eons but also the enduring, architectural testament to cultural collision: the Spanish colonial missions, churches, and chapels."</i></b>
