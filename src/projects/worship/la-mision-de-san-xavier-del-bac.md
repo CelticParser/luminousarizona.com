@@ -2,15 +2,19 @@
 layout: image-landscape
 title: "La Mision de San Xavier del Bac"
 subTitle: "Black and White Visions: Tribal Lands of the American Southwest"
-description: ""
+description: "The White Dove of The Desert"
 date: 2025-10-16
 tags: "worship"
 permalink: "/projects/worship/la-mision-de-san-xavier-del-bac/"
 thumbnail: "la-mision-de-san-xavier-del-bac-photo-by-jason-robert-okennedy.jpeg"
+tumbCardPosition: "top"
 image: "la-mision-de-san-xavier-del-bac-photo-by-jason-robert-okennedy.jpeg"
 alt: ""
 year: "2022"
-tripod: "lat: 32.103310, lng: -111.003673"
+gMap:
+  - tripod: "lat: 32.103296, lng: -111.003641"
+    zoom: "15"
+    portrait: false
 ---
 
 > _Across the field, where white cotton grows,
