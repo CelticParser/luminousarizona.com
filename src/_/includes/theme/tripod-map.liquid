@@ -13,6 +13,11 @@
         {% if gMap and gMap.size > 0 %}
           {% assign gMapConfig = gMap[0] %}
           
+          {% comment %} Parse zoom first (before center parsing) {% endcomment %}
+          {% if gMapConfig.zoom %}
+            {% assign mapZoom = gMapConfig.zoom %}
+          {% endif %}
+          
           {% comment %} Parse center coordinates {% endcomment %}
           {% if gMapConfig.center %}
             {% assign centerStr = gMapConfig.center %}
@@ -38,19 +43,21 @@
               {% endif %}
             {% endif %}
           {% endif %}
-          
-          {% if gMapConfig.zoom %}
-            {% assign mapZoom = gMapConfig.zoom %}
-          {% endif %}
         {% endif %}
         
         // Detect mobile devices (typically < 768px width)
         const isMobile = window.innerWidth < 768;
         
         // Adjust zoom: reduce by 2 steps on mobile
-        let adjustedZoom = {{ mapZoom }};
+        // Ensure zoom is a number (parseInt handles string values from frontmatter)
+        let adjustedZoom = parseInt({{ mapZoom }}, 10);
+        if (isNaN(adjustedZoom)) {
+            adjustedZoom = 8; // Fallback to default
+        }
+        console.log('Map zoom from frontmatter:', {{ mapZoom }}, 'Parsed zoom:', adjustedZoom);
         if (isMobile && adjustedZoom > 1) {
             adjustedZoom = Math.max(1, adjustedZoom - 2);
+            console.log('Mobile detected, adjusted zoom:', adjustedZoom);
         }
         
         const mapOptions = {

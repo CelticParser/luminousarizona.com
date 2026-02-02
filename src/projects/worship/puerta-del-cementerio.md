@@ -13,7 +13,7 @@ alt: ""
 year: "2023"
 gMap:
   - tripod: "lat: 33.640383, lng: -111.116602"
-    zoom: "14"
+    zoom: "16"
     portrait: false
 ---
 

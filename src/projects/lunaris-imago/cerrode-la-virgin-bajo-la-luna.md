@@ -12,8 +12,8 @@ image: "cerrode-la-virgin-bajo-la-luna-photo-by-jason-robrt-okennedy.jpg"
 alt: ""
 year: "2022"
 gMap:
-  - tripod: "lat: 31.3797, lng: -110.222646"
-    zoom: "12"
+  - tripod: "lat: 31.379932, lng: -110.222977"
+    zoom: "16"
     portrait: false
 ---
 
