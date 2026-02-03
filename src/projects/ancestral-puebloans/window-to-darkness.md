@@ -1,7 +1,7 @@
 ---
-layout: image-landscape
+layout: image-portrait
 title: "Window to Darkness"
-subTitle: ""
+subTitle: "Tonto Upper Cliff Dwelling, Tonto National Monument"
 description: ""
 date: 2025-10-16
 tags: "ancestral-puebloans"
@@ -11,9 +11,9 @@ image: "image-coming-soon.webp"
 alt: ""
 year: "2026"
 gMap:
-  - tripod: "lat: 33.640383, lng: -111.116602"
-    zoom: "14"
-    portrait: false
+  - tripod: "lat: 33.640396, lng: -111.116624"
+    zoom: "16"
+    portrait: true
 ---
 
 > _A chance appears, a window to the light,
