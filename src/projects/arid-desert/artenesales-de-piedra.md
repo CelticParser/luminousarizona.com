@@ -1,7 +1,7 @@
 ---
 layout: image-landscape
 title: "Artenesales de Piedra"
-subTitle: "T"
+subTitle: "Church Rock Valley, Kayenta"
 description: ""
 date: 2025-10-16
 tags: "arid-desert"

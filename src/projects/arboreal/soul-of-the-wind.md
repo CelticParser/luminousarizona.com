@@ -1,7 +1,7 @@
 ---
 layout: image-portrait
 title: "Soul of The Wind"
-subTitle: "Piñon at Solders Pass"
+subTitle: "Piñon at Solders Pass Trail"
 description: ""
 date: 2025-10-16
 tags: "arboreal"

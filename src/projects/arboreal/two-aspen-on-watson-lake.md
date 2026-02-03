@@ -1,7 +1,7 @@
 ---
 layout: image-landscape
 title: "Two Aspen on Watson Lake"
-subTitle: ""
+subTitle: "Watson Lake, Prescott"
 description: ""
 date: 2025-10-16
 tags: "arboreal"
