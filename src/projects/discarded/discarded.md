@@ -1,7 +1,7 @@
 ---
 layout: project-portrait
 title: "Discarded"
-subTitle: "Add Sub line"
+subTitle: "The Spectral Dignity of Decay"
 description: ""
 date: 2026-01-01
 weight: 5

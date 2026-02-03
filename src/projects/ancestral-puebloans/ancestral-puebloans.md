@@ -1,7 +1,7 @@
 ---
 layout: project-landscape
 title: "Ancestral Puebloans"
-subTitle: ""
+subTitle: "Light, Mortar, and Mystery: Stripping Away Color to Reveal the Soul of the Southwest."
 description: ""
 date: 2026-01-01
 weight: 6

@@ -1,7 +1,7 @@
 ---
 layout: image-portrait
 title: "Delapidated DC3 Ephonage"
-subTitle: ""
+subTitle: "Gila River Memorial Airport, Gila River Indian Reservation"
 description: ""
 date: 2025-10-16
 tags: "discarded"

@@ -1,7 +1,7 @@
 ---
 layout: project-portrait
 title: "Monoliths"
-subTitle: "Create a subtitle"
+subTitle: "Monuments of Resistance: A Visual Study of Stone Defying Time"
 description: ""
 date: 2026-01-01
 weight: 3

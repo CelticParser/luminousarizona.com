@@ -1,7 +1,7 @@
 ---
 layout: project-portrait
 title: "Arboreal"
-subTitle: "From Sand to Summit -- The Trees of Arizona"
+subTitle: "The Rigor of the Root: Unveiling the Hidden Geometry of Arizona’s Flora."
 description: ""
 date: 2026-01-01
 weight: 8
