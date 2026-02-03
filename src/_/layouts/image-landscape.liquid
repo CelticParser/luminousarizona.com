@@ -28,6 +28,9 @@ body_classes: page-project
 
     <header class="project-heading">
       <h1>{{ title }}</h1>
+      {% if subTitle %}
+        <p style="font-size: 1.2em">{{ subTitle }}</p>
+      {% endif %}
     </header>
 
     <article class="content" style="width: 100%">{{ content }}</article>

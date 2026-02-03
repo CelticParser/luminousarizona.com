@@ -1,7 +1,7 @@
 ---
 layout: project-landscape
 title: "Ancestral Puebloans"
-subTitle: "Create sub title"
+subTitle: ""
 description: ""
 date: 2026-01-01
 weight: 6

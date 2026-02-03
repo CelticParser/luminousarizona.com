@@ -31,23 +31,6 @@ body_classes: page-project
           </div>
         {% endif %}
 
-        {% if client %}
-          <div class="project-client">
-            <strong>Client
-            </strong>
-            <span>{{ client }}</span>
-          </div>
-        {% endif %}
-
-        {% if role %}
-          <div class="project-role">
-            <strong>Role
-            </strong>
-            <span>{{ role }}</span>
-          </div>
-        {% endif %}
-      </aside>
-
       <article class="col-12 col-md-6 mb-4">
         <div class="content">{{ content }}</div>
         {% include 'framework/project-navigation' %}
