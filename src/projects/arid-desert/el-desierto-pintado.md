@@ -1,7 +1,7 @@
 ---
 layout: image-landscape
 title: "el Desierto Pintado"
-subTitle: "The Painted Desert"
+subTitle: "The Painted Desert, Tuba City"
 description: ""
 date: 2025-10-16
 tags: "arid-desert"
