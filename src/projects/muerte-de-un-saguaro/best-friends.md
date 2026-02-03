@@ -4,7 +4,9 @@ title: "Best Friends"
 subTitle: ""
 description: ""
 date: 2025-10-16
-tags: "muerte-de-un-saguaro"
+tags: 
+  - "muerte-de-un-saguaro"
+  - "arboreal"
 permalink: "/projects/muerte-de-un-saguaro/best-friends/"
 thumbnail: "image-coming-soon.webp"
 tumbCardPosition: "top"
