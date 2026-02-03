@@ -3,7 +3,29 @@
     <h2>{{ title }} Gallery</h2>
     <div class="gallery gallery-two-column">
       {% assign currentTag = title | slugify %}
-      {% for post in collections[currentTag] %}
+      {% comment %} Get all images that have this project tag in their tags (supports both string and array) {% endcomment %}
+      {% assign galleryImages = "" | split: "," %}
+      {% for image in collections.images %}
+        {% assign imageTags = image.data.tags %}
+        {% assign hasTag = false %}
+        {% if imageTags %}
+          {% if imageTags == currentTag %}
+            {% assign hasTag = true %}
+            {% elsif imageTags.first %}
+            {% comment %} tags is an array {% endcomment %}
+            {% for tag in imageTags %}
+              {% if tag == currentTag %}
+                {% assign hasTag = true %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endif %}
+        {% if hasTag %}
+          {% assign galleryImages = galleryImages | push: image %}
+        {% endif %}
+      {% endfor %}
+      {% for post in galleryImages %}
         <figure class="gallery-item">
           <div class="gallery-image">
             <a href="{{ post.url }}">

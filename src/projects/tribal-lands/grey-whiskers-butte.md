@@ -4,7 +4,9 @@ title: "Grey Whiskers Butte"
 subTitle: "Black and White Visions: Tribal Lands of the American Southwest"
 description: ""
 date: 2025-10-16
-tags: "tribal-lands"
+tags: 
+  - "tribal-lands"
+  - "monoliths"
 permalink: "/projects/tribal-lands/grey-whiskers-butte/"
 thumbnail: "grey-whiskers-butte-photo-by-jason-robert-okennedy.jpeg"
 image: "grey-whiskers-butte-photo-by-jason-robert-okennedy.jpeg"

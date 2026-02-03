@@ -76,9 +76,29 @@
 
         {% if isProject %}
           {% comment %} Project page: show all pins from project images {% endcomment %}
-          // Get project images from collections using project title as tag
+          // Get project images that have this project tag in their tags (supports both string and array)
           {% assign projectTag = title | slugify %}
-          {% assign projectImages = collections[projectTag] %}
+          {% assign projectImages = "" | split: "," %}
+          {% for image in collections.images %}
+            {% assign imageTags = image.data.tags %}
+            {% assign hasTag = false %}
+            {% if imageTags %}
+              {% if imageTags == projectTag %}
+                {% assign hasTag = true %}
+              {% elsif imageTags.first %}
+                {% comment %} tags is an array {% endcomment %}
+                {% for tag in imageTags %}
+                  {% if tag == projectTag %}
+                    {% assign hasTag = true %}
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            {% endif %}
+            {% if hasTag %}
+              {% assign projectImages = projectImages | push: image %}
+            {% endif %}
+          {% endfor %}
           
           // Define custom points from project images' gMap.tripod
           const customPoints = [

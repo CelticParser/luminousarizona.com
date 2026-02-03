@@ -1,8 +1,42 @@
 {% comment %} Image navigation: previous/next images within the same project {% endcomment %}
 {% if tags %}
-  {% comment %} Get all images with the same project tag, sorted by title {% endcomment %}
-  {% assign projectTag = tags %}
-  {% assign projectImages = collections.images | where: "data.tags", projectTag | sort: "data.title" %}
+  {% comment %} Get all images with the same project tag(s), sorted by title {% endcomment %}
+  {% comment %} Extract project tag from URL path (e.g., /projects/tribal-lands/...) or use first tag {% endcomment %}
+  {% assign urlParts = page.url | split: '/' %}
+  {% if urlParts.size >= 3 %}
+    {% assign projectTag = urlParts[2] %}
+    {% else %}
+    {% comment %} Fallback: use first tag from tags array or tags string {% endcomment %}
+    {% if tags.first %}
+      {% assign projectTag = tags.first %}
+    {% else %}
+      {% assign projectTag = tags %}
+    {% endif %}
+  {% endif %}
+
+  {% comment %} Get images that have this project tag (supports both string and array) {% endcomment %}
+  {% assign projectImages = "" | split: "," %}
+  {% for image in collections.images %}
+    {% assign imageTags = image.data.tags %}
+    {% assign hasTag = false %}
+    {% if imageTags %}
+      {% if imageTags == projectTag %}
+        {% assign hasTag = true %}
+        {% elsif imageTags.first %}
+        {% comment %} tags is an array {% endcomment %}
+        {% for tag in imageTags %}
+          {% if tag == projectTag %}
+            {% assign hasTag = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endif %}
+    {% if hasTag %}
+      {% assign projectImages = projectImages | push: image %}
+    {% endif %}
+  {% endfor %}
+  {% assign projectImages = projectImages | sort: "data.title" %}
 
   {% comment %} Find current image index by comparing URLs {% endcomment %}
   {% assign currentIndex = -1 %}
