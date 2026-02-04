@@ -1,7 +1,7 @@
 ---
 layout: project-portrait
 title: "On The Tonto"
-subTitle: "Black and White Visions within Tonto National Forest"
+subTitle: "Three Million Acres of Silence: A Visual Journey Across Arizona’s Most Diverse Terrain"
 description: ""
 date: 2026-01-01
 weight: 4
@@ -27,3 +27,7 @@ gallery_limit: 2
 Holding the title of one of the most diverse National Forests in the United States, its boundaries encapsulate an astonishing vertical range, climbing from scorched Sonoran Desert cactus flats to the crisp, mixed conifer forests near the summit of Four Peaks. This photo essay, titled On The Tonto, is an ode to this vast and varied terrain, documenting the dramatic transitions where life adapts across climates and altitudes.
 
 Captured exclusively in the stark simplicity of black and white, this collection strips away the distracting greens and browns to emphasize the structural backbone of the forest. The monochrome lens is employed to highlight the textures of transition: the parched earth of the lowlands, the resilient scrub of the Pinyon-Juniper belt, and the imposing geometry of the high mountain slopes. By focusing on contrast, shadow, and scale, On The Tonto offers a contemplative visual journey through a territory defined by immense scale and unexpected biological richness, revealing the quiet, constant negotiations of survival in this immense, storied landscape.
+
+<!-- Break to wrap image -->
+
+> _On The Tonto serves as a grand synthesis of my geographical themes. By focusing on this "ecological system in miniature," I aim to capturing the entire vertical soul of Arizona within a single forest's boundaries.<br><br>The Tonto moves from a "green space" to a "structural space," where the transition from cactus to conifer becomes a study in evolutionary geometry._

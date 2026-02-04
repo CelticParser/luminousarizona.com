@@ -8,6 +8,11 @@ body_classes: page-project
 <main class="section">
   <div class="container">
     <section class="row">
+      {% comment %} Split content at <!-- Break to wrap image --> comment {% endcomment %}
+      {% assign contentParts = content | split: '<!-- Break to wrap image -->' %}
+      {% assign contentBeforeBreak = contentParts[0] %}
+      {% assign contentAfterBreak = contentParts[1] %}
+
       {% if featured %}
         <aside class="col-12 col-md-6 mb-6 mb-md-0">
           {% include 'framework/project-breadcrumb' %}
@@ -43,9 +48,25 @@ body_classes: page-project
           </header>
         {% endif %}
 
-        <div class="content">{{ content }}</div>
+        <div class="content">
+          {% if contentBeforeBreak %}
+            {{ contentBeforeBreak }}
+          {% else %}
+            {{ content }}
+          {% endif %}
+        </div>
       </article>
     </section>
+    {% if contentAfterBreak %}
+      <hr>
+      <section class="row">
+        <div class="col-12">
+          <div class="content content-below-image">
+            {{ contentAfterBreak }}
+          </div>
+        </div>
+      </section>
+    {% endif %}
     <hr>
     {% include 'framework/project-navigation' %}
     {% include 'project-gallery' %}
