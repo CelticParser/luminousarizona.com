@@ -4,7 +4,9 @@ title: "Fall of a Dreamer"
 subTitle: "Cibecue Falls"
 description: ""
 date: 2025-10-16
-tags: "oasis"
+tags: 
+  - "oasis"
+  - "tribal-lands"
 permalink: "/projects/oasis/fall-of-a-dreamer/"
 thumbnail: "fall-of-a-dreamer-photo-by-jason-robert-okennedy.jpeg"
 tumbCardPosition: "top"
