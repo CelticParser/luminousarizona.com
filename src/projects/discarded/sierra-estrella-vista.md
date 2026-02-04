@@ -1,7 +1,7 @@
 ---
 layout: image-landscape
 title: "Sierra Estrella Vista"
-subTitle: ""
+subTitle: "Cotton Citrus Farms, Goodyear"
 description: ""
 date: 2025-10-16
 tags: "discarded"

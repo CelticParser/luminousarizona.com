@@ -4,7 +4,9 @@ title: "Tsohanoai"
 subTitle: ""
 description: ""
 date: 2025-10-16
-tags: "arid-desert"
+tags: 
+  - "arid-desert"
+  - "tribal-lands"
 permalink: "/projects/arid-desert/tsohanoai/"
 thumbnail: "image-coming-soon.webp"
 image: "image-coming-soon.webp"

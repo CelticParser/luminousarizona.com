@@ -4,7 +4,9 @@ title: "el Desierto Pintado"
 subTitle: "The Painted Desert, Tuba City"
 description: ""
 date: 2025-10-16
-tags: "arid-desert"
+tags: 
+  - "arid-desert"
+  - "tribal-lands"
 permalink: "/projects/arid-desert/el-desierto-pintado/"
 thumbnail: "el-desierto-pintado-photo-by-jason-robert-okennedy.jpeg"
 image: "el-desierto-pintado-photo-by-jason-robert-okennedy.jpeg"

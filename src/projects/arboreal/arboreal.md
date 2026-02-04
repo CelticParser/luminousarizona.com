@@ -16,7 +16,7 @@ featured:
     year: "2020"
 gMap:
   - center: "lat: 34.911695, lng: -111.974406"
-    zoom: "9"
+    zoom: "8"
 ---
 
 <i><b>"Arizona, the state of extremes, hosts an astonishing biodiversity defined by elevation, where arid desert floors ascend rapidly into alpine peaks."</b></i>

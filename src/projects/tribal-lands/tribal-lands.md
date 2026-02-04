@@ -16,7 +16,7 @@ featured:
     year: "2020"
 gMap:
   - center: "lat: 36.970402, lng: -110.141348"
-    zoom: "10"
+    zoom: "9"
 gallery: true
 ---
 

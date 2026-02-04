@@ -17,24 +17,6 @@ gMap:
     portrait: true
 ---
 
-> _The Saguaro, giant of the desert,
-<br>Stands sentinel, a watchful eye
-<br>For centuries he'd weathered storms,
-<br>Drunk deep the rain from summer skies.
-<br><br>
-But time, the sculptor, knows no rest,
-<br>And slowly, surely, life departs.
-<br><br>
-The verdant skin, once a vibrant green,
-<br>Now hangs in tatters, worn and torn.
-<br><br>
-The ribs, once hidden, now exposed,
-<br>A skeletal dance beneath the sun.
-<br>A silent homage to the earth,
-<br>From which all life, its journey's begun.
-<br><br>
-The Old One bows, a graceful arc,
-<br>Beturning dust unto the ground.
-<br><br>
-A cycle endless, ever turning,
-<br>Life giving way..._
+The now-abandoned Gila River Memorial Airport, which consists of a half-dozen large airplanes in various stages of decay, lies still in the middle of the desert in South-Western Chandler. Built in 1942, the airport once played host to aerial operations during World War II. Today, it has become a popular destination for daring taggers, photographers, videographers and adventurous Instagrammers.
+
+> Note: A Gila River Reservation permit is required to visit this location.

@@ -1,7 +1,7 @@
 ---
 layout: project-landscape
 title: "Arid Desert"
-subTitle: "Desertscapes of Arizona"
+subTitle: "<!-- TODO SUbtitle -->"
 description: ""
 date: 2026-01-01
 weight: 12

@@ -107,7 +107,7 @@
               {% for image in projectImages %}
                 {% if image.data.gMap and image.data.gMap.size > 0 %}
                   {% assign imageGMap = image.data.gMap[0] %}
-                  {% if imageGMap.tripod %}
+                  {% if imageGMap.tripod and imageGMap.tripod != "" and imageGMap.tripod != "NULL" %}
                     {% comment %} Parse tripod string: "lat: 36.970402, lng: -110.141348" {% endcomment %}
                     {% assign tripodStr = imageGMap.tripod %}
                     {% assign tripodParts = tripodStr | split: ',' %}
@@ -117,16 +117,18 @@
                       {% if latPart.size >= 2 and lngPart.size >= 2 %}
                         {% assign parsedLat = latPart[1] | strip %}
                         {% assign parsedLng = lngPart[1] | strip %}
-                        {% if pointCount > 0 %},{% endif %}
-                        {
-                            lat: {{ parsedLat }},
-                            lng: {{ parsedLng }}, 
-                            title: '{{ image.data.title | escape }}',
-                            imageUrl: '{{ image.data.image }}',
-                            pageUrl: '{{ image.url }}',
-                            portrait: {% if imageGMap.portrait == true %}true{% else %}false{% endif %}
-                        }
-                        {% assign pointCount = pointCount | plus: 1 %}
+                        {% if parsedLat != "" and parsedLng != "" %}
+                          {% if pointCount > 0 %},{% endif %}
+                          {
+                              lat: {{ parsedLat }},
+                              lng: {{ parsedLng }}, 
+                              title: '{{ image.data.title | escape }}',
+                              imageUrl: '{{ image.data.image }}',
+                              pageUrl: '{{ image.url }}',
+                              portrait: {% if imageGMap.portrait == true %}true{% else %}false{% endif %}
+                          }
+                          {% assign pointCount = pointCount | plus: 1 %}
+                        {% endif %}
                       {% endif %}
                     {% endif %}
                   {% endif %}
