@@ -1,10 +1,12 @@
 ---
 layout: image-landscape
-title: "La Mision de San Xavier del Bac"
-subTitle: "Black and White Visions: Tribal Lands of the American Southwest"
+title: "La Misión de San Xavier del Bac"
+subTitle: "San Xavier Indian Reservation"
 description: "The White Dove of The Desert"
 date: 2025-10-16
-tags: "worship"
+tags: 
+  - "worship"
+  - "tribal-lands"
 permalink: "/projects/worship/la-mision-de-san-xavier-del-bac/"
 thumbnail: "la-mision-de-san-xavier-del-bac-photo-by-jason-robert-okennedy.jpeg"
 tumbCardPosition: "top"
@@ -33,5 +35,6 @@ A silent promise in the waning light,
 A sanctuary holding time's slow dance.
 <br><br>
 ​It stands afar, a relic stark and grand,
-As when the last of them released its hand.
-<br><br><p style="float:right;">-jason_</p>
+As when the last of them released its hand._
+
+---

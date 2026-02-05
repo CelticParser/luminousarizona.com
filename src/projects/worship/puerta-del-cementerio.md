@@ -1,7 +1,7 @@
 ---
 layout: image-landscape
 title: "Puerta del Cementerio"
-subTitle: "Black and White Visions: Tribal Lands of the American Southwest"
+subTitle: "Tumacacori National Historical Park, Tumacacori"
 description: ""
 date: 2025-10-16
 tags: "worship"
@@ -34,3 +34,5 @@ The setting sun descends with tender grace,
 <br><br>
 Though time has claimed the gate and worn the wood,
 <br>The light still finds where once the spirit stood._
+
+---
