@@ -1,7 +1,7 @@
 ---
 layout: image-landscape
 title: "Cerrode la Virgin Bajo la Luna"
-subTitle: ""
+subTitle: "Our Lady of the Sierras, Hereford"
 description: ""
 date: 2025-10-16
 tags: "lunaris-imago"
@@ -17,22 +17,22 @@ gMap:
     portrait: false
 ---
 
-> _A monolith, twin hands clasped in prayer
-<br>Beneath the Hunter's Moon, a silent plea
-<br>For him who hunts, through darkness, cold, and snare
-<br>May fortune favor, and his spirit be free.
+> _The dusk descends upon the thirsty sand,
+<br>Beneath a heather sky of violet hue,
+<br>Far from the toil of any human hand,
+<br>A lonely bloom awaits the falling dew.
 <br><br>
-The moon, a watchful eye, illuminates
-<br>The ancient stone, a sentinel of night.
-<br>A silent guardian, it elevates
-<br>The hunter's spirit, guiding him aright
+No iron wheel disturbs the quiet floor,
+<br>Where creosote and ancient shadows lie;
+<br>It does not seek the world’s unresting roar,
+<br>But stands content beneath the open sky.
 <br><br>
-Through deserts' dark and fields of rocky ground
-<br>He follows trails, his heart both filled with fear
-<br>And hope, as ancient echoes resound
-<br>Within the silent clifs, year after year
+While men are bound in webs of wire and light,
+<br>And heavy hearts pursue a hollow prize,
+<br>This ivory cup embraces coming night,
+<br>With silent prayer beneath the starlit skies.
 <br><br>
-And so, the hunter, guided by the moon
-<br>And blessed by hands of stone, pursues his boon._
+For peace is found where sun and silence meet,
+<br>And life is whole, untroubled and complete._
 
 <!-- TODO Add some history notes -->
