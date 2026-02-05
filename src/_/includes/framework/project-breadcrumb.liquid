@@ -1,19 +1,35 @@
 <nav class="project-breadcrumb" aria-label="Breadcrumb">
   <a href="/">Home</a>
-  <span class="breadcrumb-separator">/</span>
+  <span>/</span>
   <a href="/projects/">Projects</a>
   {% if tags %}
-    {% comment %} For image pages, show project name from tags {% endcomment %}
-    <span class="breadcrumb-separator">/</span>
-    <a href="/projects/{{ tags | slugify }}/">{{ tags }}</a>
+    {% comment %} For image pages, show project name from tags (use first tag if array) {% endcomment %}
+    {% assign projectTag = tags %}
+    {% assign projectTitle = tags %}
+      {% if tags.first %}
+      {% comment %} tags is an array, use first tag {% endcomment %}
+      {% assign projectTag = tags.first %}
+      {% assign projectTitle = tags.first %}
+      {% comment %} Try to get the actual project title from collections {% endcomment %}
+      {% assign projectSlug = projectTag | slugify %}
+      {% for project in collections.projects %}
+        {% assign projectSlugFromTitle = project.data.title | slugify %}
+        {% if projectSlugFromTitle == projectSlug %}
+          {% assign projectTitle = project.data.title %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    <span>/</span>
+    <a href="/projects/{{ projectTag | slugify }}/">{{ projectTitle }}</a>
   {% elsif title %}
     {% comment %} For project pages, show project title {% endcomment %}
-    <span class="breadcrumb-separator">/</span>
+    <span>/</span>
     <span class="breadcrumb-current">{{ title }}</span>
   {% endif %}
   {% if tags and title %}
     {% comment %} For image pages, also show image title {% endcomment %}
-    <span class="breadcrumb-separator">/</span>
+    <span>/</span>
     <span class="breadcrumb-current">{{ title }}</span>
   {% endif %}
 </nav>
