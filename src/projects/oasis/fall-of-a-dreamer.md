@@ -14,8 +14,8 @@ image: "fall-of-a-dreamer-photo-by-jason-robert-okennedy.jpeg"
 alt: ""
 year: "2022"
 gMap:
-  - tripod: "lat: 33.640383, lng: -111.116602"
-    zoom: "14"
+  - tripod: "lat: 33.885268, lng: -110.501450"
+    zoom: "13"
     portrait: false
 ---
 

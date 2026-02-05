@@ -13,8 +13,8 @@ featured:
     caption: "The Santa Cruz"
     year: "2023"
 gMap:
-  - center: "lat: 33.349714, lng: -111.788635"
-    zoom: "9"
+  - center: "lat: 33.043691, lng: -111.986575"
+    zoom: "8"
 ---
 
 <b><i>"The arid, sun-bleached expanse of the Arizona desert holds not only the geology of eons but also the enduring, architectural testament to cultural collision: the Spanish colonial missions, churches, and chapels."</i></b>

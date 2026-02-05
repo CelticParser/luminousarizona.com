@@ -7,19 +7,15 @@ date: 2026-01-01
 weight: 4
 thumbnail: "notches-in-the-sky-photo-by-jason-robert-okennedy.jpeg"
 tumbCardPosition: "0px -350px"
-categories: ["On The Tonto"]
-role: ""
 isProject: true
 featured:
   - image: "notches-in-the-sky-photo-by-jason-robert-okennedy.jpeg"
+    alt: ""
     caption: "Notches In The Sky"
     year: "2023"
-gallery:
-  - image: "notches-in-the-sky-photo-by-jason-robert-okennedy.jpeg"
-    caption: "Notches In The Sky"
-  - image: "notches-in-the-sky-photo-by-jason-robert-okennedy.jpeg"
-    caption: "Notches In The Sky"
-gallery_limit: 2
+gMap:
+  - center: "lat: 33.501521, lng: -111.329461"
+    zoom: "10"
 ---
 
 <b><i>"The Tonto National Forest, a monumental expanse of land that spans nearly three million acres, is not merely a geographic feature but a complete ecological system in miniature."</i></b>

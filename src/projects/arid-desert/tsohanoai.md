@@ -13,7 +13,7 @@ image: "image-coming-soon.webp"
 alt: ""
 year: "2026"
 gMap:
-  - tripod: "lat: 33.065, lng: -114.5"
+  - tripod: ""
     zoom: "14"
     portrait: false
 ---

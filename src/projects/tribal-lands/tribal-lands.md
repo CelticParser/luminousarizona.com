@@ -15,8 +15,8 @@ featured:
     caption: "Grey Whiskers Butte"
     year: "2020"
 gMap:
-  - center: "lat: 36.970402, lng: -110.141348"
-    zoom: "9"
+  - center: "lat: 34.970402, lng: -111.141348"
+    zoom: "7"
 gallery: true
 ---
 

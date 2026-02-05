@@ -14,8 +14,8 @@ featured:
     caption: "Picacho"
     year: "2023"
 gMap:
-  - center: "lat: 33.75, lng: -112"
-    zoom: "8"
+  - center: "lat: 34.75, lng: -112"
+    zoom: "7"
 ---
 
 <b><i>"Arizona’s identity is forged not just by its vast arid plains, but by the sudden, dramatic ascent of its mountain ranges and isolated peaks."</i></b>

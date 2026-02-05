@@ -16,11 +16,14 @@
           {% if isProject %}
             {% comment %} Project page: MUST use center and zoom from frontmatter {% endcomment %}
             {% if gMapConfig.center %}
-              {% assign centerStr = gMapConfig.center %}
+              {% assign centerStr = gMapConfig.center | strip %}
+              {% comment %} Parse format: "lat: 33.343691, lng: -111.786575" {% endcomment %}
               {% assign centerParts = centerStr | split: ',' %}
               {% if centerParts.size >= 2 %}
-                {% assign latStr = centerParts[0] | split: ':' %}
-                {% assign lngStr = centerParts[1] | split: ':' %}
+                {% assign latPart = centerParts[0] | strip %}
+                {% assign lngPart = centerParts[1] | strip %}
+                {% assign latStr = latPart | split: ':' %}
+                {% assign lngStr = lngPart | split: ':' %}
                 {% if latStr.size >= 2 and lngStr.size >= 2 %}
                   {% assign mapCenterLat = latStr[1] | strip %}
                   {% assign mapCenterLng = lngStr[1] | strip %}
@@ -338,12 +341,16 @@
             console.warn('No custom points to display on map');
         }
         
-        // If we have points, center map on first point
-        if (customPoints.length > 0) {
-            const firstPoint = customPoints[0];
-            map.setCenter({ lat: firstPoint.lat, lng: firstPoint.lng });
-            console.log('Map centered on', firstPoint.lat, firstPoint.lng);
-        }
+        // For project pages, center is already set from frontmatter, don't override
+        // For image pages, center on the marker if no center was specified
+        {% unless isProject %}
+          if (customPoints.length > 0) {
+              const firstPoint = customPoints[0];
+              map.setCenter({ lat: firstPoint.lat, lng: firstPoint.lng });
+              console.log('Map centered on first marker:', firstPoint.lat, firstPoint.lng);
+          }
+        {% endunless %}
+        console.log('Map initialized with center:', {{ mapCenterLat }}, {{ mapCenterLng }}, 'zoom:', adjustedZoom);
         
         customPoints.forEach((point) => {
             // Create absolute URL for the image
