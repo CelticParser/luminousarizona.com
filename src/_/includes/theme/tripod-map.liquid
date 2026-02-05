@@ -13,33 +13,54 @@
         {% if gMap and gMap.size > 0 %}
           {% assign gMapConfig = gMap[0] %}
           
-          {% comment %} Parse zoom first (before center parsing) {% endcomment %}
-          {% if gMapConfig.zoom %}
-            {% assign mapZoom = gMapConfig.zoom %}
-          {% endif %}
-          
-          {% comment %} Parse center coordinates {% endcomment %}
-          {% if gMapConfig.center %}
-            {% assign centerStr = gMapConfig.center %}
-            {% assign centerParts = centerStr | split: ',' %}
-            {% if centerParts.size >= 2 %}
-              {% assign latStr = centerParts[0] | split: ':' %}
-              {% assign lngStr = centerParts[1] | split: ':' %}
-              {% if latStr.size >= 2 and lngStr.size >= 2 %}
-                {% assign mapCenterLat = latStr[1] | strip %}
-                {% assign mapCenterLng = lngStr[1] | strip %}
+          {% if isProject %}
+            {% comment %} Project page: MUST use center and zoom from frontmatter {% endcomment %}
+            {% if gMapConfig.center %}
+              {% assign centerStr = gMapConfig.center %}
+              {% assign centerParts = centerStr | split: ',' %}
+              {% if centerParts.size >= 2 %}
+                {% assign latStr = centerParts[0] | split: ':' %}
+                {% assign lngStr = centerParts[1] | split: ':' %}
+                {% if latStr.size >= 2 and lngStr.size >= 2 %}
+                  {% assign mapCenterLat = latStr[1] | strip %}
+                  {% assign mapCenterLng = lngStr[1] | strip %}
+                {% endif %}
               {% endif %}
             {% endif %}
-          {% elsif gMapConfig.tripod and isProject == false %}
-            {% comment %} Image page: If no center specified, use tripod location as center {% endcomment %}
-            {% assign tripodStr = gMapConfig.tripod %}
-            {% assign tripodParts = tripodStr | split: ',' %}
-            {% if tripodParts.size >= 2 %}
-              {% assign latPart = tripodParts[0] | split: ':' %}
-              {% assign lngPart = tripodParts[1] | split: ':' %}
-              {% if latPart.size >= 2 and lngPart.size >= 2 %}
-                {% assign mapCenterLat = latPart[1] | strip %}
-                {% assign mapCenterLng = lngPart[1] | strip %}
+            
+            {% if gMapConfig.zoom %}
+              {% assign mapZoom = gMapConfig.zoom %}
+            {% endif %}
+          {% else %}
+            {% comment %} Image page: use center if specified, otherwise fall back to tripod {% endcomment %}
+            {% comment %} Parse zoom first (before center parsing) {% endcomment %}
+            {% if gMapConfig.zoom %}
+              {% assign mapZoom = gMapConfig.zoom %}
+            {% endif %}
+            
+            {% comment %} Parse center coordinates {% endcomment %}
+            {% if gMapConfig.center %}
+              {% assign centerStr = gMapConfig.center %}
+              {% assign centerParts = centerStr | split: ',' %}
+              {% if centerParts.size >= 2 %}
+                {% assign latStr = centerParts[0] | split: ':' %}
+                {% assign lngStr = centerParts[1] | split: ':' %}
+                {% if latStr.size >= 2 and lngStr.size >= 2 %}
+                  {% assign mapCenterLat = latStr[1] | strip %}
+                  {% assign mapCenterLng = lngStr[1] | strip %}
+                {% endif %}
+              {% endif %}
+            {% elsif gMapConfig.tripod %}
+              {% comment %} Image page: If no center specified, use tripod location as center {% endcomment %}
+              {% assign tripodStr = gMapConfig.tripod %}
+              {% assign tripodParts = tripodStr | split: ',' %}
+              {% if tripodParts.size >= 2 %}
+                {% assign latPart = tripodParts[0] | split: ':' %}
+                {% assign lngPart = tripodParts[1] | split: ':' %}
+                {% if latPart.size >= 2 and lngPart.size >= 2 %}
+                  {% assign mapCenterLat = latPart[1] | strip %}
+                  {% assign mapCenterLng = lngPart[1] | strip %}
+                {% endif %}
               {% endif %}
             {% endif %}
           {% endif %}
