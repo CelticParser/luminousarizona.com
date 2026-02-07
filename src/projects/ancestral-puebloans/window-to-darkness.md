@@ -43,3 +43,7 @@ And on the other side, no peace is found
 My future's not to choose which path to take,
 <br>
 But tear my walls down for my own soul's sake._
+
+<!-- Break to wrap image -->
+
+_Gową Bini Édiné -- Many scholars agree that the European Spanish name Tonto derived from the Chiricahua name for Western Apaches (Ndee biyáti’) — bini édiné — meaning “people without minds.” This may have referred to the fact that they spoke a different dialect — in other words, they talked funny_
