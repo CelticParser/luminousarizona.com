@@ -10,7 +10,7 @@ body_classes: page-project
       {% assign contentParts = content | split: '<!-- Break to wrap image -->' %}
       {% assign contentBeforeBreak = contentParts[0] %}
       {% assign contentAfterBreak = contentParts[1] %}
-      
+
       <aside class="col-12 col-md-6 mb-6 mb-md-0">
         {% include 'framework/project-breadcrumb' %}
         <div class="gallery gallery-single-column">
