@@ -1,0 +1,22 @@
+{% assign tripod = "" %}
+{% assign mapsUrl = "" %}
+{% if gMap and gMap.size > 0 and gMap[0].tripod %}
+  {% assign tripod = gMap[0].tripod %}
+  {% assign tripodParts = tripod | split: "," %}
+  {% if tripodParts.size >= 2 %}
+    {% assign latPart = tripodParts[0] | split: ":" %}
+    {% assign lngPart = tripodParts[1] | split: ":" %}
+    {% if latPart.size >= 2 and lngPart.size >= 2 %}
+      {% assign lat = latPart[1] | strip %}
+      {% assign lng = lngPart[1] | strip %}
+      {% assign mapsUrl = "https://www.google.com/maps?q=" | append: lat | append: "," | append: lng %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+<p style="color: #929eaf;">
+  {% if mapsUrl != "" %}
+    <a href="{{ mapsUrl }}" target="_blank" rel="noopener noreferrer" style="color: #929eaf; border-bottom: 0.125em dotted #929eaf50;">{{ tripod }}</a>
+  {% else %}
+    {{ tripod }}
+  {% endif %}
+</p>
