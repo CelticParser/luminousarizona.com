@@ -6,28 +6,46 @@ main:
     url: "/projects/"
     order: 2
     child:
-      - name: Ancestrial Puebloans
+      - name: Ancestral Puebloans
         description: 
         url: "/projects/ancestral-puebloans/"
+      - name: Arid Desert
+        description: 
+        url: "/projects/arid-desert/"
       - name: Arboreal
         description: 
         url: "/projects/arboreal/"
       - name: Discarded
         description:
         url: "/projects/discarded/"
+      - name: Lunaris Imago
+        description: 
+        url: "/projects/lunaris-imago/"
       - name: Monoliths
         description: 
         url: "/projects/monoliths/"
+      - name: Muerte de un Saguaro
+        description: 
+        url: "/projects/muerte-de-un-saguaro/"
+      - name: Oasis
+        description: 
+        url: "/projects/oasis/"
       - name: On The Tonto
         description: 
         url: "/projects/on-the-tonto/"
+      - name: Open Range
+        description: 
+        url: "/projects/open-range/"
       - name: Sky Islands
         description: 
         url: "/projects/sky-islands/"
       - name: Tribal Lands
         description: 
         url: "/projects/tribal-lands/"
-      - name: worship
+      - name: Wildlife
+        description: 
+        url: "/projects/wildlife/"
+      - name: Worship
         description: 
         url: "/projects/worship/"
   - name: Blog
