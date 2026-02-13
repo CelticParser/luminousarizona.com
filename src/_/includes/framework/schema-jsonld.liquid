@@ -5,6 +5,8 @@
 {% endcomment %}
 {% assign siteUrl = "https://luminousarizona.com" %}
 {% assign pageUrl = page.url | prepend: siteUrl %}
+{% comment %} Phoenix, Arizona - MST (UTC-7), no DST {% endcomment %}
+{% assign tzPhoenix = "T00:00:00-07:00" %}
 
 {% comment %} 1. Person - Author/Artist (all pages) {% endcomment %}
 <script type="application/ld+json">
@@ -18,7 +20,36 @@
 }
 </script>
 
-{% comment %} 2. Article - Page (all pages) {% endcomment %}
+{% comment %} 2. Page schema - WebSite + WebPage for homepage, Article for other pages {% endcomment %}
+{% if page.url == "/" or page.url == "/index.html" %}
+{% comment %} Homepage: WebSite + WebPage {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.title | json }},
+  "url": "{{ siteUrl }}/",
+  "author": { "@id": "{{ siteUrl }}/#/schema/person/jason-robert-okennedy" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": {{ title | default: site.title | json }},
+  "description": {{ description | default: meta_description | default: site.title | json }},
+  "url": "{{ pageUrl }}",
+  "author": { "@id": "{{ siteUrl }}/#/schema/person/jason-robert-okennedy" }
+  {% if featured and featured.size > 0 %},
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "contentUrl": "{{ siteUrl }}/assets/images/{{ featured[0].image }}"
+  }
+  {% endif %}
+}
+</script>
+{% else %}
+{% comment %} Other pages: Article {% endcomment %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -29,8 +60,8 @@
   "author": {
     "@id": "{{ siteUrl }}/#/schema/person/jason-robert-okennedy"
   },
-  "datePublished": "{% if date %}{{ date | date: '%Y-%m-%d' }}{% else %}2025-01-01{% endif %}",
-  "dateModified": "{% if date %}{{ date | date: '%Y-%m-%d' }}{% else %}2025-01-01{% endif %}"
+  "datePublished": "{% if date %}{{ date | date: '%Y-%m-%d' }}{% else %}2025-01-01{% endif %}{{ tzPhoenix }}",
+  "dateModified": "{% if date %}{{ date | date: '%Y-%m-%d' }}{% else %}2025-01-01{% endif %}{{ tzPhoenix }}"
   {% if image %},
   "image": "{{ siteUrl }}/assets/images/{{ image }}"
   {% elsif featured and featured.size > 0 %},
@@ -40,6 +71,7 @@
   {% endif %}
 }
 </script>
+{% endif %}
 
 {% comment %} 3. Photograph - Single image pages (image-landscape, image-portrait) {% endcomment %}
 {% if image %}
@@ -73,7 +105,7 @@
   "name": {{ title | default: image | json }},
   "description": {{ alt | default: title | default: image | json }},
   "author": { "@id": "{{ siteUrl }}/#/schema/person/jason-robert-okennedy" },
-  "dateCreated": "{% if year %}{{ year }}{% elsif date %}{{ date | date: '%Y' }}{% else %}2025{% endif %}-01-01",
+  "dateCreated": "{% if year %}{{ year }}{% elsif date %}{{ date | date: '%Y' }}{% else %}2025{% endif %}-01-01{{ tzPhoenix }}",
   "contentUrl": "{{ siteUrl }}/assets/images/{{ image }}",
   "isPartOf": {
     "@type": "CreativeWork",
@@ -117,7 +149,7 @@
   "name": {{ item.caption | default: item.image | json }},
   "description": {{ item.alt | default: item.caption | default: item.image | json }},
   "author": { "@id": "{{ siteUrl }}/#/schema/person/jason-robert-okennedy" },
-  "dateCreated": "{{ item.year | default: '2025' }}-01-01",
+  "dateCreated": "{{ item.year | default: '2025' }}-01-01{{ tzPhoenix }}",
   "contentUrl": "{{ siteUrl }}/assets/images/{{ item.image }}",
   "isPartOf": {
     "@type": "CreativeWork",
