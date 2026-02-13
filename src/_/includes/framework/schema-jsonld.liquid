@@ -1,0 +1,140 @@
+{% comment %}
+  JSON-LD Schema for LuminousArizona.com
+  Author/Artist: Jason Robert O'Kennedy (also Jason Alan Kennedy)
+  Per Google: https://developers.google.com/search/docs/appearance/structured-data/
+{% endcomment %}
+{% assign siteUrl = "https://luminousarizona.com" %}
+{% assign pageUrl = page.url | prepend: siteUrl %}
+
+{% comment %} 1. Person - Author/Artist (all pages) {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "{{ siteUrl }}/#/schema/person/jason-robert-okennedy",
+  "name": "Jason Robert O'Kennedy",
+  "alternateName": "Jason Alan Kennedy",
+  "url": "https://www.instagram.com/jason.robert.okennedy/"
+}
+</script>
+
+{% comment %} 2. Article - Page (all pages) {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ title | default: site.title | json }},
+  "description": {{ description | default: meta_description | default: site.title | json }},
+  "url": "{{ pageUrl }}",
+  "author": {
+    "@id": "{{ siteUrl }}/#/schema/person/jason-robert-okennedy"
+  },
+  "datePublished": "{% if date %}{{ date | date: '%Y-%m-%d' }}{% else %}2025-01-01{% endif %}",
+  "dateModified": "{% if date %}{{ date | date: '%Y-%m-%d' }}{% else %}2025-01-01{% endif %}"
+  {% if image %},
+  "image": "{{ siteUrl }}/assets/images/{{ image }}"
+  {% elsif featured and featured.size > 0 %},
+  "image": "{{ siteUrl }}/assets/images/{{ featured[0].image }}"
+  {% elsif thumbnail %},
+  "image": "{{ siteUrl }}/assets/images/{{ thumbnail }}"
+  {% endif %}
+}
+</script>
+
+{% comment %} 3. Photograph - Single image pages (image-landscape, image-portrait) {% endcomment %}
+{% if image %}
+{% assign photoLat = null %}
+{% assign photoLng = null %}
+{% if gMap and gMap[0].tripod %}
+  {% assign tripodParts = gMap[0].tripod | split: "," %}
+  {% if tripodParts.size >= 2 %}
+    {% assign latPart = tripodParts[0] | split: ":" %}
+    {% assign lngPart = tripodParts[1] | split: ":" %}
+    {% if latPart.size >= 2 and lngPart.size >= 2 %}
+      {% assign photoLat = latPart[1] | strip %}
+      {% assign photoLng = lngPart[1] | strip %}
+    {% endif %}
+  {% endif %}
+{% elsif gMap and gMap[0].center %}
+  {% assign centerParts = gMap[0].center | split: "," %}
+  {% if centerParts.size >= 2 %}
+    {% assign latPart = centerParts[0] | split: ":" %}
+    {% assign lngPart = centerParts[1] | split: ":" %}
+    {% if latPart.size >= 2 and lngPart.size >= 2 %}
+      {% assign photoLat = latPart[1] | strip %}
+      {% assign photoLng = lngPart[1] | strip %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Photograph",
+  "name": {{ title | default: image | json }},
+  "description": {{ alt | default: title | default: image | json }},
+  "author": { "@id": "{{ siteUrl }}/#/schema/person/jason-robert-okennedy" },
+  "dateCreated": "{% if year %}{{ year }}{% elsif date %}{{ date | date: '%Y' }}{% else %}2025{% endif %}-01-01",
+  "contentUrl": "{{ siteUrl }}/assets/images/{{ image }}",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": {{ title | default: site.title | json }},
+    "url": "{{ pageUrl }}"
+  }
+  {% if photoLat and photoLng %},
+  "contentLocation": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": {{ photoLat }},
+      "longitude": {{ photoLng }}
+    }
+  }
+  {% endif %}
+}
+</script>
+{% endif %}
+
+{% comment %} 4. Photograph(s) - Featured images on project/home pages {% endcomment %}
+{% if featured and image == null %}
+{% assign centerLat = null %}
+{% assign centerLng = null %}
+{% if gMap and gMap[0].center %}
+  {% assign centerParts = gMap[0].center | split: "," %}
+  {% if centerParts.size >= 2 %}
+    {% assign latPart = centerParts[0] | split: ":" %}
+    {% assign lngPart = centerParts[1] | split: ":" %}
+    {% if latPart.size >= 2 and lngPart.size >= 2 %}
+      {% assign centerLat = latPart[1] | strip %}
+      {% assign centerLng = lngPart[1] | strip %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+{% for item in featured limit: 10 %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Photograph",
+  "name": {{ item.caption | default: item.image | json }},
+  "description": {{ item.alt | default: item.caption | default: item.image | json }},
+  "author": { "@id": "{{ siteUrl }}/#/schema/person/jason-robert-okennedy" },
+  "dateCreated": "{{ item.year | default: '2025' }}-01-01",
+  "contentUrl": "{{ siteUrl }}/assets/images/{{ item.image }}",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": {{ title | default: site.title | json }},
+    "url": "{{ pageUrl }}"
+  }
+  {% if centerLat and centerLng %},
+  "contentLocation": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": {{ centerLat }},
+      "longitude": {{ centerLng }}
+    }
+  }
+  {% endif %}
+}
+</script>
+{% endfor %}
+{% endif %}
