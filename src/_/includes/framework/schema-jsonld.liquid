@@ -8,6 +8,75 @@
 {% comment %} Phoenix, Arizona - MST (UTC-7), no DST {% endcomment %}
 {% assign tzPhoenix = "T00:00:00-07:00" %}
 
+{% comment %} BreadcrumbList - Build from URL path and page context {% endcomment %}
+{% assign isHome = false %}
+{% if page.url == "/" or page.url == "/index.html" %}
+  {% assign isHome = true %}
+{% endif %}
+{% assign pathParts = page.url | replace: "/index.html", "" | split: "/" %}
+{% assign segmentNames = "Home|Projects|About|Contact|Blog" | split: "|" %}
+{% assign segmentPaths = "|projects|about|contact|blog" | split: "|" %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ siteUrl }}/"
+    }
+    {% unless isHome %}
+    {% assign pos = 2 %}
+    {% assign breadcrumbPath = "" %}
+    {% for part in pathParts %}
+      {% if part != "" %}
+        {% assign breadcrumbPath = breadcrumbPath | append: "/" | append: part %}
+        {% assign segPath = breadcrumbPath | append: "/" %}
+        {% assign itemName = part | replace: "-", " " | capitalize %}
+        {% if segPath == "/projects/" %}
+          {% assign itemName = "Projects" %}
+        {% elsif segPath == "/about/" %}
+          {% assign itemName = "About" %}
+        {% elsif segPath == "/contact/" %}
+          {% assign itemName = "Contact" %}
+        {% elsif segPath == "/blog/" %}
+          {% assign itemName = "Blog" %}
+        {% elsif page.url contains "/projects/" %}
+          {% if tags and title and segPath == page.url %}
+            {% assign itemName = title %}
+          {% elsif tags and forloop.index == 3 %}
+            {% assign projectTag = tags.first | default: tags %}
+            {% assign projectSlug = projectTag | slugify %}
+            {% for project in collections.projects %}
+              {% assign projTitleSlug = project.data.title | slugify %}
+              {% if project.url contains projectSlug or projTitleSlug == projectSlug %}
+                {% assign itemName = project.data.title %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          {% elsif image == null and forloop.index == 3 %}
+            {% assign itemName = title %}
+          {% endif %}
+        {% elsif page.url contains "/about/" and segPath == page.url %}
+          {% assign itemName = title | default: itemName %}
+        {% endif %}
+    ,{
+      "@type": "ListItem",
+      "position": {{ pos }},
+      "name": {{ itemName | json }},
+      "item": "{{ siteUrl }}{{ segPath }}"
+    }
+        {% assign pos = pos | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    {% endunless %}
+  ]
+}
+</script>
+
 {% comment %} 1. Person - Author/Artist (all pages) {% endcomment %}
 <script type="application/ld+json">
 {
