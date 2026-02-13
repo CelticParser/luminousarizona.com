@@ -61,6 +61,9 @@ main:
       - name: About Jason
         description: 
         url: "/about/jason-robert-okennedy/"
+      - name: Photo Licensing
+        description: 
+        url: "/photo-licensing/"
   - name: Contact
     url: "/contact/"
     order: 4

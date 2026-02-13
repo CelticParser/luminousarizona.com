@@ -4,6 +4,7 @@
   Per Google: https://developers.google.com/search/docs/appearance/structured-data/
 {% endcomment %}
 {% assign siteUrl = "https://luminousarizona.com" %}
+{% assign licensePageUrl = siteUrl | append: "/photo-licensing/" %}
 {% assign pageUrl = page.url | prepend: siteUrl %}
 {% comment %} Phoenix, Arizona - MST (UTC-7), no DST {% endcomment %}
 {% assign tzPhoenix = "T00:00:00-07:00" %}
@@ -112,7 +113,9 @@
   {% if featured and featured.size > 0 %},
   "primaryImageOfPage": {
     "@type": "ImageObject",
-    "contentUrl": "{{ siteUrl }}/assets/images/{{ featured[0].image }}"
+    "contentUrl": "{{ siteUrl }}/assets/images/{{ featured[0].image }}",
+    "license": "{{ licensePageUrl }}",
+    "acquireLicensePage": "{{ licensePageUrl }}"
   }
   {% endif %}
 }
@@ -176,6 +179,8 @@
   "author": { "@id": "{{ siteUrl }}/#/schema/person/jason-robert-okennedy" },
   "dateCreated": "{% if year %}{{ year }}{% elsif date %}{{ date | date: '%Y' }}{% else %}2025{% endif %}-01-01{{ tzPhoenix }}",
   "contentUrl": "{{ siteUrl }}/assets/images/{{ image }}",
+  "license": "{{ licensePageUrl }}",
+  "acquireLicensePage": "{{ licensePageUrl }}",
   "isPartOf": {
     "@type": "CreativeWork",
     "name": {{ title | default: site.title | json }},
@@ -220,6 +225,8 @@
   "author": { "@id": "{{ siteUrl }}/#/schema/person/jason-robert-okennedy" },
   "dateCreated": "{{ item.year | default: '2025' }}-01-01{{ tzPhoenix }}",
   "contentUrl": "{{ siteUrl }}/assets/images/{{ item.image }}",
+  "license": "{{ licensePageUrl }}",
+  "acquireLicensePage": "{{ licensePageUrl }}",
   "isPartOf": {
     "@type": "CreativeWork",
     "name": {{ title | default: site.title | json }},
