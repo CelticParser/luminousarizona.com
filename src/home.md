@@ -2,8 +2,8 @@
 layout: home
 permalink: "/"
 title: "LuminousArizona"
-description: "Photo essays of Arizona's places and things that makes it unique<br>by photographer Jason Robert O'Kennedy"
-meta_description: "Photo essays of Arizona's places and things that makes it unique by photographer Jason Robert O'Kennedy"
+description: "Photo essays of Arizona's places and things that make it unique<br>by photographer Jason Robert O'Kennedy"
+meta_description: "Photo essays of Arizona's places and things that make it unique by photographer Jason Robert O'Kennedy"
 meta_title: LuminousArizona
 featured:
   - image: "la-mision-de-san-xavier-del-bac-photo-by-jason-robert-okennedy.jpeg"
