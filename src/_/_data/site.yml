@@ -107,7 +107,7 @@ menu:
 
 footer:
   enable_footer: true # show/hide the entire footer
-  footer_title: &#168;2025 LuminousArizona | Jason Robert O'Kennedy<br>| ALL RIGHTS RESERVED
+  footer_title: LuminousArizona | Jason Robert O'Kennedy 
   footer_description: Essays of Arizona's places and things that make it unique.
   enable_social_media_icons: true
   enable_contact_details: false
