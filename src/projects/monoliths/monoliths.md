@@ -24,6 +24,6 @@ These geological features—the buttes, mesas, and sky islands—stand as silent
 
 While "[Ancestral Puebloans](/projects/ancestral-puebloans/)" dealt with human time and "[Arboreal](/projects/arboreal/)" with biological time, this essay tackles geologic time — the scale that makes a human life look like a lightning flash.
 
-By stripping these "isolated giants" of their famous Arizona reds and oranges, the viewer is vorced to confront their sheer mass and the "architectural truth" of the planet itself.
+By stripping these "isolated giants" of their famous Arizona reds and oranges, the viewer is forced to confront their sheer mass and the "architectural truth" of the planet itself.
 
 Captured exclusively in the severe simplicity of black and white, this collection strips away distracting color to emphasize the raw architectural truth of the mountains. The monochrome lens transforms granite, basalt, and sandstone into pure texture and form, highlighting the deep, chiseled lines of ancient strata and the dramatic geometry created by sunlight and shadow. By focusing on contrast and scale, Monoliths aims to articulate the spiritual weight and physical grandeur of these isolated giants. It is a photographic meditation on permanence, revealing the deep geologic narrative written into the stone and the enduring power of earth's most formidable structures.
