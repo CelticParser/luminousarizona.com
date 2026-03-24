@@ -1,0 +1,113 @@
+<style>
+  #la-dev-notice-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2147483646;
+    background: rgba(4, 6, 8, 0.85);
+    padding: 1rem;
+  }
+
+  #la-dev-notice-overlay.show {
+    display: flex;
+  }
+
+  #la-dev-notice-dialog {
+    width: min(560px, 100%);
+    background: var(--cc-bg, #fff);
+    color: var(--cc-text, #2d4156);
+    border-radius: var(--cc-border-radius, 0.45rem);
+    box-shadow: var(--cc-consent-modal-box-shadow, 0 0.625rem 1.875rem rgba(2, 2, 3, 0.28));
+    padding: 1.25rem 1rem;
+    text-align: center;
+  }
+
+  #la-dev-notice-dialog p {
+    margin: 0 0 1rem 0;
+  }
+
+  #la-dev-notice-ok {
+    border: 0;
+    border-radius: var(--cc-btn-border-radius, 0.375rem);
+    background: var(--cc-btn-primary-bg, #2d4156);
+    color: var(--cc-btn-primary-text, #fff);
+    padding: 0.55rem 1rem;
+    cursor: pointer;
+    font: inherit;
+  }
+
+  #la-dev-notice-ok:hover {
+    background: var(--cc-btn-primary-hover-bg, #1d2e38);
+    color: var(--cc-btn-primary-hover-text, #fff);
+  }
+</style>
+
+<script>
+  window.addEventListener('load', function () {
+    var devNoticeCookieName = 'la_dev_notice_dismissed';
+    var consentCookieName = 'cc_cookie';
+
+    function hasCookie(name) {
+      return document.cookie.split(';').some(function (cookie) {
+        return cookie.trim().indexOf(name + '=') === 0;
+      });
+    }
+
+    function setCookie(name, value, days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      document.cookie = name + '=' + value + '; expires=' + date.toUTCString() + '; path=/; SameSite=Lax';
+    }
+
+    function createDialog() {
+      if (document.getElementById('la-dev-notice-overlay')) return;
+
+      var overlay = document.createElement('div');
+      overlay.id = 'la-dev-notice-overlay';
+
+      var dialog = document.createElement('div');
+      dialog.id = 'la-dev-notice-dialog';
+      dialog.setAttribute('role', 'dialog');
+      dialog.setAttribute('aria-modal', 'true');
+      dialog.setAttribute('aria-label', 'Development notice');
+
+      var message = document.createElement('p');
+      message.innerHTML = 'LuminousArizona is currently under development. <br> Please revisit often.';
+
+      var okButton = document.createElement('button');
+      okButton.id = 'la-dev-notice-ok';
+      okButton.type = 'button';
+      okButton.textContent = 'OK';
+      okButton.addEventListener('click', function () {
+        overlay.classList.remove('show');
+        setCookie(devNoticeCookieName, 'true', 30);
+      });
+
+      dialog.appendChild(message);
+      dialog.appendChild(okButton);
+      overlay.appendChild(dialog);
+      document.body.appendChild(overlay);
+    }
+
+    function showNoticeIfEligible() {
+      if (hasCookie(devNoticeCookieName)) return true;
+      if (!hasCookie(consentCookieName)) return false;
+      createDialog();
+      var overlay = document.getElementById('la-dev-notice-overlay');
+      if (overlay) overlay.classList.add('show');
+      return true;
+    }
+
+    if (!showNoticeIfEligible()) {
+      var attempts = 0;
+      var poll = setInterval(function () {
+        attempts += 1;
+        if (showNoticeIfEligible() || attempts > 120) {
+          clearInterval(poll);
+        }
+      }, 1000);
+    }
+  });
+</script>
