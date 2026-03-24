@@ -16,4 +16,21 @@ gMap:
     portrait: false
 ---
 
-> __
+> _High on a rock beneath the painted sky,
+Above the stretch of Arizona plain,
+The ancient walls of red Wukoki lie,
+And wait for hands that will not build again.
+<br><br>
+The wind sweeps through the window's empty stone,
+Where fires danced and woven baskets lay;
+Now quiet spirits walk the dust alone,
+As centuries of silence slip away.
+<br><br>
+Discarded by the march of heavy years,
+It stands defiant in the desert sand,
+Unmoved by mortal, fleeting joys or fears,
+A lonely fortress in an empty land.
+<br><br>
+Though time may seek to wear its mortar down,
+Wukoki wears the mesa like a crown._
+

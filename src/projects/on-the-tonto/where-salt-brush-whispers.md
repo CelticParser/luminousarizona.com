@@ -14,19 +14,19 @@ tripod: "lat: 32.103310, lng: -111.003673"
 ---
 
 > _The tall saguaros guard the cooling sand,
-<br>Where salt-bush whispers through the desert air.
-<br>He rests his head upon this hollow land,
-<br>With only ghosts to meet his vacant stare.
+Where salt-bush whispers through the desert air.
+He rests his head upon this hollow land,
+With only ghosts to meet his vacant stare.
 <br><br>
-The dreams he chased have vanished like the rain
-<br>That falls on dust and never leaves a trace;
-<br>Each golden hope has turned to grit and pain,
-<br>Reflecting nothing in his weathered face.
+The dreams he chased have vanished like the rain,
+That falls on dust and never leaves a trace;
+Each golden hope has turned to grit and pain,
+Reflecting nothing in his weathered face.
 <br><br>
 The tunnel’s end has lost its distant glow,
-<br>The guiding light has flickered and gone dark.
-<br><br>No lover waits where desert lilies grow,
+The guiding light has flickered and gone dark.
+No lover waits where desert lilies grow,
 No home-fire waits to light his lonely arc.
 <br><br>
 The path is dead, no reason left to ride,
-<br>As hopeless silence swallows him inside._
+As hopeless silence swallows him inside._
