@@ -1,7 +1,7 @@
 ---
 layout: image-landscape
 title: "Grey Whiskers Butte"
-subTitle: "Black and White Visions: Tribal Lands of the American Southwest"
+subTitle: "Oljato-Monument Valley"
 description: ""
 date: 2025-10-16
 tags: 

@@ -1,7 +1,7 @@
 ---
 layout: image-portrait
 title: "Elvis Memorial Chapel"
-subTitle: "TODO"
+subTitle: "Superstition Mountain - Lost Dutchman Museum"
 description: ""
 date: 2025-10-16
 tags: "worship"

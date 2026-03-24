@@ -1,5 +1,5 @@
 ---
-layout: image-portrait
+layout: image-landscape
 title: "Echoes In Ancient Tongue"
 subTitle: ""
 description: ""
@@ -13,30 +13,30 @@ year: "2026"
 gMap:
   - tripod: "NULL"
     zoom: "13"
-    portrait: true
+    portrait:
 ---
 
 > _The canyon floor remembers every sound,
-<br>Beneath the rim where desert shadows hung;
-<br>The ancient tongue is fading from the young.
+Beneath the rim where desert shadows hung;
+The ancient tongue is fading from the young.
 <br><br>
 They trade the cedar smoke for city ground,
-<br>And leave the prayers that to the cliffs once clung;
-<br>The canyon floor remembers every sound.
+And leave the prayers that to the cliffs once clung;
+The canyon floor remembers every sound.
 <br><br>
 In classrooms far, new lexicons are found,
-<br>While stories of the stars remain unsung;
-<br>The ancient tongue is fading from the young.
+While stories of the stars remain unsung;
+The ancient tongue is fading from the young.
 <br><br>
 The river’s name is lost, its spirit bound,
-<br>By modern masks that on their faces hung;
-<br>The canyon floor remembers every sound.
+By modern masks that on their faces hung;
+The canyon floor remembers every sound.
 <br><br>
 I call to them, but silence is profound,
-<br>Like winter’s frost that on the sagebrush stung;
-<br>The ancient tongue is fading from the young.
+Like winter’s frost that on the sagebrush stung;
+The ancient tongue is fading from the young.
 <br><br>
 Though roots run deep beneath this hallowed ground,
-<br>By their own choice, the final bell is rung;
-<br>The canyon floor remembers every sound,
-<br>The ancient tongue is fading from the young._
+By their own choice, the final bell is rung;
+The canyon floor remembers every sound,
+The ancient tongue is fading from the young._
