@@ -36,27 +36,29 @@ gMap:
 
 <!-- Break to wrap image -->
 
-<h2>Historical Footnotes</h2>
+## The Man Who Saw the Wind
 
-Mr. Grey Whiskers (Navajo: Dághaaʼ Łibáí) was a revered Navajo medicine man (Hataałii) and a foundational figure in the history of Monument Valley. While many historical accounts of the valley focus on the trading post established by Harry Goulding or the films of John Ford, Grey Whiskers represents the deep-rooted Indigenous leadership that ensured the land remained under Navajo stewardship.
+​Before the tour buses and the Hollywood cameras of John Ford arrived, the Valley belonged to the silence and the Hataałii—the medicine men. Among them walked Mr. Grey Whiskers. While history books often point to the trading posts and the settlers, the Diné (Navajo) know that the true heartbeat of this land was kept steady by leaders like him. He wasn't just a man of prayer; he was a man of the soil who understood that once you give your land away to a distant government, you never truly get it back.
 
-<b>Historical Contribution & The Founding of the Park:</b> 
+## ​The Line in the Red Sand
 
-Grey Whiskers is most significant for his instrumental role in the creation of the Monument Valley Navajo Tribal Park in 1958. Prior to this, there was significant pressure to turn the area into a U.S. National Park under federal jurisdiction. Grey Whiskers and other tribal leaders advocated for a different path: the establishment of the first-ever Tribal Park.
+​Back in the late 1950s, the outside world was closing in. There was a great push to turn these sacred spires into a U.S. National Park. To many, it sounded like a good deal, but Mr. Grey Whiskers saw the hidden thorns. He knew that a National Park meant federal rules, fences, and the potential displacement of the families who had grazed their sheep here for generations.
 
-This allowed the Navajo Nation to: 
+​Alongside other tribal leaders, he stood his ground. He didn't want a "National" park; he wanted a Tribal Park. Because of his vision in 1958, Monument Valley became the first of its kind. He ensured three things remained true:
 
-_Maintain Sovereignty_ -- Ensure the land remained under tribal control rather than the National Park Service.
+*​The Land Stayed Ours:* The sovereignty of the Navajo Nation remained unbroken.
 
-_Protect Residents_ -- Safeguard the families who lived on the valley floor, allowing them to continue their traditional way of life, grazing, and ceremonies.
+*​The People Stayed Home:* The families living on the valley floor could continue their ceremonies and their way of life without being "managed" by outsiders.
 
-_Manage Tourism_ -- Create a framework where tourism revenue and land management were handled by the Diné people.
+*​The Story Stayed Ours:* He made sure that the tourism—and the prosperity it brought—was handled by the Diné, for the Diné.
 
-<b>The Legacy of Gray Whiskers Butte</b>
+## ​A Monument That Breathes
 
-His contribution to the valley is literally etched into the landscape. One of the major rock formations, Gray Whiskers Butte (elevation 6,385 feet), is named in his honor. Located southwest of the visitor center, it stands as a permanent monument to his influence and his status as a spiritual leader of the community.
+​If you look southwest from the visitor center, you’ll see a massive butte rising 6,385 feet into the Arizona sky. That is Gray Whiskers Butte. It isn’t just a pile of rock; it is a permanent sentry, named to honor his spirit and his role as a guardian of the community.
 
-Grey Whiskers is also remembered as the patriarch of a long lineage of guides and storytellers. His great-great-grandson, Harold Simpson, founded one of the first Navajo-owned tour companies in the valley, Simpson's Trailhandler Tours. Much of the "inside information" and cultural history shared with visitors today—ranging from the significance of the spires to the traditional uses of local plants—is knowledge that has been passed down directly from Grey Whiskers through his descendants.
+​But his greatest legacy isn't made of stone. It’s in the voices of the guides who lead you through the dust today. His great-great-grandson, Harold Simpson, carried that torch forward when he founded Simpson’s Trailhandler Tours. Every time a traveler learns about the "Big Hogan" or the healing properties of a local herb, they are hearing a whisper of the knowledge passed down from Mr. Grey Whiskers himself.
+
+_​The valley remains a living place, not a museum, because one man with silver in his beard knew the value of staying rooted._
 
 ---
 
