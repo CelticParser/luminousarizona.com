@@ -25,12 +25,12 @@ gMap:
 The moon, a watchful eye, illuminates
 <br>The ancient stone, a sentinel of night.
 <br>A silent guardian, it elevates
-<br>The hunter's spirit, guiding him aright
+<br>The hunter's spirit, guiding him aright.
 <br><br>
-Through deserts' dark and fields of rocky ground
+Through deserts' dark and fields of rocky ground,
 <br>He follows trails, his heart both filled with fear
 <br>And hope, as ancient echoes resound
-<br>Within the silent clifs, year after year
+<br>Within the silent clifs, year after year.
 <br><br>
 And so, the hunter, guided by the moon
 <br>And blessed by hands of stone, pursues his boon._

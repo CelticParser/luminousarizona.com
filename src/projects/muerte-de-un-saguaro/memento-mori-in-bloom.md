@@ -18,7 +18,7 @@ gMap:
 ---
 
 > _The desert giant falls upon the sand,
-<br>His wooden ribs now bared to burning sun.
+<br>Her wooden ribs now bared to burning sun.
 <br>The armor stripped by time’s relentless hand,
 <br>A long and weary vigil now is done.
 <br><br>
@@ -34,3 +34,6 @@ The skeleton reminds us we must pass,
 <br><br>
 For in this grave of wood and floral breath,
 <br>The sweetest bloom is nurtured by a death._
+
+---
+

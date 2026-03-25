@@ -20,18 +20,29 @@ gMap:
 
 > _The Spanish dream, by gilded hope defined,
 <br>Sought golden spires in Arizona's heat,
-<br>They came for wealth, with avarice in mind,
-<br>And drove their quest where painted canyons meet.
+<br>
+They came for wealth, with avarice in mind,
+<br>
+And drove their quest where painted canyons meet.
 <br><br>
 They crossed the sands where wind had swept the track,
-<br>Through barren flats where nothing soft could grow,
-<br>And found no stone with shining metal's back,
-<br>No river banked with gold's steady glow.
+<br>
+Through barren flats where nothing soft could grow,
+<br>
+And found no stone with shining metal's back,
+<br>
+No river banked with gold's steady glow.
 <br><br>
 They saw no gold, no jewels, no hidden seam,
-<br>But colors deep in clay and petrified wood,
-<br>The land itself, a geological dream,
-<br>A truth more stark than they had understood.
+<br>
+But colors deep in clay and petrified wood,
+<br>
+The land itself, a geological dream,
+<br>
+A truth more stark than they had understood.
 <br><br>
 The treasure lay in ochre, gray, and red,
-<br>El Desierto Pintado —- thus they fled._
+<br>
+El Desierto Pintado —- thus they fled._
+
+---

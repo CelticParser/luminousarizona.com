@@ -18,16 +18,19 @@ gMap:
     portrait: false
 ---
 > _Upon red lands where ancient mesas stand,
-A spirit walked, a guide named Grey Whiskers,
-Whose heart was tied to this ancestral land,
-He watched the sun on desert rock, it flickers
+<br>A spirit walked, a guide named Grey Whiskers,
+<br>Whose heart was tied to this ancestral land,
+<br>He watched the sun on desert rock, it flickers
 <br><br>He saw the beauty and the solemn grace,
-The towering buttes, the arches in the sky,
-And knew his people's history and place,
-Should live beyond when he himself should die
+<br>The towering buttes, the arches in the sky,
+<br>And knew his people's history and place,
+<br>Should live beyond when he himself should die
 <br><br>He spoke of sacred ground, of timeless art,
-Of canyons carved by wind and patient rain,
-And helped to give this vision a new start,
-To save this land from thoughtless, worldly gain
+<br>Of canyons carved by wind and patient rain,
+<br>And helped to give this vision a new start,
+<br>To save this land from thoughtless, worldly gain
 <br><br>His legacy, a park, a people's pride,
-Where shadows of his spirit still reside._
+<br>Where shadows of his spirit still reside._
+
+---
+

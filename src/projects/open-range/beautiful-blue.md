@@ -29,5 +29,5 @@ For in this vastness, I can finally speak,
 The winds will carry what I cannot keep,
 <br>And all the pain the world has built will corrupt.
 <br><br>
-In beautiful blue, where endless oceans cry,
+In beautiful blue, where endless sands cry adry,
 <br>I find a space to scream beneath the sky._

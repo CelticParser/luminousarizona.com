@@ -18,7 +18,7 @@ gMap:
 ---
 
 > _The Saguaro, giant of the desert,
-<br>Stands sentinel, a watchful eye
+<br>Stands sentinel, a watchful eye,
 <br>For centuries he'd weathered storms,
 <br>Drunk deep the rain from summer skies.
 <br><br>
@@ -33,8 +33,10 @@ The ribs, once hidden, now exposed,
 <br>A silent homage to the earth,
 <br>From which all life, its journey's begun.
 <br><br>
-The Old One bows, a graceful arc,
+The Old One Bows, a graceful arc,
 <br>Beturning dust unto the ground.
 <br><br>
 A cycle endless, ever turning,
 <br>Life giving way..._
+
+---

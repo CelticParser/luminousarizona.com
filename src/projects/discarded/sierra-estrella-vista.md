@@ -18,19 +18,19 @@ gMap:
 ---
 
 > _The sun-baked clay of earthen walls decays,
-Besieged by snowy drifts of cotton seed.
-Forgotten are the rancho’s golden days,
-Now lost to wind and every choking weed.
+<br>Besieged by snowy drifts of cotton seed.
+<br>Forgotten are the rancho’s golden days,
+<br>Now lost to wind and every choking weed.
 <br><br>
 The courtyard, once a pride of stone and tile,
-Is tangled now in Palo Verde’s snare;
-Green branches weave through every empty aisle,
-And thorns defend the silence lingering there.
+<br>Is tangled now in Palo Verde’s snare;
+<br>Green branches weave through every empty aisle,
+<br>And thorns defend the silence lingering there.
 <br><br>
 The Starry Mountains rise in silvered light,
-Sierra Estrellas Vista, distant and sublime;
-They once were held within this home's clear sight,
-Before the dust and heavy hand of time.
+<br>Sierra Estrellas Vista, distant and sublime;
+<br>They once were held within this home's clear sight,
+<br>Before the dust and heavy hand of time.
 <br><br>
 The house dissolves into the desert floor,
-A ghost of grace that looks on them no more._
+<br>A ghost of grace that looks on them no more._
