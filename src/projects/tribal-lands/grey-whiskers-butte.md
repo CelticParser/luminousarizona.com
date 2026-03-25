@@ -34,3 +34,29 @@ gMap:
 
 ---
 
+<!-- Break to wrap image -->
+
+<h2>Historical Footnotes</h2>
+
+Mr. Grey Whiskers (Navajo: Dághaaʼ Łibáí) was a revered Navajo medicine man (Hataałii) and a foundational figure in the history of Monument Valley. While many historical accounts of the valley focus on the trading post established by Harry Goulding or the films of John Ford, Grey Whiskers represents the deep-rooted Indigenous leadership that ensured the land remained under Navajo stewardship.
+
+<b>Historical Contribution & The Founding of the Park:</b> 
+
+Grey Whiskers is most significant for his instrumental role in the creation of the Monument Valley Navajo Tribal Park in 1958. Prior to this, there was significant pressure to turn the area into a U.S. National Park under federal jurisdiction. Grey Whiskers and other tribal leaders advocated for a different path: the establishment of the first-ever Tribal Park.
+
+This allowed the Navajo Nation to: 
+
+_Maintain Sovereignty_ -- Ensure the land remained under tribal control rather than the National Park Service.
+
+_Protect Residents_ -- Safeguard the families who lived on the valley floor, allowing them to continue their traditional way of life, grazing, and ceremonies.
+
+_Manage Tourism_ -- Create a framework where tourism revenue and land management were handled by the Diné people.
+
+<b>The Legacy of Gray Whiskers Butte</b>
+
+His contribution to the valley is literally etched into the landscape. One of the major rock formations, Gray Whiskers Butte (elevation 6,385 feet), is named in his honor. Located southwest of the visitor center, it stands as a permanent monument to his influence and his status as a spiritual leader of the community.
+
+Grey Whiskers is also remembered as the patriarch of a long lineage of guides and storytellers. His great-great-grandson, Harold Simpson, founded one of the first Navajo-owned tour companies in the valley, Simpson's Trailhandler Tours. Much of the "inside information" and cultural history shared with visitors today—ranging from the significance of the spires to the traditional uses of local plants—is knowledge that has been passed down directly from Grey Whiskers through his descendants.
+
+---
+

@@ -46,3 +46,11 @@ The treasure lay in ochre, gray, and red,
 El Desierto Pintado —- thus they fled._
 
 ---
+
+<!-- Break to wrap image -->
+
+<h2>Historical Footnote</h2>
+
+The European history of the Painted Desert began not with a map, but with a myth. In 1539, a Franciscan friar named Marcos de Niza returned to Mexico City with a sensational claim: he had seen Cíbola, a city of gold larger than Mexico City itself.
+
+He was likely seeing the Zuni pueblo of Hawikuh at sunset, where the red adobe might have caught a golden sheen. This report ignited a frenzy in New Spain, leading to one of the most expensive and ambitious expeditions in history.
