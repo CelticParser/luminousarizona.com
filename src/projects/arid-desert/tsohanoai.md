@@ -40,14 +40,26 @@ His kiss brings life, but takes it just the same,
 
 <!-- Break to wrap image -->
 
-<h2>Tsohanoai (Diné: Jóhonaaʼéí)</h2>
+## One Who Rules the Day
 
-Frequently identified in Navajo cosmology as the "Sun-Bearer," is less a distant deity and more a tireless cosmic laborer. While many cultures view the sun as a self-propelled chariot or a sentient ball of fire, the Diné tradition emphasizes the physical toll of the day: Tsohanoai literally carries the sun—a massive, glowing disc of polished turquoise—on his back as he treks across the sky.
+If you were to stand out on the red dirt of the high desert just as the first sliver of light cuts across the mesas, you wouldn’t just be looking at a sunrise. You’d be witnessing the beginning of a long, heavy day of work for Jóhonaaʼéí (Tsohanoai)—the one we call the Sun-Bearer (Tłééhonaaʼéí).
 
-<b>_Key Mythological Contexts_</b>
+​In the old stories, the sun isn't a ball of gas or a golden chariot. It is a massive, glowing disc of polished turquoise, and it doesn't move on its own.
 
-  <b>The Daily Ritual:</b> Each morning, Tsohanoai begins his journey from his hogan in the East. Upon reaching the West, he hangs the sun on a peg on his wall, where it cools and transitions into the softer light of the moon (carried by his brother, Tłʼéhonaaʼéí).
+​T## he Weight of the Sky
 
-  <b>The Paternal Trial:</b> Tsohanoai is the father of the Hero Twins (Naayééʼ Neizghání and Toobájízhíní), though he wasn't exactly a "hands-on" dad initially. When the twins sought his help to defeat the monsters plaguing the world, Tsohanoai put them through a series of lethal tests—including a spiked sweat lodge—to prove their divine lineage.
+​Imagine a traveler who never rests. Every morning, Jóhonaaʼéí emerges from his hogan in the East. He doesn't ride across the sky in ease; he carries the sun upon his back. He is a cosmic laborer, his footsteps marking the hours, feeling the immense weight of that blue-green fire as he treks toward the western horizon.
 
-  <b>Symbolism:</b> He represents the unforgiving yet life-giving power of the sun. In Navajo sandpainting, he is often depicted as a blue mask with feathers, signifying the balance between the harsh heat and the breath of life.
+​When he finally reaches his home in the West, his work still isn't finished. He carefully hangs the sun on a peg on his wall, where it cools from the heat of the day. Only then does his brother, Tłʼéhonaaʼéí, take up his own burden—the white shell of the moon—to start the journey back across the dark.
+
+## he Stern Father
+
+​Jóhonaaʼéí is not a deity of easy whispers. He is a father of discipline. When his sons, the Hero Twins, traveled to the ends of the earth to find him, they didn't find a doting parent. They found a warrior who demanded they prove their worth.
+
+​He put them through the trials of the spiked sweat lodge and the lethal tests of the sky, not out of cruelty, but because he knew that to survive the monsters of this world, they had to be as tempered and resilient as the turquoise he carried. He gave them the lightning they needed to protect the people, but only after they showed they had the strength to wield it.
+
+## ​The Rhythm of Hózhó
+
+​To see the Sun-Bearer in the Diné way is to understand that life requires effort. He is the heartbeat of Hózhó—the perfect balance of the universe. He provides the warmth that makes the corn grow and the light that guides the traveler, but he reminds us that beauty and harmony are maintained through duty and unwavering discipline.
+
+_​Next time you see the "Blue Mask" in a sandpainting, look at the feathers and the steady eyes. You aren't looking at a distant star; you're looking at the ultimate provider, finishing another day’s hike so that the world may keep turning._
