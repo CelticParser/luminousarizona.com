@@ -46,13 +46,13 @@ If you were to stand out on the red dirt of the high desert just as the first sl
 
 ​In the old stories, the sun isn't a ball of gas or a golden chariot. It is a massive, glowing disc of polished turquoise, and it doesn't move on its own.
 
-​T## he Weight of the Sky
+​## The Weight of the Sky
 
 ​Imagine a traveler who never rests. Every morning, Jóhonaaʼéí emerges from his hogan in the East. He doesn't ride across the sky in ease; he carries the sun upon his back. He is a cosmic laborer, his footsteps marking the hours, feeling the immense weight of that blue-green fire as he treks toward the western horizon.
 
 ​When he finally reaches his home in the West, his work still isn't finished. He carefully hangs the sun on a peg on his wall, where it cools from the heat of the day. Only then does his brother, Tłʼéhonaaʼéí, take up his own burden—the white shell of the moon—to start the journey back across the dark.
 
-## he Stern Father
+## The Stern Father
 
 ​Jóhonaaʼéí is not a deity of easy whispers. He is a father of discipline. When his sons, the Hero Twins, traveled to the ends of the earth to find him, they didn't find a doting parent. They found a warrior who demanded they prove their worth.
 
