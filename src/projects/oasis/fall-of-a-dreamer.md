@@ -35,7 +35,7 @@ The sudden gunfire shattered through the dust,
 <br>That laid the captive medicine man low.
 <br><br>
 The dreamer perished in the bitter fray, 
-<br>Yet in the wind, his spirit sings today._
+<br>Yet in the falling water, his spirit sings today._
 
 ---
 

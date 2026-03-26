@@ -40,8 +40,28 @@ A stony shrine along the western way,
 
 <!-- Break to wrap image -->
 
-<h2>Historical Footnote</h2>
+---
 
-<p>The modern-day name Church Rock, was originally named, Artenesales de Piedra (Eur. Sp. Sculpted Rock). This terrain reference was used by the Mexican merchant and explorer Antonio Armijo famous for leading the first commercial caravan party between Abiquiú, Nuevo México and San Gabriel Mission, Alta California in 1829–1830. Armijo’s route, the southernmost and most direct, became known as the Armijo Route of the Old Spanish Trail.</p>
+_If you were to follow the ghosts of the mule trains through the high, red Navajo dust of the 1820s, you would find yourself on a path carved by grit and the hunger for trade. This was the Armijo Route, the shortest and harshest link between the mountains of New Mexico and the missions of California._
+
+_And at the heart of this "ancient sand," there is a landmark that has watched every traveler pass for centuries._
+
+## The Merchant’s Vision
+
+In the winter of 1829, a Mexican merchant named Antonio Armijo led sixty men and a hundred mules out of Abiquiú. They weren't seeking gold in the ground; they were carrying woolen goods to exchange for horses and mules in Alta California.
+As they pushed through the "howling desert gale," they came upon a sight that stopped them in their tracks. Rising abruptly from the flat, arid landscape was a spire of stone so deliberate in its beauty that it looked like the work of a master mason. Armijo didn't see just a rock; he saw a "sudden temple." He recorded it in his diary as Artenesales de Piedra—the Sculpted Rock.
+
+## A Grand Cathedral of the Weary
+
+To those "merchants of the desert," the rock was more than a waypoint; it was a sanctuary. In a land of shifting dunes and jagged canyons, this solid nave of stone stood permanent. It became a place where the weary could rest their eyes on something that felt like home.
+Though "no human hands" had raised its walls, the wind whistling through the earthly caves of the formation sounded to the travelers like a "bronze or iron bell" calling them to prayer. Under its shadow, they found the strength to continue their journey toward the "golden west," knowing that if they could reach the Sculpted Rock, they were on the right path.
+
+## The Stony Shrine
+
+Over time, the Spanish name faded from the maps, replaced by the modern title we know today: Church Rock. But the name change didn't strip the site of its power. It remains a "stony shrine along the western way," a monument to the first commercial caravan to ever bridge the distance between the Rio Grande and the Pacific.
+
+When the sun hits the tower at a low angle, casting long shadows that "stretch across the canyon’s lair," you can almost see the dust kicked up by Armijo’s mules. It is a place where "ancient ghosts of exploration" still linger, reminding us that the desert is not a void, but a landscape filled with cathedrals of stone, waiting for a traveler to stop and notice their "holy beauty."
+
+---
 
 <!-- TODO Expand to include this place is on the Navajo Res. -->
