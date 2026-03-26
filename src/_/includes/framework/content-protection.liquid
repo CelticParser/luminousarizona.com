@@ -1,0 +1,54 @@
+<script>
+  window.addEventListener("load", function () {
+    function isFormControl(target) {
+      if (!target || !target.closest) return false;
+      return !!target.closest("input, textarea, select, [contenteditable='true']");
+    }
+
+    // Block right-click on images.
+    document.addEventListener("contextmenu", function (event) {
+      if (event.target && event.target.closest("img, picture")) {
+        event.preventDefault();
+      }
+    });
+
+    // Block dragging images.
+    document.addEventListener("dragstart", function (event) {
+      if (event.target && event.target.closest("img, picture")) {
+        event.preventDefault();
+      }
+    });
+
+    // Block text selection outside form fields.
+    document.addEventListener("selectstart", function (event) {
+      if (!isFormControl(event.target)) {
+        event.preventDefault();
+      }
+    });
+
+    // Block copying/cutting outside form fields.
+    document.addEventListener("copy", function (event) {
+      if (!isFormControl(event.target)) {
+        event.preventDefault();
+      }
+    });
+
+    document.addEventListener("cut", function (event) {
+      if (!isFormControl(event.target)) {
+        event.preventDefault();
+      }
+    });
+
+    // Block keyboard shortcuts often used to copy/select content.
+    document.addEventListener("keydown", function (event) {
+      var isModifier = event.ctrlKey || event.metaKey;
+      if (!isModifier) return;
+      if (isFormControl(event.target)) return;
+
+      var key = String(event.key || "").toLowerCase();
+      if (key === "a" || key === "c" || key === "x") {
+        event.preventDefault();
+      }
+    });
+  });
+</script>
