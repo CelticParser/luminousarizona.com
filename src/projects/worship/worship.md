@@ -5,12 +5,12 @@ subTitle: "Monuments of Spiritual Ambition: Tracing the Sacred Geometry of the D
 description: ""
 date: 2026-01-01
 weight: 2
-thumbnail: "the-santa-cruz-photo-by-jason-robert-okennedy.jpeg"
+thumbnail: "the-song-of-the-holy-cross-photo-by-jason-robert-okennedy.jpeg"
 tumbCardPosition: "top"
 isProject: true
 featured:
-  - image: "the-santa-cruz-photo-by-jason-robert-okennedy.jpeg"
-    caption: "The Santa Cruz"
+  - image: "the-song-of-the-holy-cross-photo-by-jason-robert-okennedy.jpeg"
+    caption: "The Song of the Holy Cross"
     year: "2023"
 gMap:
   - center: "lat: 33.043691, lng: -111.986575"
