@@ -1,14 +1,55 @@
 <script>
   window.addEventListener("load", function () {
+    var toast = null;
+    var toastTimer = null;
+    var lastToastAt = 0;
+
     function isFormControl(target) {
       if (!target || !target.closest) return false;
       return !!target.closest("input, textarea, select, [contenteditable='true']");
+    }
+
+    function ensureToast() {
+      if (toast) return toast;
+      toast = document.createElement("div");
+      toast.id = "la-content-protection-toast";
+      toast.textContent = "Copying is disabled on this site.";
+      toast.setAttribute("role", "status");
+      toast.setAttribute("aria-live", "polite");
+      toast.style.position = "fixed";
+      toast.style.left = "50%";
+      toast.style.bottom = "18px";
+      toast.style.transform = "translateX(-50%)";
+      toast.style.padding = "0.6rem 0.9rem";
+      toast.style.borderRadius = "8px";
+      toast.style.background = "rgba(13, 4, 43, 0.95)";
+      toast.style.color = "#fdfcf9";
+      toast.style.fontSize = "0.9rem";
+      toast.style.zIndex = "2147483647";
+      toast.style.opacity = "0";
+      toast.style.pointerEvents = "none";
+      toast.style.transition = "opacity 140ms ease-in-out";
+      document.body.appendChild(toast);
+      return toast;
+    }
+
+    function showBlockedToast() {
+      var now = Date.now();
+      if (now - lastToastAt < 1200) return;
+      lastToastAt = now;
+      var t = ensureToast();
+      t.style.opacity = "1";
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () {
+        t.style.opacity = "0";
+      }, 1400);
     }
 
     // Block right-click on images.
     document.addEventListener("contextmenu", function (event) {
       if (event.target && event.target.closest("img, picture")) {
         event.preventDefault();
+        showBlockedToast();
       }
     });
 
@@ -16,6 +57,7 @@
     document.addEventListener("dragstart", function (event) {
       if (event.target && event.target.closest("img, picture")) {
         event.preventDefault();
+        showBlockedToast();
       }
     });
 
@@ -23,6 +65,7 @@
     document.addEventListener("selectstart", function (event) {
       if (!isFormControl(event.target)) {
         event.preventDefault();
+        showBlockedToast();
       }
     });
 
@@ -30,12 +73,14 @@
     document.addEventListener("copy", function (event) {
       if (!isFormControl(event.target)) {
         event.preventDefault();
+        showBlockedToast();
       }
     });
 
     document.addEventListener("cut", function (event) {
       if (!isFormControl(event.target)) {
         event.preventDefault();
+        showBlockedToast();
       }
     });
 
@@ -48,6 +93,7 @@
       var key = String(event.key || "").toLowerCase();
       if (key === "a" || key === "c" || key === "x") {
         event.preventDefault();
+        showBlockedToast();
       }
     });
   });
