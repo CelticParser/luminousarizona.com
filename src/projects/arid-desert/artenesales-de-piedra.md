@@ -40,11 +40,11 @@ A stony shrine along the western way,
 
 <!-- Break to wrap image -->
 
----
-
 _If you were to follow the ghosts of the mule trains through the high, red Navajo dust of the 1820s, you would find yourself on a path carved by grit and the hunger for trade. This was the Armijo Route, the shortest and harshest link between the mountains of New Mexico and the missions of California._
 
 _And at the heart of this "ancient sand," there is a landmark that has watched every traveler pass for centuries._
+
+---
 
 ## The Merchant’s Vision
 
