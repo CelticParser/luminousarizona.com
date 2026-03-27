@@ -60,7 +60,7 @@ This was the Battle of Picacho Pass, the westernmost skirmish of the American Ci
 
 For the traveler today, Picacho is the ultimate weather vane. When the "heavy, bruised-gray sky" of the monsoon rolls in from the south, Picacho is the first to catch it.
 
-As noted, it "pierces the belly of the swollen cloud." Because of its isolation, the peak often creates its own micro-climate. You can watch from the valley floor as the spire disappears into a "coat of silver mist," while the surrounding plains remain bone-dry.
+As noted, it "pierces the belly of the swollen cloud"; because of its isolation, the peak often creates its own micro-climate. You can watch from the valley floor as the spire disappears into a "coat of silver mist," while the surrounding plains remain bone-dry.
 
 Down below, in the rock crevices and desert washes, the desert tortoises indeed "sleep" or hunker down, waiting for that "sudden rain" to fill the stone tinajas. When the lightning flashes "arrogant and proud" against that dark basalt, Picacho stands fast, a granite witness to the "summer blast" that has tried to weather it down for millions of years.
 

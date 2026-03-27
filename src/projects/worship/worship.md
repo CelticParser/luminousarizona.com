@@ -25,4 +25,4 @@ Captured exclusively in black and white, this collection strips away the distrac
 
 <!-- Break to wrap image -->
 
-> _This project adds a layer of spiritual and architectural history to Arizonas anthology. It serves as a profound meditation on the "cultural collision" that shaped the region, moving from the natural and tribal history of the previous chapters into the colonial and religious structures that anchor the desert landscape.<br><br>By choosing black and white to document these missions and chapels, I hope to highlight the raw, elemental struggle between human faith and the relentless desert environment._
+> _This project adds a layer of spiritual and architectural history to Arizonas anthology. It serves as a profound meditation on the "cultural collision" that shaped the region, moving from the natural and tribal history of the previous chapters into the colonial and religious structures that anchor the desert landscape.<br><br>By choosing black and white to document these missions and chapels, I capture the highlights of the raw, elemental struggle between human faith and the relentless desert environment._

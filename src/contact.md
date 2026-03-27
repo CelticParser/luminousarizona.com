@@ -6,6 +6,4 @@ permalink: "/contact/"
 
 ## Contact Info
 
-- **Email:** <a href="mailto:jroke@luminousarizona.com">jroke@luminousarizona.com</a>
-- **Phone:** 
-- **Address:** 
+- **Email:** <a href="mailto:jason.robert.okennedy@gmail.com">jrok@luminousarizona.com</a>

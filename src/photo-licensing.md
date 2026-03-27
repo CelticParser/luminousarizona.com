@@ -9,6 +9,12 @@ description: "Licensing information for photographs by Jason Robert O'Kennedy on
 
 All photographs on LuminousArizona.com are © Jason Robert O'Kennedy. All rights reserved.
 
+# Sonnets / Poems / Commentary 
+
+All written texts on LuminousArizona.com are © Jason Robert O'Kennedy. All rights reserved.
+
+---
+
 ## Licensing Inquiries
 
 For licensing requests, commercial use, or reproduction permissions, please contact:
@@ -19,7 +25,7 @@ Use the [contact form](/contact/) to inquire about licensing specific images.
 
 ## Usage
 
-Images on this site are protected by copyright and may not be reproduced, distributed, or used without prior written permission.
+Images and texts on this site are protected by copyright and may not be reproduced, distributed, or used without prior written permission.
 
 ---
 

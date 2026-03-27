@@ -22,7 +22,7 @@ gallery: true
 
 <b><i>"This essay project is a pilgrimage to the heart of the Southwest, a chance to capture the timeless beauty and historical significance of the tribal lands within. The Navajo Nation, the Hopi Reservation, the Apache lands, the Tohono Oʼodham - each hold stories as old as the canyons, forests, and deserts themselves."</i></b>
 
-As I learn stories and traditions about the local tribes, I realized the depth of their cultural heritage and the importance of preserving it. By accompanying my photographs with indigenous knowledge, folklore, and the significant names given to these places by the original inhabitants, I hope to elevate Indigenous voices and contribute to a more accurate and respectful understanding of the Southwest.
+As I learn stories and traditions about the local tribes, I realized the depth of their cultural heritage and the importance of preserving it. By accompanying my photographs with indigenous knowledge, folklore, and the significant names given to these places by the original inhabitants, I intend to elevate Indigenous voices and contribute to a more accurate and respectful understanding of the Southwest.
 
 Here, the black and white aesthetic is a deliberate choice. It strips away the distractions of color, focusing on the essential elements of the landscape. The stark contrasts between light and shadow, the textures of the rock, the lines of the canyons - all came to life in a way that color photography could never fully capture.
 
