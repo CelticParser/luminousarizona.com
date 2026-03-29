@@ -9,6 +9,7 @@ permalink: "/projects/discarded/delapidated-dc3-ephonage/"
 thumbnail: "delapidated-dc3-ephonage-photo-by-jason-robert-okennedy.jpeg"
 tumbCardPosition: "bottom"
 image: "delapidated-dc3-ephonage-photo-by-jason-robert-okennedy.jpeg"
+ImagePosition: "100% 100%"
 alt: ""
 year: "2022"
 gMap:

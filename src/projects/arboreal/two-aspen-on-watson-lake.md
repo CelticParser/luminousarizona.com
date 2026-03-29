@@ -9,6 +9,7 @@ permalink: "/projects/arboreal/two-aspen-on-watson-lake/"
 thumbnail: "aspen-on-watson-lake-photo-by-jason-robert-okennedy.jpeg"
 tumbCardPosition: "top"
 image: "aspen-on-watson-lake-photo-by-jason-robert-okennedy.jpeg"
+ImagePosition: 100% 70%
 alt: ""
 year: "2022"
 gMap:

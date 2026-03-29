@@ -9,6 +9,7 @@ permalink: "/projects/on-the-tonto/notches-in-the-sky/"
 thumbnail: "notches-in-the-sky-photo-by-jason-robert-okennedy.jpeg"
 tumbCardPosition: "top"
 image: "notches-in-the-sky-photo-by-jason-robert-okennedy.jpeg"
+ImagePosition: 100% 60%
 alt: ""
 year: "2021"
 gMap:

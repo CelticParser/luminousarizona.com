@@ -9,6 +9,7 @@ permalink: "/projects/worship/elvis-memorial-chapel/"
 thumbnail: "elvis-memorial-chapel-photo-by-jason-robert-okennedy.jpeg"
 tumbCardPosition: "top"
 image: "elvis-memorial-chapel-photo-by-jason-robert-okennedy.jpeg"
+ImagePosition: 100% 70%
 alt: ""
 year: "2022"
 gMap:

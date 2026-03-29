@@ -13,12 +13,14 @@ body_classes: page-project
           {% include 'framework/project-breadcrumb' %}
           <div class="gallery">
             {% for item in featured limit: limit %}
+              {% assign featuredObjectPos = item.ImagePosition | default: ImagePosition %}
               <figure class="gallery-item">
                 <a href="/projects/{{ title | slugify }}/{% if item.slug %}{{ item.slug }}{% else %}{{ item.caption | slugify }}{% endif %}/">
                   <div class="gallery-image">
                     {% include 'framework/shortcodes/responsive-image'
                       , src: item.image
                       , alt: item.caption
+                      , ImagePosition: featuredObjectPos
                     %}
                   </div>
                 </a>

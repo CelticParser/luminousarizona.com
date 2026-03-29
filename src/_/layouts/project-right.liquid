@@ -55,11 +55,13 @@ body_classes: page-project
       <div class="col-12 col-md-6 mt-6 mt-md-0">
         <div class="gallery gallery-single-column">
           {% for item in gallery limit: limit %}
+            {% assign galleryRightObjectPos = item.ImagePosition | default: ImagePosition %}
             <div class="gallery-item">
               <div class="gallery-image">
                 {% include 'framework/shortcodes/responsive-image',
                   src: item.image,
-                  alt: item.caption
+                  alt: item.caption,
+                  ImagePosition: galleryRightObjectPos
                 %}
               </div>
               <div class="gallery-caption">{{ item.caption }}</div>

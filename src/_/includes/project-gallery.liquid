@@ -29,10 +29,11 @@
         <figure class="gallery-item">
           <div class="gallery-image">
             <a href="{{ post.url }}">
+              {% assign galleryImgObjectPos = post.data.ImagePosition | default: post.data.tumbCardPosition | default: post.data.thumbCardPosition %}
               {% include 'framework/shortcodes/responsive-image'
                 , src: post.data.thumbnail
                 , alt: post.data.title
-                , object-position: post.data.thumbCardPosition
+                , ImagePosition: galleryImgObjectPos
                 , sizes: '(min-width: 1920px) 770px, (min-width: 1280px) 550px, (min-width: 1040px) 450px, (min-width: 780px) 330px, calc(50vw - 30px)'
               %}
             </a>

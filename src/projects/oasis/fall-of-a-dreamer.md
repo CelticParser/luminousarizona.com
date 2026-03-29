@@ -11,6 +11,7 @@ permalink: "/projects/oasis/fall-of-a-dreamer/"
 thumbnail: "fall-of-a-dreamer-photo-by-jason-robert-okennedy.jpeg"
 tumbCardPosition: "top"
 image: "fall-of-a-dreamer-photo-by-jason-robert-okennedy.jpeg"
+ImagePosition: 100% 90%
 alt: ""
 year: "2022"
 gMap:

@@ -8,6 +8,7 @@ tags: "oasis"
 permalink: "/projects/oasis/east-verde-river-cascade/"
 thumbnail: "east-verde-river-cascade-photo-by-jason-robert-okennedy.jpeg"
 image: "east-verde-river-cascade-photo-by-jason-robert-okennedy.jpeg"
+ImagePosition: 100% 100%
 alt: ""
 year: "2024"
 tripod: "lat: 32.103310, lng: -111.003673"

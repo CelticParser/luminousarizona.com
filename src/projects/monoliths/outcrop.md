@@ -9,6 +9,7 @@ permalink: "/projects/monoliths/outcrop/"
 thumbnail: "outcrop-photo-by-jason-robert-okennedy.jpeg"
 tumbCardPosition: "top"
 image: "outcrop-photo-by-jason-robert-okennedy.jpeg"
+ImagePosition: 100% 100%
 alt: ""
 year: "2022"
 gMap:

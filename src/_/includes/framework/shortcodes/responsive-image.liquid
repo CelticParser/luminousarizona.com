@@ -1,40 +1,39 @@
 {% comment %}
   Responsive Image Include
-  
   Usage:
   {% include 'framework/shortcodes/responsive-image',
     src: 'image-name.jpg',
     alt: 'Image description',
     style: 'max-width: 100%; height: auto;',
     class: 'gallery-image',
-    object-position: tumbCardPosition,
+    ImagePosition: '50% 30%',
     sizes: '(min-width: 1360px) 1220px, calc(94.23vw - 43px)'
   %}
-  
   Parameters:
   - src: Image filename (required) - should be in /assets/images/
   - alt: Alt text for accessibility (default: '')
   - style: Inline CSS styles (optional)
   - class: CSS class(es) (optional)
-  - object-position: Object position for object-fit (optional) - will be appended to style
-  - sizes: Sizes attribute for responsive images (optional) - defaults to container-based sizing
+  - ImagePosition: value for CSS object-position (optional), e.g. "center top" or "100% 80%"
+  - sizes: Sizes attribute for responsive images (optional)
 {% endcomment %}
 
 {% if src %}
   {% assign imageSrc = src %}
   {% assign imageAlt = alt | default: '' %}
-  
-  {% comment %} Build style attribute, combining style and object-position if provided {% endcomment %}
+  {% assign imgObjectPosition = ImagePosition | default: '' | strip | replace: ';', '' %}
+
+  {% comment %} Build style attribute, combining style and ImagePosition if provided {% endcomment %}
   {% assign combinedStyle = style | default: '' %}
-  {% if object-position %}
+  {% if imgObjectPosition != '' %}
     {% if combinedStyle != '' %}
-      {% assign combinedStyle = combinedStyle | append: ' object-position: ' | append: object-position | append: ';' %}
+      {% assign combinedStyle = combinedStyle | append: ' object-position: ' | append: imgObjectPosition | append: ';' %}
     {% else %}
-      {% assign combinedStyle = 'object-position: ' | append: object-position | append: ';' %}
+      {% assign combinedStyle = 'object-position: ' | append: imgObjectPosition | append: ';' %}
     {% endif %}
   {% endif %}
-  
-  {% comment %} Use the responsiveImage shortcode {% endcomment %}
+
+  {% comment %} Use the responsiveImage shortcode (single line required for Liquid parser) {% endcomment %}
   {% responsiveImage imageSrc, imageAlt, combinedStyle, class, sizes %}
 {% else %}
   {% comment %} Fallback if no src provided {% endcomment %}

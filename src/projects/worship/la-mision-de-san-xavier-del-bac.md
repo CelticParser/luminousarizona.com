@@ -9,8 +9,9 @@ tags:
   - "tribal-lands"
 permalink: "/projects/worship/la-mision-de-san-xavier-del-bac/"
 thumbnail: "la-mision-de-san-xavier-del-bac-photo-by-jason-robert-okennedy.jpeg"
-tumbCardPosition: "top"
+tumbCardPosition: "bottom"
 image: "la-mision-de-san-xavier-del-bac-photo-by-jason-robert-okennedy.jpeg"
+ImagePosition: 100% 100%
 alt: ""
 year: "2022"
 gMap:

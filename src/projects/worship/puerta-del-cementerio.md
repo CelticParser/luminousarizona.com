@@ -9,6 +9,7 @@ permalink: "/projects/worship/puerta-del-cementerio/"
 thumbnail: "puerta-del-cementerio-photo-by-jason-robert-okennedy.jpg"
 tumbCardPosition: "top"
 image: "puerta-del-cementerio-photo-by-jason-robert-okennedy.jpg"
+ImagePosition: 100% 80%
 alt: ""
 year: "2023"
 gMap:
