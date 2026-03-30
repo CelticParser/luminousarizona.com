@@ -8,7 +8,23 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import eleventyImage from "@11ty/eleventy-img";
 import path from "path";
 
+const isProductionBuild = process.env.ELEVENTY_PRODUCTION === "true";
+
+/** In production, omit pages with `published: false` from output and collections. */
+function itemPublishedInBuild(item) {
+  if (!isProductionBuild) return true;
+  return item.data.published !== false;
+}
+
 export default function(eleventyConfig) {
+  eleventyConfig.addGlobalData("eleventyComputed", {
+    permalink(data) {
+      if (isProductionBuild && data.published === false) {
+        return false;
+      }
+      return data.permalink;
+    },
+  });
   // 11ty watch targets
   eleventyConfig.addWatchTarget("./src/_/sass/");
   // 11ty YAML support
@@ -19,22 +35,22 @@ export default function(eleventyConfig) {
       // Only include the main project file (same name as directory)
       const dirName = item.inputPath.split('/').slice(-2, -1)[0];
       const fileName = item.inputPath.split('/').slice(-1)[0].replace('.md', '');
-      return dirName === fileName;
+      return dirName === fileName && itemPublishedInBuild(item);
     });
   });
   eleventyConfig.addCollection("about", (collection) => {
-    return collection.getFilteredByGlob("./src/about/*.md");
+    return collection.getFilteredByGlob("./src/about/*.md").filter(itemPublishedInBuild);
   });
   eleventyConfig.addCollection("images", (collection) => {
     // Images are now in project subdirectories, collect all .md files except the main project file
     return collection.getFilteredByGlob("./src/projects/**/*.md").filter(item => {
       const dirName = item.inputPath.split('/').slice(-2, -1)[0];
       const fileName = item.inputPath.split('/').slice(-1)[0].replace('.md', '');
-      return dirName !== fileName; // Exclude the main project file
+      return dirName !== fileName && itemPublishedInBuild(item); // Exclude the main project file
     });
   });
   eleventyConfig.addCollection("posts", (collection) => {
-    return collection.getFilteredByGlob("./src/_/posts/*.md");
+    return collection.getFilteredByGlob("./src/_/posts/*.md").filter(itemPublishedInBuild);
   });
 
   // Custom filename format function to preserve original filename with width appended
@@ -163,7 +179,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addCollection("tagList", (collectionApi) => {
     const tagsSet = {};
     collectionApi.getFilteredByGlob("./src/_/posts/*.md").forEach((item) => {
-      if (!item.data.tags) return;
+      if (!itemPublishedInBuild(item) || !item.data.tags) return;
       item.data.tags
         .filter((tag) => !["posts", "all"].includes(tag))
         .forEach((tag) => {
@@ -180,7 +196,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addCollection("categoryList", (collectionApi) => {
     let catSet = {};
     collectionApi.getFilteredByGlob("./src/_/posts/*.md").forEach((item) => {
-      if (!item.data.categories) return;
+      if (!itemPublishedInBuild(item) || !item.data.categories) return;
       item.data.categories
         .filter((cat) => !["posts", "all"].includes(cat))
         .forEach((cat) => {

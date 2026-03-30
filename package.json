@@ -9,10 +9,11 @@
     "build:sass:prod": "sass --style=compressed --no-source-map src/_/sass/style.scss:public/assets/css/style.css",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "eleventy",
+    "build:eleventy:prod": "ELEVENTY_PRODUCTION=true eleventy",
     "clean": "rm -rf public",
     "dev": "npm run start",
     "start": "npm-run-all build:sass --parallel watch:*",
-    "build": "npm-run-all build:sass:prod build:eleventy",
+    "build": "npm-run-all build:sass:prod build:eleventy:prod",
     "todos": "node src/_/scripts/update-todos.js",
     "watch:todos": "node src/_/scripts/watch-todos.js"
   },
