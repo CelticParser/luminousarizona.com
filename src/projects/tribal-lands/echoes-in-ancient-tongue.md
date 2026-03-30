@@ -14,6 +14,7 @@ gMap:
   - tripod: "NULL"
     zoom: "13"
     portrait:
+published: false
 ---
 
 > _The canyon floor remembers every sound,

@@ -14,6 +14,7 @@ gMap:
   - tripod: "lat: 33.640396, lng: -111.116624"
     zoom: "16"
     portrait: true
+published: false
 ---
 
 > _A chance appears, a window to the light,

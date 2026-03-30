@@ -15,6 +15,7 @@ gMap:
   - tripod: "NULL"
     zoom: "14"
     portrait: false
+published: false
 ---
 
 > _TODO_

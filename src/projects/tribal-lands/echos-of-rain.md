@@ -13,7 +13,8 @@ year: "2026"
 gMap:
   - tripod: "NULL"
     zoom: "13"
-    portrait: 
+    portrait:
+published: false
 ---
 
 > _Upon the canyon's long rust-red walls,

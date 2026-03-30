@@ -15,6 +15,7 @@ gMap:
   - tripod: "lat: 34.890159, lng: -111.785832"
     zoom: "14"
     portrait: true
+published: false
 ---
 
 

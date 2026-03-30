@@ -11,6 +11,7 @@ image: "image-coming-soon.webp"
 alt: ""
 year: "2026"
 tripod: "lat: 32.103310, lng: -111.003673"
+published: false
 ---
 ## Where I Go To Scream
 > _I chase the sun, a gilded, burning guide,
