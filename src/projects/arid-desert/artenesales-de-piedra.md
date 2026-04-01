@@ -4,9 +4,14 @@ title: "Artenesales de Piedra"
 subTitle: "Church Rock Valley, Kayenta"
 description: ""
 date: 2025-10-16
-tags: 
-  - "arid-desert"
-  - "tribal-lands"
+pagination:
+  data: projectTagVariants
+  size: 1
+  alias: projectView
+  addAllPagesToCollections: true
+tags:
+  - "arid-desert": "Artenesales de Piedra"
+  - "tribal-lands": "Sentinel of Scraped Earth"
 permalink: "/projects/arid-desert/artenesales-de-piedra/"
 thumbnail: "artenesales-de-piedra-photo-by-jason-robert-okennedy.jpg"
 image: "artenesales-de-piedra-photo-by-jason-robert-okennedy.jpg"
@@ -17,6 +22,8 @@ gMap:
     zoom: "12"
     portrait: false
 ---
+
+<!-- arid-desert start -->
 
 > _Along the dusty route of ancient sand, 
 <br>Where brave Armijo carved the Spanish Trail, 
@@ -64,4 +71,30 @@ When the sun hits the tower at a low angle, casting long shadows that "stretch a
 
 ---
 
-<!-- TODO Expand to include this place is on the Navajo Res. -->
+<!-- arid-desert end -->
+
+<!-- tribal-lands start -->
+
+Sentinel of Scraped Earth
+
+> _A spire of stone beneath the turquoise sky,
+<br>Where ancient giants met their bitter end; 
+<br>It watches as the desert hawks go by,
+<br>A broken heart that time can never mend.
+<br><br>
+The Monster Slayer walked this crimson floor,
+<br>To rid the world of those who preyed on men;
+<br>He closed the lid on every iron door,
+<br>And brought the dawn of peaceful life again.
+<br><br>
+Near where the "Much Wool" rises from the sand,
+<br>The Pointed One still keeps its lonely post;
+<br>A testament across the Diné land,
+<br>Of battles fought and every wandering ghost.
+<br><br>
+Though names may change and newer faiths take root,
+<br>The earth remembers every heavy foot.__
+
+---
+
+<!-- tribal-lands end -->

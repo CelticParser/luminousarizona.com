@@ -6,8 +6,12 @@ body_classes: page-project
 <main class="section">
   <div class="container">
     <section class="row">
-      {% comment %} Split content at <!-- section break --> comment {% endcomment %}
-      {% assign contentParts = content | split: '<!-- section break -->' %}
+      {% comment %} Multi-project pages: variantContentHtml; else full markdown body {% endcomment %}
+      {% if variantContentHtml != '' %}
+        {% assign contentParts = variantContentHtml | split: '<!-- section break -->' %}
+      {% else %}
+        {% assign contentParts = content | split: '<!-- section break -->' %}
+      {% endif %}
       {% assign contentBeforeBreak = contentParts[0] %}
       {% assign contentAfterBreak = contentParts[1] %}
 

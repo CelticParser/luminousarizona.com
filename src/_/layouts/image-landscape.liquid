@@ -35,7 +35,13 @@ body_classes: page-project
       {% endif %}
     </header>
 
-    <article class="content" style="width: 100%">{{ content }}</article>
+    <article class="content" style="width: 100%">
+      {% if variantContentHtml != '' %}
+        {{ variantContentHtml }}
+      {% else %}
+        {{ content }}
+      {% endif %}
+    </article>
 
     {% include 'framework/image-navigation' %}
     <br>

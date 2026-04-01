@@ -1,4 +1,5 @@
 import yaml from "js-yaml";
+import MarkdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import xmlFiltersPlugin from "eleventy-xml-plugin";
@@ -6,9 +7,12 @@ import pluginRss from "@11ty/eleventy-plugin-rss";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import eleventyImage from "@11ty/eleventy-img";
+import slugify from "@sindresorhus/slugify";
 import path from "path";
 
 const isProductionBuild = process.env.ELEVENTY_PRODUCTION === "true";
+
+const variantMarkdown = new MarkdownIt({ html: true }).use(markdownItAttrs);
 
 /** In production, omit pages with `published: false` from output and collections. */
 function itemPublishedInBuild(item) {
@@ -22,7 +26,29 @@ export default function(eleventyConfig) {
       if (isProductionBuild && data.published === false) {
         return false;
       }
+      if (data.projectView) {
+        const pathSlug = slugify(data.projectView.pageTitle, { decamelize: false });
+        return `/projects/${data.projectView.projectSlug}/${pathSlug}/`;
+      }
       return data.permalink;
+    },
+    title(data) {
+      if (data.projectView) {
+        return data.projectView.pageTitle;
+      }
+      return data.title;
+    },
+    tags(data) {
+      if (data.projectView) {
+        return data.projectView.projectSlug;
+      }
+      return data.tags;
+    },
+    variantContentHtml(data) {
+      if (!data.projectView?.markdown) {
+        return "";
+      }
+      return variantMarkdown.render(data.projectView.markdown);
     },
   });
   // 11ty watch targets
