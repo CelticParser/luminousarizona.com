@@ -1,0 +1,21 @@
+{
+  "name": "markdown-poem-sonnet",
+  "displayName": "Markdown poem / sonnet (\"\") highlighting",
+  "description": "Highlights \"\" … \"\" poem blocks in Markdown for LuminousArizona.com",
+  "version": "0.1.0",
+  "publisher": "luminousarizona",
+  "private": true,
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "grammars": [
+      {
+        "path": "./syntaxes/markdown-poem-sonnet.tmLanguage.json",
+        "scopeName": "markdown.poem-sonnet.injection",
+        "injectTo": ["text.html.markdown"]
+      }
+    ]
+  }
+}

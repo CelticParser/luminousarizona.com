@@ -1,10 +1,28 @@
- {
+{
     "files.exclude": {
         "**/node_modules": true,
-        "**/.vscode":true
+        "**/.vscode": true
     },
     "[liquid]": {
         "editor.defaultFormatter": "sissel.shopify-liquid",
         "editor.formatOnSave": true
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "string.other.poem-sonnet.markdown",
+                "settings": {
+                    "foreground": "#b578ff",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "punctuation.definition.poem-sonnet.begin.markdown, punctuation.definition.poem-sonnet.end.markdown",
+                "settings": {
+                    "foreground": "#f7a344",
+                    "fontStyle": "bold"
+                }
+            }
+        ]
     }
 }

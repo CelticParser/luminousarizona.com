@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Markdown poem-sonnet injection",
+  "scopeName": "markdown.poem-sonnet.injection",
+  "injectionSelector": "L:text.html.markdown",
+  "patterns": [
+    {
+      "name": "meta.block.poem-sonnet.markdown",
+      "begin": "^[ \\t]*\"\"",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.poem-sonnet.begin.markdown" }
+      },
+      "end": "\"\"",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.poem-sonnet.end.markdown" }
+      },
+      "contentName": "string.other.poem-sonnet.markdown"
+    }
+  ]
+}
