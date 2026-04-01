@@ -1,7 +1,8 @@
 {
     "files.exclude": {
         "**/node_modules": true,
-        "**/.vscode": true
+        "**/.vscode": true,
+        "extensions": true
     },
     "[liquid]": {
         "editor.defaultFormatter": "sissel.shopify-liquid",
