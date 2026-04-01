@@ -9,6 +9,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import eleventyImage from "@11ty/eleventy-img";
 import slugify from "@sindresorhus/slugify";
 import path from "path";
+import { loadProjectTagVariantsFromFile } from "./src/_/lib/projectTagVariants.mjs";
 
 const isProductionBuild = process.env.ELEVENTY_PRODUCTION === "true";
 
@@ -38,15 +39,16 @@ export default function(eleventyConfig) {
     if (!isFlatEssayMarkdownPath(this.inputPath)) return;
     if (data.pagination) return;
 
+    // Fresh from disk each run — do not use cached global `_data` (watch would stay stale).
+    const multiprojectVariantPages = loadProjectTagVariantsFromFile(this.inputPath);
+    if (!multiprojectVariantPages.length) return;
+
+    data.multiprojectVariantPages = multiprojectVariantPages;
     data.pagination = {
-      data: "essayProjectVariants.pages",
+      data: "multiprojectVariantPages",
       size: 1,
       alias: "projectView",
       addAllPagesToCollections: true,
-      before(items, dataInner) {
-        const stem = String(dataInner.page?.filePathStem || "").replace(/^\/+/, "");
-        return items.filter((item) => item.sourceStem === stem);
-      },
     };
   });
 
@@ -82,6 +84,8 @@ export default function(eleventyConfig) {
   });
   // 11ty watch targets
   eleventyConfig.addWatchTarget("./src/_/sass/");
+  eleventyConfig.addWatchTarget("./src/essays/");
+  eleventyConfig.addWatchTarget("./src/_/_data/");
   // 11ty YAML support
   eleventyConfig.addDataExtension("yml", (contents) => yaml.load(contents));
   // 11ty Collections

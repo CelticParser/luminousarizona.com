@@ -86,7 +86,28 @@ Near where the "Much Wool" rises from the sand,
 <br>Of battles fought and every wandering ghost.
 <br><br>
 Though names may change and newer faiths take root,
-<br>The earth remembers every heavy foot.__
+<br>The earth remembers every heavy foot._
+
+---
+
+<!-- section break -->
+
+## Echoes of a War Before Time
+
+To the eyes of a traveler driving east toward Kayenta, the formation looks like a Gothic cathedral, its spires reaching for a heaven it can never touch. This is why the outsiders call it Church Rock. But the Diné, the People, know it as Ooo’í—the Pointed One. To understand its story, you must look past the "modern masks" and listen to the vibration of a war fought when the world was still soft. This was the time of the Naayéé’, the monsters that haunted the four corners, feeding on the people until the Twin Heroes, Monster Slayer and Born-for-Water, rose to challenge them.
+
+## Trophy of the Monster Slayer
+
+Every volcanic plug in this field—Shiprock to the east, Agathla to the north, and Ooo’í here in the valley—is a "jagged scar" left behind by that war. The stories say that when the Twins struck down the Great Giant, Yé’iitsoh, and the other monsters, their remains did not simply rot away. The earth, in its wisdom, turned them to stone. Church Rock is often whispered to be the heart or the head of a fallen foe, pinned to the desert floor by the power of the Twins' lightning bolts. It stands as a "testament to man’s harsh cruelty" to some, but to the Diné, it is a monument to survival. It is the evidence that the world was once made safe for us to walk in beauty.
+
+## Scaping of the Hides and the "Much Wool"
+
+You cannot speak of the Pointed One without looking toward its massive neighbor, Aghaałą́, or Agathla Peak. Its name means "Much Wool," and it holds one of the most vivid "old stories" of the region. It is said that after the monsters were slain, this was the place where their hides were scraped clean. The fur and wool of the creatures accumulated in such a mountain that it turned into the towering, gray rock we see today. Ooo’í stands in the shadow of that work, a silent partner in the "mundane" cleanup of a supernatural battle. It is a place of heavy memory, where the "ancient tongue" still has words for the shadows that cling to the rock.
+
+## Prayers Preserved in the Volcanic Core
+
+While the "final bell" of the modern world rings and tourists snap photos of the "sculpted rock," the formation remains an anchor for the Navajo Nation. It is a reminder that we live on a battlefield that has been reclaimed by peace. The "unspoken song" of Church Rock is one of resilience. It tells us that no matter how large the monster—whether it be a giant of legend or the "prickly shame" of modern assimilation—there is a way to overcome. As the sun sets and turns the sandstone to the color of dried blood, the Pointed One reminds those who listen that the roots of the People run deeper than any spire, grounded in the very hearts of the giants they defeated.
+<br><br>
 
 ---
 

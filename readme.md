@@ -456,7 +456,7 @@ tags:
 
 (`multiProject: true` is also accepted.) No `pagination` block and no extra data files per essay—you can **rename the `.md` file** whenever you like.
 
-A content **preprocessor** in `eleventy.config.js` injects pagination when `multiproject` is set (only for `src/essays/<name>.md`, not subfolders). **`src/_/_data/essayProjectVariants.js`** scans `src/essays/**/*.md` and fills `essayProjectVariants.pages`. **`eleventy.config.js`** `eleventyComputed` supplies `permalink`, `title`, `tags`, and `variantContentHtml` per variant.
+A content **preprocessor** in `eleventy.config.js` injects pagination when `multiproject` is set (only for `src/essays/<name>.md`, not subfolders). It **re-reads that markdown file from disk** each build so `--serve` / watch picks up edits (Eleventy otherwise caches merged global `_data` for the whole run). **`eleventy.config.js`** `eleventyComputed` supplies `permalink`, `title`, `tags`, and `variantContentHtml` per variant.
 
 ---
 
