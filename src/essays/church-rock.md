@@ -20,23 +20,23 @@ gMap:
 
 <!-- arid-desert start -->
 
-> _Along the dusty route of ancient sand, 
-<br>Where brave Armijo carved the Spanish Trail, 
-<br>Behold a sudden temple in the land, 
-<br>That stands against the howling desert gale.
-<br><br>
+""Along the dusty route of ancient sand, 
+Where brave Armijo carved the Spanish Trail, 
+Behold a sudden temple in the land, 
+That stands against the howling desert gale.
+
 A church of solid rock beneath the sky, 
-<br>A grand cathedral where the weary rest, 
-<br>As merchants of the desert journey by, 
-<br>To seek their fortunes in the golden west.
-<br><br>
+A grand cathedral where the weary rest, 
+As merchants of the desert journey by, 
+To seek their fortunes in the golden west.
+
 No human hands have built this holy nave, 
-<br>No bronze or iron bell to sound the hour, 
-<br>Yet blowing winds across the earthly cave, 
-<br>Proclaim the holy beauty of its tower.
-<br><br>
+No bronze or iron bell to sound the hour, 
+Yet blowing winds across the earthly cave, 
+Proclaim the holy beauty of its tower.
+
 A stony shrine along the western way, 
-<br>Where ancient ghosts of exploration pray._
+Where ancient ghosts of exploration pray.""
 
 ---
 

@@ -10,10 +10,13 @@ import eleventyImage from "@11ty/eleventy-img";
 import slugify from "@sindresorhus/slugify";
 import path from "path";
 import { loadProjectTagVariantsFromFile } from "./src/_/lib/projectTagVariants.mjs";
+import markdownItPoemSonnets from "./src/_/lib/markdown-it-poem-sonnet.mjs";
 
 const isProductionBuild = process.env.ELEVENTY_PRODUCTION === "true";
 
-const variantMarkdown = new MarkdownIt({ html: true }).use(markdownItAttrs);
+const variantMarkdown = new MarkdownIt({ html: true })
+  .use(markdownItAttrs)
+  .use(markdownItPoemSonnets);
 
 /** In production, omit pages with `published: false` from output and collections. */
 function itemPublishedInBuild(item) {
@@ -283,7 +286,9 @@ export default function(eleventyConfig) {
   eleventyConfig.setServerPassthroughCopyBehavior("copy");
   eleventyConfig.setLiquidOptions({ jsTruthy: true });
   eleventyConfig.setQuietMode(true);
-  eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItAttrs));
+  eleventyConfig.amendLibrary("md", (mdLib) =>
+    mdLib.use(markdownItAttrs).use(markdownItPoemSonnets)
+  );
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.setLiquidOptions({
     dynamicPartials: true,
