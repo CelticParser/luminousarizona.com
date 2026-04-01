@@ -1,18 +1,13 @@
 ---
 layout: image-landscape
-title: "Artenesales de Piedra"
+title: "Church Rock"
 subTitle: "Church Rock Valley, Kayenta"
 description: ""
 date: 2025-10-16
-pagination:
-  data: projectTagVariants
-  size: 1
-  alias: projectView
-  addAllPagesToCollections: true
+multiproject: true
 tags:
   - "arid-desert": "Artenesales de Piedra"
   - "tribal-lands": "Sentinel of Scraped Earth"
-permalink: "/projects/arid-desert/artenesales-de-piedra/"
 thumbnail: "artenesales-de-piedra-photo-by-jason-robert-okennedy.jpg"
 image: "artenesales-de-piedra-photo-by-jason-robert-okennedy.jpg"
 alt: ""
@@ -75,14 +70,12 @@ When the sun hits the tower at a low angle, casting long shadows that "stretch a
 
 <!-- tribal-lands start -->
 
-Sentinel of Scraped Earth
-
 > _A spire of stone beneath the turquoise sky,
 <br>Where ancient giants met their bitter end; 
 <br>It watches as the desert hawks go by,
 <br>A broken heart that time can never mend.
 <br><br>
-The Monster Slayer walked this crimson floor,
+The Monster Slayers walked this crimson floor,
 <br>To rid the world of those who preyed on men;
 <br>He closed the lid on every iron door,
 <br>And brought the dawn of peaceful life again.

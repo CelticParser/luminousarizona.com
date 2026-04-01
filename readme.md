@@ -180,7 +180,7 @@ LuminousArizona.com/
 │   │       └── theme/            # Theme-specific styles
 │   ├── about/                    # About page content
 │   ├── assets/                   # Static assets (images, fonts, CSS, JS)
-│   ├── essays/                   # Photo essay / image pages (markdown)
+│   ├── essays/                   # Photo essay / image pages (markdown, flat *.md)
 │   ├── projects/                 # Project landing pages: <project-name>.md
 │   ├── feed.md                   # RSS feed template
 │   ├── sitemap.liquid            # XML sitemap template
@@ -440,6 +440,23 @@ The site uses Eleventy collections defined in `eleventy.config.js`:
 - **`images`** - Photo essay / image markdown pages in `src/essays/`
 - **`about`** - About page content
 - **`posts`** - Blog posts (if used)
+
+### Multi-project essays (one essay, several project URLs)
+
+Some essays use **map-style `tags`** (see `src/_/lib/projectTagVariants.mjs`) so the same photograph can appear under more than one project with different titles, permalinks, and body copy (regions delimited by `<!-- project-slug start -->` / `<!-- project-slug end -->`).
+
+Keep the file in the **flat** `src/essays/` folder (`src/essays/my-essay.md`). In front matter add:
+
+```yaml
+multiproject: true
+tags:
+  - "project-slug": "Title for that project view"
+  - "other-project": "Other title"
+```
+
+(`multiProject: true` is also accepted.) No `pagination` block and no extra data files per essay—you can **rename the `.md` file** whenever you like.
+
+A content **preprocessor** in `eleventy.config.js` injects pagination when `multiproject` is set (only for `src/essays/<name>.md`, not subfolders). **`src/_/_data/essayProjectVariants.js`** scans `src/essays/**/*.md` and fills `essayProjectVariants.pages`. **`eleventy.config.js`** `eleventyComputed` supplies `permalink`, `title`, `tags`, and `variantContentHtml` per variant.
 
 ---
 

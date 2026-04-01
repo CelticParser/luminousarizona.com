@@ -20,7 +20,36 @@ function itemPublishedInBuild(item) {
   return item.data.published !== false;
 }
 
+function isFlatEssayMarkdownPath(inputPath) {
+  const normalized = path.normalize(inputPath).split(path.sep).join("/");
+  return /(^|\/)essays\/[^/]+\.md$/.test(normalized);
+}
+
 export default function(eleventyConfig) {
+  /**
+   * Pagination must exist before `getTemplates` runs; `eleventyComputed` is too late.
+   * Inject pagination when `multiproject: true` (or `multiProject`) in front matter.
+   * Only `src/essays/<name>.md` (flat, no subfolders).
+   */
+  eleventyConfig.addPreprocessor("multiproject-essay-pagination", "md", async function (data, content) {
+    const multi = data.multiproject ?? data.multiProject;
+    if (!multi) return;
+
+    if (!isFlatEssayMarkdownPath(this.inputPath)) return;
+    if (data.pagination) return;
+
+    data.pagination = {
+      data: "essayProjectVariants.pages",
+      size: 1,
+      alias: "projectView",
+      addAllPagesToCollections: true,
+      before(items, dataInner) {
+        const stem = String(dataInner.page?.filePathStem || "").replace(/^\/+/, "");
+        return items.filter((item) => item.sourceStem === stem);
+      },
+    };
+  });
+
   eleventyConfig.addGlobalData("eleventyComputed", {
     permalink(data) {
       if (isProductionBuild && data.published === false) {
