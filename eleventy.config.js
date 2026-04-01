@@ -57,23 +57,13 @@ export default function(eleventyConfig) {
   eleventyConfig.addDataExtension("yml", (contents) => yaml.load(contents));
   // 11ty Collections
   eleventyConfig.addCollection("projects", (collection) => {
-    return collection.getFilteredByGlob("./src/projects/**/*.md").filter(item => {
-      // Only include the main project file (same name as directory)
-      const dirName = item.inputPath.split('/').slice(-2, -1)[0];
-      const fileName = item.inputPath.split('/').slice(-1)[0].replace('.md', '');
-      return dirName === fileName && itemPublishedInBuild(item);
-    });
+    return collection.getFilteredByGlob("./src/projects/*.md").filter(itemPublishedInBuild);
   });
   eleventyConfig.addCollection("about", (collection) => {
     return collection.getFilteredByGlob("./src/about/*.md").filter(itemPublishedInBuild);
   });
   eleventyConfig.addCollection("images", (collection) => {
-    // Images are now in project subdirectories, collect all .md files except the main project file
-    return collection.getFilteredByGlob("./src/projects/**/*.md").filter(item => {
-      const dirName = item.inputPath.split('/').slice(-2, -1)[0];
-      const fileName = item.inputPath.split('/').slice(-1)[0].replace('.md', '');
-      return dirName !== fileName && itemPublishedInBuild(item); // Exclude the main project file
-    });
+    return collection.getFilteredByGlob("./src/essays/**/*.md").filter(itemPublishedInBuild);
   });
   eleventyConfig.addCollection("posts", (collection) => {
     return collection.getFilteredByGlob("./src/_/posts/*.md").filter(itemPublishedInBuild);
