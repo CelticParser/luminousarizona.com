@@ -37,7 +37,7 @@ By February, prayer had found its home,
 
 ---
 
-<!-- Break to wrap image -->
+<!-- section break -->
 <br>
 
 _If you were to walk through the south side of Tucson toward the end of 1918, you would have seen the skeletal ribs of a new cathedral rising against the horizon. This was Santa Cruz—the "Holy Cross"—a labor of love and brick designed to mirror the grand Spanish styles of the past. It was unfinished, surrounded by the scent of wet mortar and the clutter of scaffolding, waiting for its day of glory._

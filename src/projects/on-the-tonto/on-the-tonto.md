@@ -24,6 +24,6 @@ Holding the title of one of the most diverse National Forests in the United Stat
 
 Captured exclusively in the stark simplicity of black and white, this collection strips away the distracting greens and browns to emphasize the structural backbone of the forest. The monochrome lens is employed to highlight the textures of transition: the parched earth of the lowlands, the resilient scrub of the Pinyon-Juniper belt, and the imposing geometry of the high mountain slopes. By focusing on contrast, shadow, and scale, On The Tonto offers a contemplative visual journey through a territory defined by immense scale and unexpected biological richness, revealing the quiet, constant negotiations of survival in this immense, storied landscape.
 
-<!-- Break to wrap image -->
+<!-- section break -->
 
 > _On The Tonto serves as a grand synthesis of my geographical themes. By focusing on this "ecological system in miniature," I aim to capturing the entire vertical soul of Arizona within a single forest's boundaries.<br><br>The Tonto moves from a "green space" to a "structural space," where the transition from cactus to conifer becomes a study in evolutionary geometry._

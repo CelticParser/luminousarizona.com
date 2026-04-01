@@ -47,7 +47,7 @@ Though dressed in blue, he never would forget
 The axe-cut peaks where sun and sorrow met._
 
 
-<!-- Break to wrap image -->
+<!-- section break -->
 
 <br>
 <h2>Historical Footnote</h2>

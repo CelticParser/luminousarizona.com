@@ -37,7 +37,7 @@ Stand fast, Picacho, ’gainst the summer blast,
 
 ---
 
-<!-- Break to wrap image -->
+<!-- section break -->
 <br>
 
 _If you’re driving the long, shimmering, boring ribbon of I-10 between Phoenix and Tucson, there is one silhouette that demands you to look up. It is a "jagged fang of stone" that has served as a lighthouse for land-locked travelers for centuries. This is Picacho Peak._

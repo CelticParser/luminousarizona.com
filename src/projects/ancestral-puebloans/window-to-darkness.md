@@ -43,5 +43,5 @@ My future's not to choose which path to take,
 <br>
 But tear my walls down for my own soul's sake._
 
-<!-- Break to wrap image -->
+<!-- section break -->
 

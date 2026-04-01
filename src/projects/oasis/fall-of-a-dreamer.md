@@ -40,7 +40,7 @@ The dreamer perished in the bitter fray,
 
 ---
 
-<!-- Break to wrap image -->
+<!-- section break -->
 <br>
 
 ## The Echo of a Ghost Dance

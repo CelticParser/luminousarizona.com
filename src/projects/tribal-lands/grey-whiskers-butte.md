@@ -34,7 +34,7 @@ gMap:
 
 ---
 
-<!-- Break to wrap image -->
+<!-- section break -->
 
 ## The Man Who Saw the Wind
 

@@ -6,8 +6,8 @@ body_classes: page-project
 <main class="section">
   <div class="container">
     <section class="row">
-      {% comment %} Split content at <!-- Break to wrap image --> comment {% endcomment %}
-      {% assign contentParts = content | split: '<!-- Break to wrap image -->' %}
+      {% comment %} Split content at <!-- section break --> comment {% endcomment %}
+      {% assign contentParts = content | split: '<!-- section break -->' %}
       {% assign contentBeforeBreak = contentParts[0] %}
       {% assign contentAfterBreak = contentParts[1] %}
 

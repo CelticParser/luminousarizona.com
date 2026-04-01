@@ -37,7 +37,7 @@ Before the lightning strikes and thunder rolls,
 
 ---
 
-<!-- Break to wrap image -->
+<!-- section break -->
 <br>
 
 _If you were to stand in the middle of the Sonoran Desert in late June, you would feel the world holding its breath. The air is a heavy, golden weight, and the saguaros stand like silent sentinels, their ribbed skin pulled tight, waiting for a mercy that feels a thousand miles away._

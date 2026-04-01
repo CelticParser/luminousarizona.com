@@ -47,7 +47,7 @@ El Desierto Pintado —- thus they fled._
 
 ---
 
-<!-- Break to wrap image -->
+<!-- section break -->
 
 <h2>Historical Footnote</h2>
 

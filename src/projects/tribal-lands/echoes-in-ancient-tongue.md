@@ -44,7 +44,7 @@ The ancient tongue is fading from the young._
 
 ---
 
-<!-- Break to wrap image -->
+<!-- section break -->
 
 _Listen. If you press your ear to the red dust of Canyon de Chelly, past the rustle of the cottonwoods and the dry click of a raven’s wing, you can still hear the vibration of a world that was spoken into existence._
 

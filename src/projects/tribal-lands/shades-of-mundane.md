@@ -37,7 +37,7 @@ Though dull the process, mundane in its pace,
 
 ---
 
-<!-- Break to wrap image -->
+<!-- section break -->
 <br>
 
 _To understand the walls of Tsé Bighánílíní—the place where water runs through rocks—you must first understand that you are standing in the heart of the Navajo Nation. This isn't just a gallery for the eyes; it is a living part of the Diné landscape, carved by the patient hands of the Holy People using the most humble tools imaginable._

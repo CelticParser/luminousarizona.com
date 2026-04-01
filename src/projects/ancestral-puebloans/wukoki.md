@@ -36,7 +36,7 @@ Though time may seek to wear its mortar down,
 
 ---
 
-<!-- Break to wrap image -->
+<!-- section break -->
 <br>
 
 _If you were to stand atop the red sandstone outcropping where Wukoki sits, you would feel a strange sense of isolation compared to the bustling ruins of the main Wupatki complex just a few miles away. While Wupatki was a cosmopolitan hub—a "Manhattan of the Desert" fueled by the volcanic riches of Sunset Crater—Wukoki stands apart, draped in a quiet, regal dignity._

@@ -39,7 +39,7 @@ His kiss brings life, but takes it just the same,
 
 ---
 
-<!-- Break to wrap image -->
+<!-- section break -->
 
 ## One Who Rules the Day
 

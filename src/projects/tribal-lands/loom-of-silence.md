@@ -1,7 +1,7 @@
 ---
 layout: image-landscape
 title: "Loom of Silence"
-subTitle: "Spider Rock, Chinlé"
+subTitle: "Spider Rock, Canyon de Chelly National Monument"
 description: ""
 date: 2025-10-16
 tags: 
@@ -39,7 +39,7 @@ The canyon holds her secrets in its breast,
 
 ---
 
-<!-- Break to wrap image -->
+<!-- section break -->
 
 ## A Spire That Stitches Earth to the Heavens
 
