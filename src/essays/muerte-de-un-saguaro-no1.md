@@ -17,22 +17,22 @@ gMap:
     portrait: true
 ---
 
-> _For two long centuries upon the sand,
-<br>A quiet giant reaching for the sky.
-<br>The ancient, thorny keeper of the land,
-<br>Who watched a hundred burning summers die.
-<br><br>
+""For two long centuries upon the sand,
+A quiet giant reaching for the sky.
+The ancient, thorny keeper of the land,
+Who watched a hundred burning summers die.
+
 But time reclaims the strongest of the brave,
-<br>And age has bled his heavy body bare.
-<br>His mighty arms have dropped toward a grave,
-<br>Surrendering his spirit to the air.
-<br><br>
+And age has bled his heavy body bare.
+His mighty arms have dropped toward a grave,
+Surrendering his spirit to the air.
+
 Yet in his fall, he does not truly end;
-<br>His wooden skeleton becomes a space
-<br>Where hungry roots and nesting birds descend,
-<br>To build new life within his resting place.
-<br><br>
+His wooden skeleton becomes a space
+Where hungry roots and nesting birds descend,
+To build new life within his resting place.
+
 A fallen king upon the desert floor,
-<br>He gives his life so others can have more._
+He gives his life so others can have more.""
 
 ---

@@ -14,20 +14,24 @@ tripod: "lat: 32.103310, lng: -111.003673"
 published: false
 ---
 
-> _Does sorrow weave a wreath of prickly shame,
-<br>To crown the brow of faith with thorny sting?
-<br>Or is it but a cruel and mocking game,
-<br>This heavy circlet that the ages bring?
-<br><br>
+""Does sorrow weave a wreath of prickly shame,
+To crown the brow of faith with thorny sting?
+Or is it but a cruel and mocking game,
+This heavy circlet that the ages bring?
+
 A reel of wire, upon the fence it lies,
-<br>A jagged scar across the sun-scorched earth,
-<br>Where wild things wander, caught by sharp surprise,
-<br>And freedom finds a grim and bitter dearth.
-<br><br>
+A jagged scar across the sun-scorched earth,
+Where wild things wander, caught by sharp surprise,
+And freedom finds a grim and bitter dearth.
+
 The gentle deer, the rabbit in its plight,
-<br>Entangled limbs, a struggle to be free,
-<br>While rusty barbs reflect the fading light,
-<br>A testament to man’s harsh cruelty.
-<br><br>
+Entangled limbs, a struggle to be free,
+While rusty barbs reflect the fading light,
+A testament to man’s harsh cruelty.
+
 So question sorrow, for its shadowed art,
-<br>If this barbed wreath truly breaks the heart._
+If this barbed wreath truly breaks the heart.""
+
+---
+
+

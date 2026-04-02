@@ -18,18 +18,13 @@ gMap:
     portrait: false
 ---
 
-> _Two distant, solemn souls share cracks of granite in silence
-<br>
+""Two distant, solemn souls share cracks of granite in silence
 unaware that the perfect rhythm of their hearts
-<br>
 causes ripples on the lake
-<br><br>
 Aspen leaves to shimmer
-<br>
 changes the static disturbance of
-<br>
 the atmosphere forever . . .
-<br><br>
-Jill Martin_
+
+Jill Martin""
 
 ---

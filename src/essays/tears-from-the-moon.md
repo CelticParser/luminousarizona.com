@@ -18,20 +18,22 @@ gMap:
 published: false
 ---
 
-> _The silver disc hangs heavy in the night,
-<br>A pearly orb, majestic and serene.
-<br>But from its eye, a single, dropping light,
-<br>Descends, a tear, a sorrowful, bright sheen.
-<br><br>
+""The silver disc hangs heavy in the night,
+A pearly orb, majestic and serene.
+But from its eye, a single, dropping light,
+Descends, a tear, a sorrowful, bright sheen.
+
 Or so it seems, a droplet from the moon,
-<br>A falling star, a wish upon the breeze?
-<br>But closer look reveals a different tune,
-<br>A metal bird that cuts through cosmic seas.
-<br><br>
+A falling star, a wish upon the breeze?
+But closer look reveals a different tune,
+A metal bird that cuts through cosmic seas.
+
 No tear this is, but rather cold disdain,
-<br>A scar across the face of lunar grace.
-<br>The Man in the Moon, he feels a sharp, deep pain,
-<br>As human progress mars his sacred space.
-<br><br>
+A scar across the face of lunar grace.
+The Man in the Moon, he feels a sharp, deep pain,
+As human progress mars his sacred space.
+
 His silent tears for nature's fading gleam,
-<br>Reflected in this cold, mechanic stream._
+Reflected in this cold, mechanic stream.""
+
+---

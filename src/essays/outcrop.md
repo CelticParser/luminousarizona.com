@@ -18,22 +18,22 @@ gMap:
     portrait: false
 ---
 
-> _A silent sentinel of ancient stone,
-<br>Beneath the shadow Granite Mountain throws,
-<br>The rugged outcrop weathers time alone,
-<br>Where Arizona's restless zephyr blows.
-<br><br>
+""A silent sentinel of ancient stone,
+Beneath the shadow Granite Mountain throws,
+The rugged outcrop weathers time alone,
+Where Arizona's restless zephyr blows.
+
 A scattered skirt of piñon at its base,
-<br>Provides a fragrant, green, and quiet sea,
-<br>Yet cannot touch the boulder’s weathered face,
-<br>Nor keep it from its cold antiquity.
-<br><br>
+Provides a fragrant, green, and quiet sea,
+Yet cannot touch the boulder’s weathered face,
+Nor keep it from its cold antiquity.
+
 But rising tall against the western sky,
-<br>Two ponderosas stand in rustling grace,
-<br>Twin giants watching from a perch nearby,
-<br>Companions in this solitary place.
-<br><br>
+Two ponderosas stand in rustling grace,
+Twin giants watching from a perch nearby,
+Companions in this solitary place.
+
 Though granite feels no warmth from root or pine,
-<br>Together they complete a grand design._
+Together they complete a grand design.""
 
 ---

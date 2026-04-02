@@ -17,6 +17,7 @@ gMap:
     portrait: true
 ---
 
-<b><i>"We thank the moon for the light it provides, 
+""We thank the moon for the light it provides, 
 yet the moon has no light of its own. Its light, 
-as bright as it is, is but a reflection of one that shines even brighter."</i></b>
+as bright as it is, is but a reflection of one that shines even brighter.""
+

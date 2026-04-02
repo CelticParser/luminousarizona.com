@@ -17,32 +17,34 @@ gMap:
 published: false
 ---
 
-> _Above the parched and waiting desert floor,
-<br>The wisps of white begin their slow ballet.
-<br>They breathe the cooling wind and ask for more,
-<br>To chase the weary, golden heat away.
-<br><br>
+""Above the parched and waiting desert floor,
+The wisps of white begin their slow ballet.
+They breathe the cooling wind and ask for more,
+To chase the weary, golden heat away.
+
 They swirl atop the peaks of jagged stone,
-<br>Where saguaros stand like sentinels in prayer.
-<br>The heavy air now yields a softer tone,
-<br>As shadows stretch across the canyon’s lair.
-<br><br>
+Where saguaros stand like sentinels in prayer.
+The heavy air now yields a softer tone,
+As shadows stretch across the canyon’s lair.
+
 With silver skirts they sweep the Sonoran blue,
-<br>Exhaling sighs of damp and fragrant breeze.
-<br>The sky prepares to wash the desert floor anew,
-<br>And bring the thirsty earth a moment’s ease.
-<br><br>
+Exhaling sighs of damp and fragrant breeze.
+The sky prepares to wash the desert floor anew,
+And bring the thirsty earth a moment’s ease.
+
 Before the lightning strikes and thunder rolls,
-<br>Across the desert’s heart, they heal all souls._
+Across the desert’s heart, they heal all souls.""
 
 ---
 
 <!-- section break -->
-<br>
+
 
 _If you were to stand in the middle of the Sonoran Desert in late June, you would feel the world holding its breath. The air is a heavy, golden weight, and the saguaros stand like silent sentinels, their ribbed skin pulled tight, waiting for a mercy that feels a thousand miles away._
 
 _...But high above, a great, invisible wheel begins to turn._
+
+---
 
 ## The Great Inhalation
 

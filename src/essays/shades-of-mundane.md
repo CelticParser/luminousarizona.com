@@ -17,32 +17,32 @@ gMap:
 published: false
 ---
 
-> _A grain of sand, a drop of muddy rain,
-<br>The common tools of time’s unhurried hand;
-<br>To sculpt a world from what is truly plain,
-<br>And weave a dream across the desert land.
-<br><br>
+""A grain of sand, a drop of muddy rain,
+The common tools of time’s unhurried hand;
+To sculpt a world from what is truly plain,
+And weave a dream across the desert land.
+
 No gilded throne or temple built by man,
-<br>Can match the curves where flood and wind have been;
-<br>A slow and steady, silent, ancient plan,
-<br>To carve the light from shadows deep within.
-<br><br>
+Can match the curves where flood and wind have been;
+A slow and steady, silent, ancient plan,
+To carve the light from shadows deep within.
+
 The walls are washed in layers, thin and fine,
-<br>Of iron rust and dust of broken stone;
-<br>A jagged path, a smooth and flowing line,
-<br>Where beauty blooms in silence, all alone.
-<br><br>
+Of iron rust and dust of broken stone;
+A jagged path, a smooth and flowing line,
+Where beauty blooms in silence, all alone.
+
 Though dull the process, mundane in its pace, 
-<br>It leaves a ghost of wonder in its trace._
+It leaves a ghost of wonder in its trace""
 
 ---
 
 <!-- section break -->
-<br>
+
 
 _To understand the walls of Tsé Bighánílíní—the place where water runs through rocks—you must first understand that you are standing in the heart of the Navajo Nation. This isn't just a gallery for the eyes; it is a living part of the Diné landscape, carved by the patient hands of the Holy People using the most humble tools imaginable._
 
-<br>
+
 
 ---
 

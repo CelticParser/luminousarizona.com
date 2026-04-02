@@ -16,28 +16,28 @@ gMap:
     portrait: false
 ---
 
-> _High on a rock beneath the painted sky,
-<br>Above the stretch of Arizona plain,
-<br>The ancient walls of red Wukoki lie,
-<br>And wait for hands that will not build again.
-<br><br>
+""High on a rock beneath the painted sky,
+Above the stretch of Arizona plain,
+The ancient walls of red Wukoki lie,
+And wait for hands that will not build again.
+
 The wind sweeps through the window's empty stone,
-<br>Where fires danced and woven baskets lay;
-<br>Now quiet spirits walk the dust alone,
-<br>As centuries of silence slip away.
-<br><br>
+Where fires danced and woven baskets lay;
+Now quiet spirits walk the dust alone,
+As centuries of silence slip away.
+
 Discarded by the march of heavy years,
-<br>It stands defiant in the desert sand,
-<br>Unmoved by mortal, fleeting joys or fears,
-<br>A lonely fortress in an empty land.
-<br><br>
+It stands defiant in the desert sand,
+Unmoved by mortal, fleeting joys or fears,
+A lonely fortress in an empty land.
+
 Though time may seek to wear its mortar down,
-<br>Wukoki wears the mesa like a crown._
+Wukoki wears the mesa like a crown.""
 
 ---
 
 <!-- section break -->
-<br>
+
 
 _If you were to stand atop the red sandstone outcropping where Wukoki sits, you would feel a strange sense of isolation compared to the bustling ruins of the main Wupatki complex just a few miles away. While Wupatki was a cosmopolitan hub—a "Manhattan of the Desert" fueled by the volcanic riches of Sunset Crater—Wukoki stands apart, draped in a quiet, regal dignity._
 

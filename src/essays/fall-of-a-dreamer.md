@@ -20,28 +20,28 @@ gMap:
     portrait: false
 ---
 
-> _A mystic vision on the mountain air, 
-<br>To wake the sleeping warriors from the earth; 
-<br>He called upon the spirits waiting there, 
-<br>To grant his broken people second birth.
-<br><br>
+""A mystic vision on the mountain air, 
+To wake the sleeping warriors from the earth; 
+He called upon the spirits waiting there, 
+To grant his broken people second birth.
+
 But fearful soldiers heard the chants he made, 
-<br>And marched upon the quiet canyon bed, 
-<br>Beneath the sun, with rifle and with blade, 
-<br>To silence all the visions in his head.
-<br><br>
+And marched upon the quiet canyon bed, 
+Beneath the sun, with rifle and with blade, 
+To silence all the visions in his head.
+
 The sudden gunfire shattered through the dust, 
-<br>As scouts rebelled and blood began to flow, 
-<br>A sacred gathering broken by mistrust, 
-<br>That laid the captive medicine man low.
-<br><br>
+As scouts rebelled and blood began to flow, 
+A sacred gathering broken by mistrust, 
+That laid the captive medicine man low.
+
 The dreamer perished in the bitter fray, 
-<br>Yet in the falling water, his spirit sings today._
+Yet in the falling water, his spirit sings today.""
 
 ---
 
 <!-- section break -->
-<br>
+
 
 ## The Echo of a Ghost Dance
 
@@ -64,4 +64,3 @@ While the red dust of Cibecue was still settling, the news traveled East at the 
 The aftermath was a slow, agonizing "shadowed art" of pursuit. Driven by grief and a profound "distrust," many Apache fled the confinement of the reservation to reoccupy the mountain strongholds of their ancestors. They chose the "freedom" of the wilds over the "grim and bitter dearth" of the government rations. However, the Army hunted them incessantly, tracking them through the jagged rimrock like prey. Many were killed in the high country; others were forced back into the dust of San Carlos, where their descendants remain today. Though the "final bell" was rung for Nochaydelklinne that day on the creek, the Apache say his spirit still "sings today" in the mountain air—a reminder that while you can kill the dreamer, the dream is much harder to bury.
 
 _(Source; Keepers of Western Apache)_
-<br>

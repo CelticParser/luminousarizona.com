@@ -17,28 +17,28 @@ gMap:
     portrait: false
 ---
 
-> _The desert dust was thick in Eighteen’s fall,
-<br>While Santa Cruz stood framed in wood and stone.
-<br>A temple rising at the Bishop’s call,
-<br>Whose silent towers had yet to stand alone.
-<br><br>
+""The desert dust was thick in Eighteen’s fall,
+While Santa Cruz stood framed in wood and stone.
+A temple rising at the Bishop’s call,
+Whose silent towers had yet to stand alone.
+
 When news arrived the Great War’s fire was spent, 
-<br>Old Granjon sprinted through the morning light.
-<br>Up skeletal stairs with heart and soul intent,
-<br>To claim the tower in the city’s sight.
-<br><br>
+Old Granjon sprinted through the morning light.
+Up skeletal stairs with heart and soul intent,
+To claim the tower in the city’s sight.
+
 The "Holy Cross" then sang its first clear note,
-<br>To tell the town the Armistice was won.
-<br>A song of peace from iron, heavy throat,
-<br>To bless the weary when the strife was done.
-<br><br>
+To tell the town the Armistice was won.
+A song of peace from iron, heavy throat,
+To bless the weary when the strife was done.
+
 By February, prayer had found its home,
-<br>But peace had already rung beneath the dome._
+But peace had already rung beneath the dome.""
 
 ---
 
 <!-- section break -->
-<br>
+
 
 _If you were to walk through the south side of Tucson toward the end of 1918, you would have seen the skeletal ribs of a new cathedral rising against the horizon. This was Santa Cruz—the "Holy Cross"—a labor of love and brick designed to mirror the grand Spanish styles of the past. It was unfinished, surrounded by the scent of wet mortar and the clutter of scaffolding, waiting for its day of glory._
 

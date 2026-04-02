@@ -17,28 +17,28 @@ gMap:
     portrait: true
 ---
 
-> _From desert floor, a jagged fang of stone
-<br>Ascends to meet the heavy, bruised-gray sky.
-<br>A lonely king upon a basalt throne,
-<br>Where eagles drift and dusty whirlwinds fly.
-<br><br>
+""From desert floor, a jagged fang of stone
+Ascends to meet the heavy, bruised-gray sky.
+A lonely king upon a basalt throne,
+Where eagles drift and dusty whirlwinds fly.
+
 The air is thick with scent of creosote,
-<br>As thunder rumbles low across the plain.
-<br>Upon your spire, the storm-gods wrap a coat,
-<br>Of silver mist and streaks of sudden rain.
-<br><br>
+As thunder rumbles low across the plain.
+Upon your spire, the storm-gods wrap a coat,
+Of silver mist and streaks of sudden rain.
+
 You pierce the belly of the swollen cloud,
-<br>A needle stitched through velvet, dark and deep.
-<br>While lightning flashes, arrogant and proud,
-<br>Above the slopes where desert tortoises sleep.
-<br><br>
+A needle stitched through velvet, dark and deep.
+While lightning flashes, arrogant and proud,
+Above the slopes where desert tortoises sleep.
+
 Stand fast, Picacho, ’gainst the summer blast,
-<br>Until the monsoons yield their light at last._
+Until the monsoons yield their light at last.""
 
 ---
 
 <!-- section break -->
-<br>
+
 
 _If you’re driving the long, shimmering, boring ribbon of I-10 between Phoenix and Tucson, there is one silhouette that demands you to look up. It is a "jagged fang of stone" that has served as a lighthouse for land-locked travelers for centuries. This is Picacho Peak._
 

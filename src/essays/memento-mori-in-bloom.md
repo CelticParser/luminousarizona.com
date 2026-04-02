@@ -17,23 +17,23 @@ gMap:
     portrait: false
 ---
 
-> _The desert giant falls upon the sand,
-<br>Her wooden ribs now bared to burning sun.
-<br>The armor stripped by time’s relentless hand,
-<br>A long and weary vigil now is done.
-<br><br>
+""The desert giant falls upon the sand,
+Her wooden ribs now bared to burning sun.
+The armor stripped by time’s relentless hand,
+A long and weary vigil now is done.
+
 Yet round this hollow cage, the poppies wake,
-<br>In golden tides that wash against the gray.
-<br>Small petals tremble for a season’s sake,
-<br>Brief sparks of life amidst the slow decay.
-<br><br>
+In golden tides that wash against the gray.
+Small petals tremble for a season’s sake,
+Brief sparks of life amidst the slow decay.
+
 The skeleton reminds us we must pass,
-<br>That even iron giants turn to dust.
-<br>As fleeting as the morning’s meadow grass,
-<br>Our strength is borrowed, held in holy trust.
-<br><br>
+That even iron giants turn to dust.
+As fleeting as the morning’s meadow grass,
+Our strength is borrowed, held in holy trust.
+
 For in this grave of wood and floral breath,
-<br>The sweetest bloom is nurtured by a death._
+The sweetest bloom is nurtured by a death.""
 
 ---
 

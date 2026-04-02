@@ -70,23 +70,23 @@ When the sun hits the tower at a low angle, casting long shadows that "stretch a
 
 <!-- tribal-lands start -->
 
-> _A spire of stone beneath the turquoise sky,
-<br>Where ancient giants met their bitter end; 
-<br>It watches as the desert hawks go by,
-<br>A broken heart that time can never mend.
-<br><br>
+""A spire of stone beneath the turquoise sky,
+Where ancient giants met their bitter end; 
+It watches as the desert hawks go by,
+A broken heart that time can never mend.
+
 The Monster Slayers walked this crimson floor,
-<br>To rid the world of those who preyed on men;
-<br>He closed the lid on every iron door,
-<br>And brought the dawn of peaceful life again.
-<br><br>
+To rid the world of those who preyed on men;
+He closed the lid on every iron door,
+And brought the dawn of peaceful life again.
+
 Near where the "Much Wool" rises from the sand,
-<br>The Pointed One still keeps its lonely post;
-<br>A testament across the Diné land,
-<br>Of battles fought and every wandering ghost.
-<br><br>
+The Pointed One still keeps its lonely post;
+A testament across the Diné land,
+Of battles fought and every wandering ghost.
+
 Though names may change and newer faiths take root,
-<br>The earth remembers every heavy foot._
+The earth remembers every heavy foot.""
 
 ---
 
@@ -107,7 +107,7 @@ You cannot speak of the Pointed One without looking toward its massive neighbor,
 ## Prayers Preserved in the Volcanic Core
 
 While the "final bell" of the modern world rings and tourists snap photos of the "sculpted rock," the formation remains an anchor for the Navajo Nation. It is a reminder that we live on a battlefield that has been reclaimed by peace. The "unspoken song" of Church Rock is one of resilience. It tells us that no matter how large the monster—whether it be a giant of legend or the "prickly shame" of modern assimilation—there is a way to overcome. As the sun sets and turns the sandstone to the color of dried blood, the Pointed One reminds those who listen that the roots of the People run deeper than any spire, grounded in the very hearts of the giants they defeated.
-<br><br>
+
 
 ---
 

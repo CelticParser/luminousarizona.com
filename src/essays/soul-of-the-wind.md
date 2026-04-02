@@ -19,21 +19,23 @@ published: false
 ---
 
 
-> _High o'er the crimson dust of Soldier’s Pass,
+""High o'er the crimson dust of Soldier’s Pass,
 A gnarled sentinel of twisted wood,
-<br>It grips the stone above the withered grass,
-<br>Where many ancient spirits once have stood.
-<br><br>
+It grips the stone above the withered grass,
+Where many ancient spirits once have stood.
+
 Its bark is etched by seasons harsh and dry,
-<br>A record of the gales that lash the peak;
-<br>It reaches for the burning cobalt sky,
-<br>With secrets that the canyons only speak.
-<br><br>
+A record of the gales that lash the peak;
+It reaches for the burning cobalt sky,
+With secrets that the canyons only speak.
+
 It bends its spine to meet the canyon’s roar,
-<br>While roots dig deep through iron-veined ground,
-<br>It keeps the tally of the desert’s lore,
-<br>Where silent echoes are the only sound.
-<br><br>
+While roots dig deep through iron-veined ground,
+It keeps the tally of the desert’s lore,
+Where silent echoes are the only sound.
+
 The earth’s worn step where desert breezes tread,
-<br>The Sole of the Wind, by the ages led._
+The Sole of the Wind, by the ages led.""
+
+---
 

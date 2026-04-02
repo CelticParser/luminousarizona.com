@@ -19,23 +19,23 @@ gMap:
 published: false
 ---
 
-> _Within the depths where ancient waters flow,
-<br>A slender finger points toward the sun;
-<br>Where Spider Woman taught the world to know,
-<br>How sacred webs of beauty are begun.
-<br><br>
+""Within the depths where ancient waters flow,
+A slender finger points toward the sun;
+Where Spider Woman taught the world to know,
+How sacred webs of beauty are begun.
+
 Two pillars rise as one against the sky,
-<br>A stone-bound weaver in her scarlet home;
-<br>She watches as the desert eagles fly,
-<br>Beneath the vast and ever-shifting dome.
-<br><br>
+A stone-bound weaver in her scarlet home;
+She watches as the desert eagles fly,
+Beneath the vast and ever-shifting dome.
+
 The threads of life are pulled across the wood,
-<br>A pattern made of lightning and of rain;
-<br>She showed the People how to find the good,
-<br>And balance joy against the weight of pain.
-<br><br>
+A pattern made of lightning and of rain;
+She showed the People how to find the good,
+And balance joy against the weight of pain.
+
 The canyon holds her secrets in its breast,
-<br>Where stone and spirit find their final rest._
+Where stone and spirit find their final rest.""
 
 ---
 
@@ -59,10 +59,10 @@ As the evening stars begin to pin the sky to the horizon, the canyon floor retur
 
 ---
 
-<br>
+
 
 _The Spider Woman's loom reminds us that everything in Arizona is connected—from the dust to the stars._
 
-<br>
+
 
 ---

@@ -17,20 +17,22 @@ gMap:
 published: false
 ---
 
-> _Upon the canyon's long rust-red walls,
-<br>Where ancient whispers cling to sun-baked stone,
-<br>An echo haunts, when desert thunder calls,
-<br>Of rain long past, a memory overgrown.
-<br><br>
+""Upon the canyon's long rust-red walls,
+Where ancient whispers cling to sun-baked stone,
+An echo haunts, when desert thunder calls,
+Of rain long past, a memory overgrown.
+
 No silver sheet now streaks the thirsty air,
-<br>No rushing torrent fills the arroyo's bed,
-<br>Yet phantom droplets shimmer everywhere,
-<br>A whispered cadence, though the clouds have fled.
-<br><br>
+No rushing torrent fills the arroyo's bed,
+Yet phantom droplets shimmer everywhere,
+A whispered cadence, though the clouds have fled.
+
 The canyon mouth, a silent, gaping maw,
-<br>Recalls the deluge, how it once did roar.
-<br>A sonic ghost, defying nature's law,
-<br>The sound of water, though it falls no more.
-<br><br>
+Recalls the deluge, how it once did roar.
+A sonic ghost, defying nature's law,
+The sound of water, though it falls no more.
+
 So dry earth dreams of solace, cool and deep,
-<br>While phantom echoes in the canyon sleep._
+While phantom echoes in the canyon sleep.""
+
+---

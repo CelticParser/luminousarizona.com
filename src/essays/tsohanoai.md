@@ -19,23 +19,23 @@ gMap:
 published: false
 ---
 
-> _A weary sun, by ancient name, Tsohanoai,
-<br>Descends in robes of fire, a final gleam.
-<br>He lays his kiss upon the sands that sigh,
-<br>To fade a life, a long-forgotten dream.
-<br><br>
+""A weary sun, by ancient name, Tsohanoai,
+Descends in robes of fire, a final gleam.
+He lays his kiss upon the sands that sigh,
+To fade a life, a long-forgotten dream.
+
 No gentle touch, but searing heat and light,
-<br>A burning brand upon the world below,
-<br>He drinks the dew and turns the morning white,
-<br>And with his passion makes the rivers slow.
-<br><br>
+A burning brand upon the world below,
+He drinks the dew and turns the morning white,
+And with his passion makes the rivers slow.
+
 The desert blooms, then withers at his hand,
-<br>A transient beauty, born to live and die,
-<br>A fleeting hope across a barren land,
-<br>Beneath the vast and unrelenting sky.
-<br><br>
+A transient beauty, born to live and die,
+A fleeting hope across a barren land,
+Beneath the vast and unrelenting sky.
+
 His kiss brings life, but takes it just the same,
-<br>And leaves but dust where once had been a name._
+And leaves but dust where once had been a name.""
 
 ---
 
@@ -63,4 +63,9 @@ If you were to stand out on the red dirt of the high desert just as the first sl
 
 ​To see the Sun-Bearer in the Diné way is to understand that life requires effort. He is the heartbeat of Hózhó—the perfect balance of the universe. He provides the warmth that makes the corn grow and the light that guides the traveler, but he reminds us that beauty and harmony are maintained through duty and unwavering discipline.
 
+---
+
 _​Next time you see the "Blue Mask" in a sandpainting, look at the feathers and the steady eyes. You aren't looking at a distant star; you're looking at the ultimate provider, finishing another day’s hike so that the world may keep turning._
+
+---
+

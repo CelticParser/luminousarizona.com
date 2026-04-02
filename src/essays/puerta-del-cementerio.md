@@ -18,23 +18,23 @@ gMap:
     portrait: false
 ---
 
-> _The adobe archway frames the fading light,
-<br>Where wooden hinges rotted long ago.
-<br>No iron bars obstruct the traveler’s sight,
-<br>Just empty space where desert breezes blow.
-<br><br>
+""The adobe archway frames the fading light,
+Where wooden hinges rotted long ago.
+No iron bars obstruct the traveler’s sight,
+Just empty space where desert breezes blow.
+
 The cross remains, by sun and sand distressed,
-<br>Within the silence of the hallowed yard.
-<br>With silvered skin and fibers deeply pressed,
-<br>It keeps a vigil, weary and unbarred.
-<br><br>
+Within the silence of the hallowed yard.
+With silvered skin and fibers deeply pressed,
+It keeps a vigil, weary and unbarred.
+
 The setting sun descends with tender grace,
-<br>To brush the wood with beams of liquid gold.
-<br>It warms the hollows of that weathered face,
-<br>As desert shadows over earth unfold.
-<br><br>
+To brush the wood with beams of liquid gold.
+It warms the hollows of that weathered face,
+As desert shadows over earth unfold.
+
 Though time has claimed the gate and worn the wood,
-<br>The light still finds where once the spirit stood._
+The light still finds where once the spirit stood.""
 
 ---
 

@@ -18,20 +18,20 @@ gMap:
 published: false
 ---
 
-> _A monolith, twin hands clasped in prayer
-<br>Beneath the Hunter's Moon, a silent plea
-<br>For him who hunts, through darkness, cold, and snare
-<br>May fortune favor, and his spirit be free.
-<br><br>
+""A monolith, twin hands clasped in prayer
+Beneath the Hunter's Moon, a silent plea
+For him who hunts, through darkness, cold, and snare
+May fortune favor, and his spirit be free.
+
 The moon, a watchful eye, illuminates
-<br>The ancient stone, a sentinel of night.
-<br>A silent guardian, it elevates
-<br>The hunter's spirit, guiding him aright.
-<br><br>
+The ancient stone, a sentinel of night.
+A silent guardian, it elevates
+The hunter's spirit, guiding him aright.
+
 Through deserts' dark and fields of rocky ground,
-<br>He follows trails, his heart both filled with fear
-<br>And hope, as ancient echoes resound
-<br>Within the silent clifs, year after year.
-<br><br>
+He follows trails, his heart both filled with fear
+And hope, as ancient echoes resound
+Within the silent clifs, year after year.
+
 And so, the hunter, guided by the moon
-<br>And blessed by hands of stone, pursues his boon._
+And blessed by hands of stone, pursues his boon.""
