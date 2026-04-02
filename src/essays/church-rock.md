@@ -77,7 +77,7 @@ A broken heart that time can never mend.
 
 The Monster Slayers walked this crimson floor,
 To rid the world of those who preyed on men;
-He closed the lid on every iron door,
+They closed the lid on every iron door,
 And brought the dawn of peaceful life again.
 
 Near where the "Much Wool" rises from the sand,
