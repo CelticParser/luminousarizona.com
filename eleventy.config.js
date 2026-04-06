@@ -13,14 +13,17 @@ import { loadProjectTagVariantsFromFile } from "./src/_/lib/projectTagVariants.m
 import markdownItPoemSonnets from "./src/_/lib/markdown-it-poem-sonnet.mjs";
 
 const isProductionBuild = process.env.ELEVENTY_PRODUCTION === "true";
+/** Netlify `stage` branch: set ELEVENTY_DRAFTS=true to build `published: false` pages; production omits it. */
+const includeUnpublishedPages =
+  process.env.ELEVENTY_DRAFTS === "true" || !isProductionBuild;
 
 const variantMarkdown = new MarkdownIt({ html: true })
   .use(markdownItAttrs)
   .use(markdownItPoemSonnets);
 
-/** In production, omit pages with `published: false` from output and collections. */
+/** Omit `published: false` from output and collections when not including drafts. */
 function itemPublishedInBuild(item) {
-  if (!isProductionBuild) return true;
+  if (includeUnpublishedPages) return true;
   return item.data.published !== false;
 }
 
@@ -57,7 +60,7 @@ export default function(eleventyConfig) {
 
   eleventyConfig.addGlobalData("eleventyComputed", {
     permalink(data) {
-      if (isProductionBuild && data.published === false) {
+      if (!includeUnpublishedPages && data.published === false) {
         return false;
       }
       if (data.projectView) {

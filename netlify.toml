@@ -1,3 +1,8 @@
 [build]
 	publish = "public"
 	command = "npm run build"
+
+# Branch named `stage`: include front matter `published: false` in the build (stage subdomain).
+# Production context does not set this; `npm run build` still uses ELEVENTY_PRODUCTION=true.
+[context.stage.environment]
+	ELEVENTY_DRAFTS = "true"
