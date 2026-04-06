@@ -2,7 +2,6 @@
 	publish = "public"
 	command = "npm run build"
 
-# Branch named `stage`: include front matter `published: false` in the build (stage subdomain).
-# Production context does not set this; `npm run build` still uses ELEVENTY_PRODUCTION=true.
-[context.stage.environment]
-	ELEVENTY_DRAFTS = "true"
+# Draft pages (`published: false`): included when Netlify CONTEXT is not `production` and BRANCH is `stage`
+# (see eleventy.config.js). Build log will still show `ELEVENTY_PRODUCTION=true eleventy` from npm — that is expected.
+# Optional override for another branch name: set ELEVENTY_DRAFTS=true in the Netlify UI for that branch.
