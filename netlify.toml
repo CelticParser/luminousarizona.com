@@ -1,3 +1,14 @@
 [build]
 	publish = "public"
 	command = "npm run build"
+
+# Production deploys: no ELEVENTY_INCLUDE_DRAFTS → Eleventy skips `draft: true` when ELEVENTY_PRODUCTION=true (see eleventy.config.js).
+[context.production.environment]
+	NODE_ENV = "production"
+	SITE_URL = "https://luminousarizona.com"
+
+# Branch `stage` (or matching Netlify UI context): include draft pages in the build.
+[context.stage.environment]
+	NODE_ENV = "stage"
+	SITE_URL = "https://stage.luminousarizona.com"
+	ELEVENTY_INCLUDE_DRAFTS = "true"

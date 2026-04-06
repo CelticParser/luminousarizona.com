@@ -12,6 +12,30 @@ import path from "path";
 import { loadProjectTagVariantsFromFile } from "./src/_/lib/projectTagVariants.mjs";
 import markdownItPoemSonnets from "./src/_/lib/markdown-it-poem-sonnet.mjs";
 
+const isProductionBuild = process.env.ELEVENTY_PRODUCTION === "true";
+const isNetlifyProductionDeploy = process.env.CONTEXT === "production";
+
+/** Netlify stage: production branch deploy uses CONTEXT=production; stage uses branch name or `https://stage--*.netlify.app`. */
+function isNetlifyStageDeploy() {
+  if (isNetlifyProductionDeploy) return false;
+  if (process.env.ELEVENTY_INCLUDE_DRAFTS === "true") return true;
+  const branch = (process.env.BRANCH || process.env.HEAD || "").toLowerCase();
+  if (branch === "stage") return true;
+  const urls = `${process.env.DEPLOY_PRIME_URL || ""}${process.env.DEPLOY_URL || ""}`;
+  return /\/\/stage--/i.test(urls);
+}
+
+/** Omit `draft: true` from output and collections (prod build only), unless stage Netlify or ELEVENTY_INCLUDE_DRAFTS=true. */
+const excludeDraftPages =
+  isProductionBuild &&
+  process.env.ELEVENTY_INCLUDE_DRAFTS !== "true" &&
+  !isNetlifyStageDeploy();
+
+function itemPassesDraftGate(item) {
+  if (!excludeDraftPages) return true;
+  return item.data.draft !== true;
+}
+
 const variantMarkdown = new MarkdownIt({ html: true })
   .use(markdownItAttrs)
   .use(markdownItPoemSonnets);
@@ -49,6 +73,9 @@ export default function(eleventyConfig) {
 
   eleventyConfig.addGlobalData("eleventyComputed", {
     permalink(data) {
+      if (excludeDraftPages && data.draft === true) {
+        return false;
+      }
       if (data.projectView) {
         const pathSlug = slugify(data.projectView.pageTitle, { decamelize: false });
         return `/projects/${data.projectView.projectSlug}/${pathSlug}/`;
@@ -82,16 +109,16 @@ export default function(eleventyConfig) {
   eleventyConfig.addDataExtension("yml", (contents) => yaml.load(contents));
   // 11ty Collections
   eleventyConfig.addCollection("projects", (collection) => {
-    return collection.getFilteredByGlob("./src/projects/*.md");
+    return collection.getFilteredByGlob("./src/projects/*.md").filter(itemPassesDraftGate);
   });
   eleventyConfig.addCollection("about", (collection) => {
-    return collection.getFilteredByGlob("./src/about/*.md");
+    return collection.getFilteredByGlob("./src/about/*.md").filter(itemPassesDraftGate);
   });
   eleventyConfig.addCollection("images", (collection) => {
-    return collection.getFilteredByGlob("./src/essays/**/*.md");
+    return collection.getFilteredByGlob("./src/essays/**/*.md").filter(itemPassesDraftGate);
   });
   eleventyConfig.addCollection("posts", (collection) => {
-    return collection.getFilteredByGlob("./src/_/posts/*.md");
+    return collection.getFilteredByGlob("./src/_/posts/*.md").filter(itemPassesDraftGate);
   });
 
   // Custom filename format function to preserve original filename with width appended
@@ -220,7 +247,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addCollection("tagList", (collectionApi) => {
     const tagsSet = {};
     collectionApi.getFilteredByGlob("./src/_/posts/*.md").forEach((item) => {
-      if (!item.data.tags) return;
+      if (!itemPassesDraftGate(item) || !item.data.tags) return;
       item.data.tags
         .filter((tag) => !["posts", "all"].includes(tag))
         .forEach((tag) => {
@@ -237,7 +264,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addCollection("categoryList", (collectionApi) => {
     let catSet = {};
     collectionApi.getFilteredByGlob("./src/_/posts/*.md").forEach((item) => {
-      if (!item.data.categories) return;
+      if (!itemPassesDraftGate(item) || !item.data.categories) return;
       item.data.categories
         .filter((cat) => !["posts", "all"].includes(cat))
         .forEach((cat) => {
