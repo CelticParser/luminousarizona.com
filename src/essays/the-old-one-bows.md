@@ -15,7 +15,6 @@ gMap:
   - tripod: "lat: 33.378738, lng: -112.369242"
     zoom: "14"
     portrait: false
-published: false
 ---
 
 ""The Saguaro, giant of the desert,

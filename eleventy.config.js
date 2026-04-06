@@ -12,43 +12,9 @@ import path from "path";
 import { loadProjectTagVariantsFromFile } from "./src/_/lib/projectTagVariants.mjs";
 import markdownItPoemSonnets from "./src/_/lib/markdown-it-poem-sonnet.mjs";
 
-const isProductionBuild = process.env.ELEVENTY_PRODUCTION === "true";
-const isNetlifyProductionDeploy = process.env.CONTEXT === "production";
-
-function netlifyStageDraftBuild() {
-  if (isNetlifyProductionDeploy) return false;
-  const branch = (process.env.BRANCH || process.env.HEAD || "").toLowerCase();
-  if (branch === "stage") return true;
-  const deployUrls = `${process.env.DEPLOY_PRIME_URL || ""}${process.env.DEPLOY_URL || ""}`;
-  // Branch deploy subdomain: https://stage--sitename.netlify.app
-  if (/\/\/stage--/i.test(deployUrls)) return true;
-  return false;
-}
-
-/** Include `published: false` when ELEVENTY_DRAFTS is set (e.g. by scripts/netlify-build.sh), Netlify stage branch/subdomain, or non-prod Eleventy. */
-const includeUnpublishedPages =
-  process.env.ELEVENTY_DRAFTS === "true" || !isProductionBuild || netlifyStageDraftBuild();
-
-if (process.env.NETLIFY === "true") {
-  console.log(
-    "[eleventy] includeUnpublishedPages=%s CONTEXT=%s BRANCH=%s HEAD=%s ELEVENTY_DRAFTS=%s",
-    includeUnpublishedPages,
-    process.env.CONTEXT || "",
-    process.env.BRANCH || "",
-    process.env.HEAD || "",
-    process.env.ELEVENTY_DRAFTS || ""
-  );
-}
-
 const variantMarkdown = new MarkdownIt({ html: true })
   .use(markdownItAttrs)
   .use(markdownItPoemSonnets);
-
-/** Omit `published: false` from output and collections when not including drafts. */
-function itemPublishedInBuild(item) {
-  if (includeUnpublishedPages) return true;
-  return item.data.published !== false;
-}
 
 function isFlatEssayMarkdownPath(inputPath) {
   const normalized = path.normalize(inputPath).split(path.sep).join("/");
@@ -83,9 +49,6 @@ export default function(eleventyConfig) {
 
   eleventyConfig.addGlobalData("eleventyComputed", {
     permalink(data) {
-      if (!includeUnpublishedPages && data.published === false) {
-        return false;
-      }
       if (data.projectView) {
         const pathSlug = slugify(data.projectView.pageTitle, { decamelize: false });
         return `/projects/${data.projectView.projectSlug}/${pathSlug}/`;
@@ -119,16 +82,16 @@ export default function(eleventyConfig) {
   eleventyConfig.addDataExtension("yml", (contents) => yaml.load(contents));
   // 11ty Collections
   eleventyConfig.addCollection("projects", (collection) => {
-    return collection.getFilteredByGlob("./src/projects/*.md").filter(itemPublishedInBuild);
+    return collection.getFilteredByGlob("./src/projects/*.md");
   });
   eleventyConfig.addCollection("about", (collection) => {
-    return collection.getFilteredByGlob("./src/about/*.md").filter(itemPublishedInBuild);
+    return collection.getFilteredByGlob("./src/about/*.md");
   });
   eleventyConfig.addCollection("images", (collection) => {
-    return collection.getFilteredByGlob("./src/essays/**/*.md").filter(itemPublishedInBuild);
+    return collection.getFilteredByGlob("./src/essays/**/*.md");
   });
   eleventyConfig.addCollection("posts", (collection) => {
-    return collection.getFilteredByGlob("./src/_/posts/*.md").filter(itemPublishedInBuild);
+    return collection.getFilteredByGlob("./src/_/posts/*.md");
   });
 
   // Custom filename format function to preserve original filename with width appended
@@ -257,7 +220,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addCollection("tagList", (collectionApi) => {
     const tagsSet = {};
     collectionApi.getFilteredByGlob("./src/_/posts/*.md").forEach((item) => {
-      if (!itemPublishedInBuild(item) || !item.data.tags) return;
+      if (!item.data.tags) return;
       item.data.tags
         .filter((tag) => !["posts", "all"].includes(tag))
         .forEach((tag) => {
@@ -274,7 +237,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addCollection("categoryList", (collectionApi) => {
     let catSet = {};
     collectionApi.getFilteredByGlob("./src/_/posts/*.md").forEach((item) => {
-      if (!itemPublishedInBuild(item) || !item.data.categories) return;
+      if (!item.data.categories) return;
       item.data.categories
         .filter((cat) => !["posts", "all"].includes(cat))
         .forEach((cat) => {

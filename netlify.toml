@@ -1,6 +1,3 @@
 [build]
 	publish = "public"
-	# Wrapper exports ELEVENTY_DRAFTS before npm so Eleventy always sees it (see scripts/netlify-build.sh).
-	command = "bash scripts/netlify-build.sh"
-
-# Optional: force drafts on any branch via Netlify UI → ELEVENTY_DRAFTS=true (Builds scope).
+	command = "npm run build"

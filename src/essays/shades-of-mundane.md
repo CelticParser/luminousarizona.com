@@ -14,7 +14,6 @@ gMap:
   - tripod: "lat: 36.903258, lng: -111.412869"
     zoom: "13"
     portrait:
-published: false
 ---
 
 ""A grain of sand, a drop of muddy rain,

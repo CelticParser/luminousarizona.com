@@ -16,7 +16,6 @@ gMap:
   - tripod: ""
     zoom: "14"
     portrait: false
-published: false
 ---
 
 ""A weary sun, by ancient name, Tsohanoai,

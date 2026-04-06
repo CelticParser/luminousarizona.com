@@ -16,7 +16,6 @@ gMap:
   - tripod: "lat: NULL, lng: -NULL"
     zoom: "12"
     portrait: false
-published: false
 ---
 
 ""Within the depths where ancient waters flow,

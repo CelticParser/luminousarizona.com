@@ -17,7 +17,6 @@ gMap:
   - tripod: "lat: 33.542150, lng: -111.442297"
     zoom: "14"
     portrait: false
-published: false
 ---
 
 ""Two sentinels, by sun-baked earth they stood,

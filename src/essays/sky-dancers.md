@@ -14,7 +14,6 @@ gMap:
   - tripod: "lat: 34.065, lng: -112.5"
     zoom: "14"
     portrait: false
-published: false
 ---
 
 ""Above the parched and waiting desert floor,

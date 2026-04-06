@@ -15,7 +15,6 @@ gMap:
   - tripod: "NULL"
     zoom: "14"
     portrait: false
-published: false
 ---
 
 ""The silver disc hangs heavy in the night,

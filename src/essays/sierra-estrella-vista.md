@@ -15,7 +15,6 @@ gMap:
   - tripod: "lat: 33.234205, lng: -112.443895"
     zoom: "14"
     portrait: false
-published: true
 ---
 
 ""The sun-baked clay of earthen walls decays,

@@ -14,7 +14,6 @@ gMap:
   - tripod: "NULL"
     zoom: "13"
     portrait:
-published: false
 ---
 
 ""Upon the canyon's long rust-red walls,

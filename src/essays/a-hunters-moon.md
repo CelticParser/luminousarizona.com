@@ -15,7 +15,6 @@ gMap:
   - tripod: "lat: 33.452207, lng: -111.461914"
     zoom: "14"
     portrait: false
-published: false
 ---
 
 ""A monolith, twin hands clasped in prayer
