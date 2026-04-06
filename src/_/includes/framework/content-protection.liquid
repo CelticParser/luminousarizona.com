@@ -1,4 +1,15 @@
 <script>
+
+  // Right-click is only intercepted for images (and anything inside picture): 
+  // a contextmenu listener calls preventDefault() when the target is inside img or picture.
+
+  // Plain text is not blocked on right-click here; 
+  // instead the same script limits selection (selectstart), 
+  // copy/cut, and Ctrl/Cmd+A/C/X outside form controls. 
+  // So “no right-click on text” isn’t what this file does unless the browser’s 
+  // context menu was mainly used for copy (which is handled by the copy handler).
+
+
   window.addEventListener("load", function () {
     var toast = null;
     var toastTimer = null;

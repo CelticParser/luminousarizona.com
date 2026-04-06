@@ -47,7 +47,7 @@ If you were to stand out on the red dirt of the high desert just as the first sl
 
 ​In the old stories, the sun isn't a ball of gas or a golden chariot. It is a massive, glowing disc of polished turquoise, and it doesn't move on its own.
 
-​## The Weight of the Sky
+​<h2>Weight of the Sky</h2>
 
 ​Imagine a traveler who never rests. Every morning, Jóhonaaʼéí emerges from his hogan in the East. He doesn't ride across the sky in ease; he carries the sun upon his back. He is a cosmic laborer, his footsteps marking the hours, feeling the immense weight of that blue-green fire as he treks toward the western horizon.
 
