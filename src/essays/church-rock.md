@@ -16,6 +16,7 @@ gMap:
   - tripod: "lat: 36.727391, lng: -110.120010"
     zoom: "12"
     portrait: false
+published: true
 ---
 
 <!-- arid-desert start -->
