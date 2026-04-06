@@ -1,4 +1,5 @@
 ---
+draft: true
 layout: image-landscape
 title: "Loom of Silence"
 subTitle: "Spider Rock, Canyon de Chelly National Monument"

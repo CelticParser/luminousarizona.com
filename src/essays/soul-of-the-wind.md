@@ -1,4 +1,5 @@
 ---
+draft: true
 layout: image-portrait
 title: "Soul of The Wind"
 subTitle: "Piñon at Solders Pass Trail"

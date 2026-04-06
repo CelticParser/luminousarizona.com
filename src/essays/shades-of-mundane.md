@@ -1,4 +1,5 @@
 ---
+draft: true
 layout: image-landscape
 title: "Shades of Mundane"
 subTitle: "Antelope Vally"

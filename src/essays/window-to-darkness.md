@@ -1,4 +1,5 @@
 ---
+draft: true
 layout: image-portrait
 title: "Window to Darkness"
 subTitle: "Tonto Upper Cliff Dwelling, Tonto National Monument"

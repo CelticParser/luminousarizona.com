@@ -1,4 +1,5 @@
 ---
+draft: true
 layout: image-landscape
 title: "Beautiful Blue"
 subTitle: "Where I Go To Scream"

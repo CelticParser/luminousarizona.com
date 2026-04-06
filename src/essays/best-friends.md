@@ -1,4 +1,5 @@
 ---
+draft: true
 layout: image-landscape
 title: "Best Friends"
 subTitle: ""
