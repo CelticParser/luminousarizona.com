@@ -1,7 +1,6 @@
 [build]
 	publish = "public"
-	command = "npm run build"
+	# Wrapper exports ELEVENTY_DRAFTS before npm so Eleventy always sees it (see scripts/netlify-build.sh).
+	command = "bash scripts/netlify-build.sh"
 
-# Draft pages (`published: false`): included when Netlify CONTEXT is not `production` and BRANCH is `stage`
-# (see eleventy.config.js). Build log will still show `ELEVENTY_PRODUCTION=true eleventy` from npm — that is expected.
-# Optional override for another branch name: set ELEVENTY_DRAFTS=true in the Netlify UI for that branch.
+# Optional: force drafts on any branch via Netlify UI → ELEVENTY_DRAFTS=true (Builds scope).

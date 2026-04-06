@@ -14,11 +14,31 @@ import markdownItPoemSonnets from "./src/_/lib/markdown-it-poem-sonnet.mjs";
 
 const isProductionBuild = process.env.ELEVENTY_PRODUCTION === "true";
 const isNetlifyProductionDeploy = process.env.CONTEXT === "production";
-/** Include `published: false` when not doing a prod Eleventy build, or when Netlify builds the `stage` branch (non-production context), or when ELEVENTY_DRAFTS=true. `[context.stage]` in netlify.toml is unreliable; Netlify sets BRANCH. */
+
+function netlifyStageDraftBuild() {
+  if (isNetlifyProductionDeploy) return false;
+  const branch = (process.env.BRANCH || process.env.HEAD || "").toLowerCase();
+  if (branch === "stage") return true;
+  const deployUrls = `${process.env.DEPLOY_PRIME_URL || ""}${process.env.DEPLOY_URL || ""}`;
+  // Branch deploy subdomain: https://stage--sitename.netlify.app
+  if (/\/\/stage--/i.test(deployUrls)) return true;
+  return false;
+}
+
+/** Include `published: false` when ELEVENTY_DRAFTS is set (e.g. by scripts/netlify-build.sh), Netlify stage branch/subdomain, or non-prod Eleventy. */
 const includeUnpublishedPages =
-  process.env.ELEVENTY_DRAFTS === "true" ||
-  !isProductionBuild ||
-  (process.env.BRANCH === "stage" && !isNetlifyProductionDeploy);
+  process.env.ELEVENTY_DRAFTS === "true" || !isProductionBuild || netlifyStageDraftBuild();
+
+if (process.env.NETLIFY === "true") {
+  console.log(
+    "[eleventy] includeUnpublishedPages=%s CONTEXT=%s BRANCH=%s HEAD=%s ELEVENTY_DRAFTS=%s",
+    includeUnpublishedPages,
+    process.env.CONTEXT || "",
+    process.env.BRANCH || "",
+    process.env.HEAD || "",
+    process.env.ELEVENTY_DRAFTS || ""
+  );
+}
 
 const variantMarkdown = new MarkdownIt({ html: true })
   .use(markdownItAttrs)
