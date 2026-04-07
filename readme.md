@@ -40,6 +40,7 @@ A photography portfolio website built with Eleventy (11ty) showcasing Arizona's 
 
 ### Development Commands
 
+- **`NODE_ENV=stage npm run start`** - Builds Sass and starts Eleventy dev server with watch mode __**As Stage ENV**__
 - **`npm run start`** - Builds Sass and starts Eleventy dev server with watch mode
 - **`npm run dev`** - Alias for `npm run start`
 
