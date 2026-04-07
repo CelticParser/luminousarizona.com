@@ -1,8 +1,4 @@
 export default {
+  context: process.env.CONTEXT || "branch-deploy",
   ELEVENTY_ENV: process.env.ELEVENTY_ENV,
-  GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
-  GTM_ID: process.env.GTM_ID,
-  UMAMI_DATA_WEBSITE_ID: process.env.UMAMI_DATA_WEBSITE_ID,
-  UMAMI_SRC: process.env.UMAMI_SRC,
-  PLAUSIBLE_DATA_DOMAIN: process.env.PLAUSIBLE_DATA_DOMAIN,
 };
