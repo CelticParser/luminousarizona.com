@@ -32,7 +32,7 @@
   "devDependencies": {
     "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@eslint/js": "^9.12.0",
-    "eleventy-xml-plugin": "^0.1.0",
+    "eleventy-xml-plugin": "^0.5.0",
     "eslint": "^9.12.0",
     "globals": "^15.11.0",
     "lint-staged": "^15.2.10",
