@@ -2,8 +2,6 @@ import yaml from "js-yaml";
 import MarkdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import xmlFiltersPlugin from "eleventy-xml-plugin";
-import pluginRss from "@11ty/eleventy-plugin-rss";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import eleventyImage from "@11ty/eleventy-img";
@@ -310,15 +308,6 @@ export default function(eleventyConfig) {
     dynamicPartials: true,
     strictFilters: true,
   });
-
-  // RSS
-  eleventyConfig.addPlugin(xmlFiltersPlugin);
-  eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addLiquidFilter("getNewestCollectionItemDate", pluginRss.getNewestCollectionItemDate);
-  eleventyConfig.addLiquidFilter("absoluteUrl", pluginRss.absoluteUrl);
-  eleventyConfig.addLiquidFilter("convertHtmlToAbsoluteUrls", pluginRss.convertHtmlToAbsoluteUrls);
-  eleventyConfig.addLiquidFilter("dateToRfc3339", pluginRss.dateToRfc3339);
-  eleventyConfig.addLiquidFilter("dateToRfc822", pluginRss.dateToRfc822); // New in RSS 1.2.0
 
   return {
     pathPrefix: "/",

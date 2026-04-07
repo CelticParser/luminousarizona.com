@@ -6,7 +6,7 @@ layout: false
 {% raw %}
   <? xml version="1.0" encoding="UTF-8" ?>{% endraw %}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  {% assign baseUrl = metadata.feed.base | default: "https://luminousarizona.com" %}
+  {% assign baseUrl = metadata.site.base | default: "https://luminousarizona.com" %}
   {% comment %} Remove trailing slash from baseUrl if present, then append /license {% endcomment %}
   {% if baseUrl contains "://" %}
     {% assign urlParts = baseUrl | split: "://" %}

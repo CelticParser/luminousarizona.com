@@ -4,12 +4,6 @@
   padding-top: calc(var(--section-padding) * 0.5);
   padding-bottom: calc(var(--section-padding) * 0.5);
   font-size: 13px;
-  a.feed {
-    display: inline-block;
-    border-radius: var(--button-border-radius);
-    &:hover {
-    }
-  }
   a {
     display: inline-block;
     color: inherit;

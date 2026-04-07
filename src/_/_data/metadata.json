@@ -1,9 +1,5 @@
 {
-  "feed": {
-    "subtitle": "Assay of Arizona's places and things that make it unique",
-    "filename": "feed.xml",
-    "path": "/feed.xml",
-    "url": "https://luminousarizona.com/",
-    "base": "https://luminousarizona.com/"
+  "site": {
+    "base": "https://luminousarizona.com"
   }
 }
