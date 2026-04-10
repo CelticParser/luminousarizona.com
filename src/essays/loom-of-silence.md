@@ -14,14 +14,14 @@ image: "image-coming-soon.webp"
 alt: ""
 year: "2020"
 gMap:
-  - tripod: "lat: NULL, lng: -NULL"
+  - tripod: "lat: 36.104654, lng: -109.354510"
     zoom: "12"
     portrait: false
 ---
 
 ""Within the depths where ancient waters flow,
 A slender finger points toward the sun;
-Where Spider Woman taught the world to know,
+Where Spider Woman taught the world to sew,
 How sacred webs of beauty are begun.
 
 Two pillars rise as one against the sky,
@@ -55,7 +55,7 @@ There is a chill that settles in the canyon when the shadows grow long, a remind
 
 ## Pattern of Red Earth Heart
 
-As the evening stars begin to pin the sky to the horizon, the canyon floor returns to its "Eternal Pattern." The sheep are penned, the cedar smoke rises from the hogans, and the silhouette of Spider Rock fades into the indigo dusk. It stands as a warden of the unspoken song, a monument to the idea that beauty is not something we create, but something we discover within the lines of the earth itself. The loom of the canyon is never truly finished; it is woven anew with every sunrise, every monsoon, and every prayer whispered into the wind. The Diné remain, and the Stone People remain, bound together by the invisible threads of a story that has no end.
+As the evening stars begin to pin the sky to the horizon, the canyon floor returns to its "Eternal Pattern." The sheep are penned, the cedar smoke rises from the hogans, and the silhouette of Spider Rock fades into the indigo dusk. It stands as a warden of the unspoken song, a monument to the idea that beauty is not something we create, but something we discover within the lines of the earth itself. The loom of the canyon is never truly finished; it is woven anew with every sunrise, every monsoon, and every prayer whispered into the wind. The Diné remain, and the [Stone People](luminousarizona.com/projects/tribal-lands/stone-people) remain, bound together by the invisible threads of a story that has no end.
 
 ---
 
